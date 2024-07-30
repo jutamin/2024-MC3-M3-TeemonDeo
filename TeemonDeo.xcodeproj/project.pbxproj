@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B14B7052C577C0E00045B7A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B7042C577C0E00045B7A /* LoginView.swift */; };
+		8B14B7082C577CF200045B7A /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 8B14B7072C577CF200045B7A /* GoogleSignIn */; };
+		8B14B70A2C577CF200045B7A /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8B14B7092C577CF200045B7A /* GoogleSignInSwift */; };
+		8B14B70C2C577DE400045B7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B14B70B2C577DE400045B7A /* GoogleService-Info.plist */; };
+		8B14B70F2C577EE200045B7A /* SignInGoogleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B70E2C577EE200045B7A /* SignInGoogleHelper.swift */; };
+		8B14B7112C577F0F00045B7A /* SignInAppleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B7102C577F0F00045B7A /* SignInAppleHelper.swift */; };
+		8B14B7132C577F4000045B7A /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B7122C577F4000045B7A /* AuthenticationManager.swift */; };
+		8B14B7152C577F7100045B7A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B7142C577F7100045B7A /* Utilities.swift */; };
+		8B14B7172C5783AD00045B7A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B7162C5783AD00045B7A /* RootView.swift */; };
+		8B14B7192C5783E400045B7A /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B7182C5783E400045B7A /* TabbarView.swift */; };
+		8B14B71B2C57841800045B7A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B71A2C57841800045B7A /* SettingsView.swift */; };
+		8B14B71D2C57844400045B7A /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B71C2C57844400045B7A /* SettingsViewModel.swift */; };
 		8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B6FD2C57766800045B7A /* LottieManager.swift */; };
 		8B14B7012C57773100045B7A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8B14B7002C57773100045B7A /* Lottie */; };
 		8B14B7032C57774500045B7A /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B14B7022C57774500045B7A /* Splash.json */; };
@@ -14,13 +26,24 @@
 		ADB8C45D2C4F7E2F00D5B9BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */; };
 		ADB8C45F2C4F7E3000D5B9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB8C45E2C4F7E3000D5B9BC /* Assets.xcassets */; };
 		ADB8C4622C4F7E3000D5B9BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB8C4612C4F7E3000D5B9BC /* Preview Assets.xcassets */; };
-		ADB8C46B2C4F7EE100D5B9BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADB8C46A2C4F7EE100D5B9BC /* GoogleService-Info.plist */; };
 		ADB8C46E2C4F7F4400D5B9BC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ADB8C46D2C4F7F4400D5B9BC /* FirebaseAuth */; };
 		ADB8C4702C4F7F4400D5B9BC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = ADB8C46F2C4F7F4400D5B9BC /* FirebaseFirestore */; };
 		ADB8C4722C4F7F4400D5B9BC /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = ADB8C4712C4F7F4400D5B9BC /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B14B7042C577C0E00045B7A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		8B14B70B2C577DE400045B7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8B14B70D2C577E5600045B7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8B14B70E2C577EE200045B7A /* SignInGoogleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInGoogleHelper.swift; path = TeemonDeo/Views/SignInGoogleHelper.swift; sourceTree = SOURCE_ROOT; };
+		8B14B7102C577F0F00045B7A /* SignInAppleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInAppleHelper.swift; path = TeemonDeo/Views/SignInAppleHelper.swift; sourceTree = SOURCE_ROOT; };
+		8B14B7122C577F4000045B7A /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationManager.swift; path = TeemonDeo/Views/AuthenticationManager.swift; sourceTree = SOURCE_ROOT; };
+		8B14B7142C577F7100045B7A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = TeemonDeo/Views/Utilities.swift; sourceTree = SOURCE_ROOT; };
+		8B14B7162C5783AD00045B7A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		8B14B7182C5783E400045B7A /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		8B14B71A2C57841800045B7A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8B14B71C2C57844400045B7A /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewModel.swift; path = TeemonDeo/Views/SettingsViewModel.swift; sourceTree = SOURCE_ROOT; };
+		8B14B71E2C57855100045B7A /* TeemonDeo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeemonDeo.entitlements; sourceTree = "<group>"; };
 		8B14B6FD2C57766800045B7A /* LottieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieManager.swift; sourceTree = "<group>"; };
 		8B14B7022C57774500045B7A /* Splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.json; sourceTree = "<group>"; };
 		ADB8C4572C4F7E2F00D5B9BC /* TeemonDeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeemonDeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,7 +51,6 @@
 		ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ADB8C45E2C4F7E3000D5B9BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADB8C4612C4F7E3000D5B9BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		ADB8C46A2C4F7EE100D5B9BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B14B70A2C577CF200045B7A /* GoogleSignInSwift in Frameworks */,
 				ADB8C46E2C4F7F4400D5B9BC /* FirebaseAuth in Frameworks */,
+				8B14B7082C577CF200045B7A /* GoogleSignIn in Frameworks */,
 				ADB8C4702C4F7F4400D5B9BC /* FirebaseFirestore in Frameworks */,
 				ADB8C4722C4F7F4400D5B9BC /* FirebaseStorage in Frameworks */,
 				8B14B7012C57773100045B7A /* Lottie in Frameworks */,
@@ -65,7 +89,9 @@
 		ADB8C4592C4F7E2F00D5B9BC /* TeemonDeo */ = {
 			isa = PBXGroup;
 			children = (
-				ADB8C46A2C4F7EE100D5B9BC /* GoogleService-Info.plist */,
+				8B14B71E2C57855100045B7A /* TeemonDeo.entitlements */,
+				8B14B70D2C577E5600045B7A /* Info.plist */,
+				8B14B70B2C577DE400045B7A /* GoogleService-Info.plist */,
 				ADB8C47A2C4F801E00D5B9BC /* App */,
 				ADB8C4792C4F801800D5B9BC /* Models */,
 				ADB8C4782C4F800D00D5B9BC /* Views */,
@@ -108,6 +134,7 @@
 		ADB8C4752C4F7FE700D5B9BC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8B14B7142C577F7100045B7A /* Utilities.swift */,
 				8B14B6FD2C57766800045B7A /* LottieManager.swift */,
 			);
 			path = Utils;
@@ -123,6 +150,10 @@
 		ADB8C4772C4F800000D5B9BC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				8B14B70E2C577EE200045B7A /* SignInGoogleHelper.swift */,
+				8B14B7102C577F0F00045B7A /* SignInAppleHelper.swift */,
+				8B14B7122C577F4000045B7A /* AuthenticationManager.swift */,
+				8B14B71C2C57844400045B7A /* SettingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -130,7 +161,11 @@
 		ADB8C4782C4F800D00D5B9BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8B14B7162C5783AD00045B7A /* RootView.swift */,
 				ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */,
+				8B14B7042C577C0E00045B7A /* LoginView.swift */,
+				8B14B7182C5783E400045B7A /* TabbarView.swift */,
+				8B14B71A2C57841800045B7A /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,6 +219,8 @@
 				ADB8C46D2C4F7F4400D5B9BC /* FirebaseAuth */,
 				ADB8C46F2C4F7F4400D5B9BC /* FirebaseFirestore */,
 				ADB8C4712C4F7F4400D5B9BC /* FirebaseStorage */,
+				8B14B7072C577CF200045B7A /* GoogleSignIn */,
+				8B14B7092C577CF200045B7A /* GoogleSignInSwift */,
 				8B14B7002C57773100045B7A /* Lottie */,
 			);
 			productName = TeemonDeo;
@@ -216,6 +253,7 @@
 			mainGroup = ADB8C44E2C4F7E2F00D5B9BC;
 			packageReferences = (
 				ADB8C46C2C4F7F4400D5B9BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8B14B7062C577CF200045B7A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				8B14B6FF2C57773100045B7A /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = ADB8C4582C4F7E2F00D5B9BC /* Products */;
@@ -246,7 +284,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B14B7192C5783E400045B7A /* TabbarView.swift in Sources */,
+				8B14B71B2C57841800045B7A /* SettingsView.swift in Sources */,
+				8B14B7172C5783AD00045B7A /* RootView.swift in Sources */,
+				8B14B70F2C577EE200045B7A /* SignInGoogleHelper.swift in Sources */,
+				8B14B7052C577C0E00045B7A /* LoginView.swift in Sources */,
+				8B14B7152C577F7100045B7A /* Utilities.swift in Sources */,
 				ADB8C45D2C4F7E2F00D5B9BC /* ContentView.swift in Sources */,
+				8B14B7132C577F4000045B7A /* AuthenticationManager.swift in Sources */,
+				8B14B71D2C57844400045B7A /* SettingsViewModel.swift in Sources */,
+				8B14B7112C577F0F00045B7A /* SignInAppleHelper.swift in Sources */,
 				8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */,
 				ADB8C45B2C4F7E2F00D5B9BC /* TeemonDeoApp.swift in Sources */,
 			);
@@ -379,17 +426,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TeemonDeo/TeemonDeo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TeemonDeo/Preview Content\"";
-				DEVELOPMENT_TEAM = 583985W8L5;
+				DEVELOPMENT_TEAM = GF3B5LP7RQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TeemonDeo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -408,17 +458,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TeemonDeo/TeemonDeo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TeemonDeo/Preview Content\"";
-				DEVELOPMENT_TEAM = 583985W8L5;
+				DEVELOPMENT_TEAM = GF3B5LP7RQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TeemonDeo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,6 +509,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8B14B7062C577CF200045B7A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.0;
 		8B14B6FF2C57773100045B7A /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
@@ -475,6 +534,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8B14B7072C577CF200045B7A /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B14B7062C577CF200045B7A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		8B14B7092C577CF200045B7A /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B14B7062C577CF200045B7A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+
 		8B14B7002C57773100045B7A /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8B14B6FF2C57773100045B7A /* XCRemoteSwiftPackageReference "lottie-ios" */;

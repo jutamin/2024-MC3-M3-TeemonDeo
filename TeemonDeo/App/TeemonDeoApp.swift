@@ -25,8 +25,9 @@ struct TeemonDeoApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                RootView()
             }
         }
     }
 }
+

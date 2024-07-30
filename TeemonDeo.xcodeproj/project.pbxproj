@@ -19,6 +19,9 @@
 		8B14B7192C5783E400045B7A /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B7182C5783E400045B7A /* TabbarView.swift */; };
 		8B14B71B2C57841800045B7A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B71A2C57841800045B7A /* SettingsView.swift */; };
 		8B14B71D2C57844400045B7A /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B71C2C57844400045B7A /* SettingsViewModel.swift */; };
+		8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B6FD2C57766800045B7A /* LottieManager.swift */; };
+		8B14B7012C57773100045B7A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8B14B7002C57773100045B7A /* Lottie */; };
+		8B14B7032C57774500045B7A /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B14B7022C57774500045B7A /* Splash.json */; };
 		ADB8C45B2C4F7E2F00D5B9BC /* TeemonDeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB8C45A2C4F7E2F00D5B9BC /* TeemonDeoApp.swift */; };
 		ADB8C45D2C4F7E2F00D5B9BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */; };
 		ADB8C45F2C4F7E3000D5B9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB8C45E2C4F7E3000D5B9BC /* Assets.xcassets */; };
@@ -41,6 +44,8 @@
 		8B14B71A2C57841800045B7A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8B14B71C2C57844400045B7A /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewModel.swift; path = TeemonDeo/Views/SettingsViewModel.swift; sourceTree = SOURCE_ROOT; };
 		8B14B71E2C57855100045B7A /* TeemonDeo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeemonDeo.entitlements; sourceTree = "<group>"; };
+		8B14B6FD2C57766800045B7A /* LottieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieManager.swift; sourceTree = "<group>"; };
+		8B14B7022C57774500045B7A /* Splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.json; sourceTree = "<group>"; };
 		ADB8C4572C4F7E2F00D5B9BC /* TeemonDeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeemonDeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB8C45A2C4F7E2F00D5B9BC /* TeemonDeoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeemonDeoApp.swift; sourceTree = "<group>"; };
 		ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +63,7 @@
 				8B14B7082C577CF200045B7A /* GoogleSignIn in Frameworks */,
 				ADB8C4702C4F7F4400D5B9BC /* FirebaseFirestore in Frameworks */,
 				ADB8C4722C4F7F4400D5B9BC /* FirebaseStorage in Frameworks */,
+				8B14B7012C57773100045B7A /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +116,7 @@
 		ADB8C4732C4F7FCD00D5B9BC /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				8B14B7022C57774500045B7A /* Splash.json */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -128,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				8B14B7142C577F7100045B7A /* Utilities.swift */,
+				8B14B6FD2C57766800045B7A /* LottieManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -213,6 +221,7 @@
 				ADB8C4712C4F7F4400D5B9BC /* FirebaseStorage */,
 				8B14B7072C577CF200045B7A /* GoogleSignIn */,
 				8B14B7092C577CF200045B7A /* GoogleSignInSwift */,
+				8B14B7002C57773100045B7A /* Lottie */,
 			);
 			productName = TeemonDeo;
 			productReference = ADB8C4572C4F7E2F00D5B9BC /* TeemonDeo.app */;
@@ -245,6 +254,7 @@
 			packageReferences = (
 				ADB8C46C2C4F7F4400D5B9BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				8B14B7062C577CF200045B7A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				8B14B6FF2C57773100045B7A /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = ADB8C4582C4F7E2F00D5B9BC /* Products */;
 			projectDirPath = "";
@@ -261,8 +271,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADB8C4622C4F7E3000D5B9BC /* Preview Assets.xcassets in Resources */,
+				ADB8C46B2C4F7EE100D5B9BC /* GoogleService-Info.plist in Resources */,
+				8B14B7032C57774500045B7A /* Splash.json in Resources */,
 				ADB8C45F2C4F7E3000D5B9BC /* Assets.xcassets in Resources */,
-				8B14B70C2C577DE400045B7A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +294,7 @@
 				8B14B7132C577F4000045B7A /* AuthenticationManager.swift in Sources */,
 				8B14B71D2C57844400045B7A /* SettingsViewModel.swift in Sources */,
 				8B14B7112C577F0F00045B7A /* SignInAppleHelper.swift in Sources */,
+				8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */,
 				ADB8C45B2C4F7E2F00D5B9BC /* TeemonDeoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -399,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -503,6 +515,12 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 7.1.0;
+		8B14B6FF2C57773100045B7A /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
 			};
 		};
 		ADB8C46C2C4F7F4400D5B9BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
@@ -525,6 +543,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8B14B7062C577CF200045B7A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+
+		8B14B7002C57773100045B7A /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B14B6FF2C57773100045B7A /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 		ADB8C46D2C4F7F4400D5B9BC /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;

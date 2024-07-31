@@ -27,7 +27,7 @@ struct SettingView: View {
                             .foregroundStyle(.white)
                     }
                     .padding(.horizontal)
-
+                
                 
                 HStack{
                     Text("지난 챌린지")
@@ -103,7 +103,7 @@ struct profileView: View {
             Image("defaultProfileImage")
                 .resizable()
                 .frame(maxWidth: 60, maxHeight: 60)
-                        
+            
             VStack(alignment: .leading, spacing: 10) {
                 Text("누구길래티몬데오")
                     .font(.headline)
@@ -115,7 +115,7 @@ struct profileView: View {
             .padding()
             
             Spacer()
-                        
+            
             Button(action: {},
                    label: {
                 (Text("수정") + Text(Image(systemName: "pencil")))
@@ -180,15 +180,15 @@ struct endedChallengeListCell: View {
             Image("challengeCompleted")
                 .resizable()
                 .frame(maxWidth: 70, maxHeight: 70)
-//                .padding()
+            //                .padding()
         }
     }
-    
-    struct SettingView_Previews: PreviewProvider {
-        static var previews: some View {
-            NavigationStack {
-                SettingView(showSignInView: .constant(false))
-            }
+}
+
+struct SettingView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationStack {
+            SettingView(showSignInView: .constant(false))
         }
     }
 }

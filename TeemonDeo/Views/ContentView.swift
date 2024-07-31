@@ -8,20 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-//        VStack {
-//            Image(systemName: "globe")
-//                .imageScale(.large)
-//                .foregroundStyle(.tint)
-//            Text("Hello, Daisy!")
+        VStack {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundStyle(.tint)
+            Text("Hello, Daisy!")
+//            Text("\())")
+        }
+//        .onAppear{
+//            UserManager.shared.getUser(userId: <#T##String#>)
 //        }
-//        .padding()
+        .padding()
+//        .onAppear() {
+//            
+//        }
         
 //        LottieView(filename: "Splash")
 //            .ignoresSafeArea(.all)
-        Text("hello")
+//        Text("hello")
         
     }
+    
 }
 
 #Preview {

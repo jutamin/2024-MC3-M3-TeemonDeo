@@ -22,6 +22,10 @@
 		8B7543272C588E0100B1C53D /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 8B7543262C588E0100B1C53D /* GoogleSignIn */; };
 		8B7543292C588E0100B1C53D /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8B7543282C588E0100B1C53D /* GoogleSignInSwift */; };
 		8B75432C2C588E6400B1C53D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8B75432B2C588E6400B1C53D /* Lottie */; };
+		8BAD01212C59CF2D002EC402 /* ChallengeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAD01202C59CF2D002EC402 /* ChallengeUser.swift */; };
+		8BAD01232C59CF5F002EC402 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAD01222C59CF5F002EC402 /* UserManager.swift */; };
+		8BAD01252C59D047002EC402 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8BAD01242C59D047002EC402 /* FirebaseFirestoreSwift */; };
+		8BAD01272C59D0FE002EC402 /* AuthDataResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAD01262C59D0FE002EC402 /* AuthDataResultModel.swift */; };
 		ADB8C45B2C4F7E2F00D5B9BC /* TeemonDeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB8C45A2C4F7E2F00D5B9BC /* TeemonDeoApp.swift */; };
 		ADB8C45D2C4F7E2F00D5B9BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */; };
 		ADB8C45F2C4F7E3000D5B9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB8C45E2C4F7E3000D5B9BC /* Assets.xcassets */; };
@@ -46,6 +50,9 @@
 		8B7543212C588CFC00B1C53D /* TeemonDeo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeemonDeo.entitlements; sourceTree = "<group>"; };
 		8B7543222C588D8E00B1C53D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8B7543242C588DA200B1C53D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8BAD01202C59CF2D002EC402 /* ChallengeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeUser.swift; sourceTree = "<group>"; };
+		8BAD01222C59CF5F002EC402 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserManager.swift; path = TeemonDeo/UserManager.swift; sourceTree = SOURCE_ROOT; };
+		8BAD01262C59D0FE002EC402 /* AuthDataResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataResultModel.swift; sourceTree = "<group>"; };
 		ADB8C4572C4F7E2F00D5B9BC /* TeemonDeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeemonDeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB8C45A2C4F7E2F00D5B9BC /* TeemonDeoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeemonDeoApp.swift; sourceTree = "<group>"; };
 		ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +68,7 @@
 				8B7543272C588E0100B1C53D /* GoogleSignIn in Frameworks */,
 				ADB8C46E2C4F7F4400D5B9BC /* FirebaseAuth in Frameworks */,
 				ADB8C4702C4F7F4400D5B9BC /* FirebaseFirestore in Frameworks */,
+				8BAD01252C59D047002EC402 /* FirebaseFirestoreSwift in Frameworks */,
 				8B7543292C588E0100B1C53D /* GoogleSignInSwift in Frameworks */,
 				ADB8C4722C4F7F4400D5B9BC /* FirebaseStorage in Frameworks */,
 				8B75432C2C588E6400B1C53D /* Lottie in Frameworks */,
@@ -144,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				8B7543192C588A4A00B1C53D /* AuthenticationManager.swift */,
+				8BAD01222C59CF5F002EC402 /* UserManager.swift */,
 				8B75431B2C588A8C00B1C53D /* SignInGoogleHelper.swift */,
 				8B75431D2C588AAB00B1C53D /* SignInAppleHelper.swift */,
 			);
@@ -173,6 +182,8 @@
 		ADB8C4792C4F801800D5B9BC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8BAD01202C59CF2D002EC402 /* ChallengeUser.swift */,
+				8BAD01262C59D0FE002EC402 /* AuthDataResultModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,6 +233,7 @@
 				8B7543262C588E0100B1C53D /* GoogleSignIn */,
 				8B7543282C588E0100B1C53D /* GoogleSignInSwift */,
 				8B75432B2C588E6400B1C53D /* Lottie */,
+				8BAD01242C59D047002EC402 /* FirebaseFirestoreSwift */,
 			);
 			productName = TeemonDeo;
 			productReference = ADB8C4572C4F7E2F00D5B9BC /* TeemonDeo.app */;
@@ -286,11 +298,14 @@
 			files = (
 				8B75431C2C588A8C00B1C53D /* SignInGoogleHelper.swift in Sources */,
 				8B7543142C58898D00B1C53D /* LoginView.swift in Sources */,
+				8BAD01232C59CF5F002EC402 /* UserManager.swift in Sources */,
 				8B7543102C58892500B1C53D /* RootView.swift in Sources */,
 				ADB8C45D2C4F7E2F00D5B9BC /* ContentView.swift in Sources */,
 				8B75431A2C588A4A00B1C53D /* AuthenticationManager.swift in Sources */,
 				8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */,
+				8BAD01212C59CF2D002EC402 /* ChallengeUser.swift in Sources */,
 				8B7543122C58894300B1C53D /* TabbarView.swift in Sources */,
+				8BAD01272C59D0FE002EC402 /* AuthDataResultModel.swift in Sources */,
 				8B7543202C588AD600B1C53D /* SettingViewModel.swift in Sources */,
 				ADB8C45B2C4F7E2F00D5B9BC /* TeemonDeoApp.swift in Sources */,
 				8B7543182C588A0B00B1C53D /* Utilities.swift in Sources */,
@@ -548,6 +563,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8B75432A2C588E6400B1C53D /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		8BAD01242C59D047002EC402 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADB8C46C2C4F7F4400D5B9BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
 		};
 		ADB8C46D2C4F7F4400D5B9BC /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;

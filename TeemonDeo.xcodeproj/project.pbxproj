@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7227C47A2C5918AC0060F430 /* ChallengeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7227C4792C5918AC0060F430 /* ChallengeDetailView.swift */; };
 		8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B6FD2C57766800045B7A /* LottieManager.swift */; };
 		8B14B7032C57774500045B7A /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B14B7022C57774500045B7A /* Splash.json */; };
 		8B7543102C58892500B1C53D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B75430F2C58892500B1C53D /* RootView.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7227C4792C5918AC0060F430 /* ChallengeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailView.swift; sourceTree = "<group>"; };
 		8B14B6FD2C57766800045B7A /* LottieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieManager.swift; sourceTree = "<group>"; };
 		8B14B7022C57774500045B7A /* Splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.json; sourceTree = "<group>"; };
 		8B75430F2C58892500B1C53D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				8B7543112C58894300B1C53D /* TabbarView.swift */,
 				8B7543132C58898D00B1C53D /* LoginView.swift */,
 				8B7543152C5889C500B1C53D /* SettingView.swift */,
+				7227C4792C5918AC0060F430 /* ChallengeDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */,
 				8B7543122C58894300B1C53D /* TabbarView.swift in Sources */,
 				8B7543202C588AD600B1C53D /* SettingViewModel.swift in Sources */,
+				7227C47A2C5918AC0060F430 /* ChallengeDetailView.swift in Sources */,
 				ADB8C45B2C4F7E2F00D5B9BC /* TeemonDeoApp.swift in Sources */,
 				8B7543182C588A0B00B1C53D /* Utilities.swift in Sources */,
 				8B75431E2C588AAB00B1C53D /* SignInAppleHelper.swift in Sources */,

@@ -31,9 +31,15 @@
 		ADB8C45D2C4F7E2F00D5B9BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */; };
 		ADB8C45F2C4F7E3000D5B9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB8C45E2C4F7E3000D5B9BC /* Assets.xcassets */; };
 		ADB8C4622C4F7E3000D5B9BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB8C4612C4F7E3000D5B9BC /* Preview Assets.xcassets */; };
-		ADB8C46E2C4F7F4400D5B9BC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ADB8C46D2C4F7F4400D5B9BC /* FirebaseAuth */; };
-		ADB8C4702C4F7F4400D5B9BC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = ADB8C46F2C4F7F4400D5B9BC /* FirebaseFirestore */; };
-		ADB8C4722C4F7F4400D5B9BC /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = ADB8C4712C4F7F4400D5B9BC /* FirebaseStorage */; };
+		ADBC5AFA2C59CD6D00237350 /* ChallengeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBC5AF92C59CD6D00237350 /* ChallengeMainView.swift */; };
+		ADBC5AFC2C59CF3600237350 /* ChallengeMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBC5AFB2C59CF3600237350 /* ChallengeMainViewModel.swift */; };
+		ADBC5AFE2C59CF5C00237350 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBC5AFD2C59CF5C00237350 /* Challenge.swift */; };
+		ADBC5B002C59CFE000237350 /* FirestoreChallengeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBC5AFF2C59CFE000237350 /* FirestoreChallengeManager.swift */; };
+		ADBC5B062C59DC7600237350 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBC5B052C59DC7600237350 /* CustomFont.swift */; };
+		ADBC5B092C59DE3700237350 /* LaundryOTF_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ADBC5B072C59DE3700237350 /* LaundryOTF_Bold.otf */; };
+		ADBC5B0A2C59DE3700237350 /* LaundryOTF_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ADBC5B082C59DE3700237350 /* LaundryOTF_Regular.otf */; };
+		ADBC5B0F2C59E2CC00237350 /* TextModifire.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBC5B0E2C59E2CC00237350 /* TextModifire.swift */; };
+		ADBC5B132C59E32D00237350 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBC5B122C59E32D00237350 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +66,15 @@
 		ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ADB8C45E2C4F7E3000D5B9BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADB8C4612C4F7E3000D5B9BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ADBC5AF92C59CD6D00237350 /* ChallengeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMainView.swift; sourceTree = "<group>"; };
+		ADBC5AFB2C59CF3600237350 /* ChallengeMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMainViewModel.swift; sourceTree = "<group>"; };
+		ADBC5AFD2C59CF5C00237350 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		ADBC5AFF2C59CFE000237350 /* FirestoreChallengeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreChallengeManager.swift; sourceTree = "<group>"; };
+		ADBC5B052C59DC7600237350 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		ADBC5B072C59DE3700237350 /* LaundryOTF_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaundryOTF_Bold.otf; sourceTree = "<group>"; };
+		ADBC5B082C59DE3700237350 /* LaundryOTF_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaundryOTF_Regular.otf; sourceTree = "<group>"; };
+		ADBC5B0E2C59E2CC00237350 /* TextModifire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifire.swift; sourceTree = "<group>"; };
+		ADBC5B122C59E32D00237350 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +87,6 @@
 				ADB8C4702C4F7F4400D5B9BC /* FirebaseFirestore in Frameworks */,
 				8BAD01252C59D047002EC402 /* FirebaseFirestoreSwift in Frameworks */,
 				8B7543292C588E0100B1C53D /* GoogleSignInSwift in Frameworks */,
-				ADB8C4722C4F7F4400D5B9BC /* FirebaseStorage in Frameworks */,
 				8B75432C2C588E6400B1C53D /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				ADB8C45E2C4F7E3000D5B9BC /* Assets.xcassets */,
+				ADBC5B0D2C59E0BB00237350 /* Modifiers */,
 				ADB8C47C2C4F804300D5B9BC /* Colors */,
 				ADB8C47B2C4F803500D5B9BC /* Fonts */,
 			);
@@ -157,6 +172,7 @@
 				8BAD01222C59CF5F002EC402 /* UserManager.swift */,
 				8B75431B2C588A8C00B1C53D /* SignInGoogleHelper.swift */,
 				8B75431D2C588AAB00B1C53D /* SignInAppleHelper.swift */,
+				ADBC5AFF2C59CFE000237350 /* FirestoreChallengeManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -165,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				8B75431F2C588AD600B1C53D /* SettingViewModel.swift */,
+				ADBC5AFB2C59CF3600237350 /* ChallengeMainViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -177,6 +194,7 @@
 				8B7543112C58894300B1C53D /* TabbarView.swift */,
 				8B7543132C58898D00B1C53D /* LoginView.swift */,
 				8B7543152C5889C500B1C53D /* SettingView.swift */,
+				ADBC5AF92C59CD6D00237350 /* ChallengeMainView.swift */,
 				7227C4792C5918AC0060F430 /* ChallengeDetailView.swift */,
 			);
 			path = Views;
@@ -185,6 +203,7 @@
 		ADB8C4792C4F801800D5B9BC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ADBC5AFD2C59CF5C00237350 /* Challenge.swift */,
 				8BAD01202C59CF2D002EC402 /* ChallengeUser.swift */,
 				8BAD01262C59D0FE002EC402 /* AuthDataResultModel.swift */,
 			);
@@ -202,6 +221,9 @@
 		ADB8C47B2C4F803500D5B9BC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				ADBC5B072C59DE3700237350 /* LaundryOTF_Bold.otf */,
+				ADBC5B082C59DE3700237350 /* LaundryOTF_Regular.otf */,
+				ADBC5B052C59DC7600237350 /* CustomFont.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -209,8 +231,17 @@
 		ADB8C47C2C4F804300D5B9BC /* Colors */ = {
 			isa = PBXGroup;
 			children = (
+				ADBC5B122C59E32D00237350 /* Colors.swift */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		ADBC5B0D2C59E0BB00237350 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				ADBC5B0E2C59E2CC00237350 /* TextModifire.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,9 +261,6 @@
 			);
 			name = TeemonDeo;
 			packageProductDependencies = (
-				ADB8C46D2C4F7F4400D5B9BC /* FirebaseAuth */,
-				ADB8C46F2C4F7F4400D5B9BC /* FirebaseFirestore */,
-				ADB8C4712C4F7F4400D5B9BC /* FirebaseStorage */,
 				8B7543262C588E0100B1C53D /* GoogleSignIn */,
 				8B7543282C588E0100B1C53D /* GoogleSignInSwift */,
 				8B75432B2C588E6400B1C53D /* Lottie */,
@@ -267,7 +295,6 @@
 			);
 			mainGroup = ADB8C44E2C4F7E2F00D5B9BC;
 			packageReferences = (
-				ADB8C46C2C4F7F4400D5B9BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				8B7543252C588E0100B1C53D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				8B75432A2C588E6400B1C53D /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
@@ -287,7 +314,9 @@
 			files = (
 				ADB8C4622C4F7E3000D5B9BC /* Preview Assets.xcassets in Resources */,
 				8B7543232C588D8E00B1C53D /* GoogleService-Info.plist in Resources */,
+				ADBC5B0A2C59DE3700237350 /* LaundryOTF_Regular.otf in Resources */,
 				8B14B7032C57774500045B7A /* Splash.json in Resources */,
+				ADBC5B092C59DE3700237350 /* LaundryOTF_Bold.otf in Resources */,
 				ADB8C45F2C4F7E3000D5B9BC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,10 +329,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B75431C2C588A8C00B1C53D /* SignInGoogleHelper.swift in Sources */,
+				ADBC5B132C59E32D00237350 /* Colors.swift in Sources */,
 				8B7543142C58898D00B1C53D /* LoginView.swift in Sources */,
+				ADBC5B062C59DC7600237350 /* CustomFont.swift in Sources */,
 				8BAD01232C59CF5F002EC402 /* UserManager.swift in Sources */,
 				8B7543102C58892500B1C53D /* RootView.swift in Sources */,
 				ADB8C45D2C4F7E2F00D5B9BC /* ContentView.swift in Sources */,
+				ADBC5AFE2C59CF5C00237350 /* Challenge.swift in Sources */,
 				8B75431A2C588A4A00B1C53D /* AuthenticationManager.swift in Sources */,
 				8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */,
 				8BAD01212C59CF2D002EC402 /* ChallengeUser.swift in Sources */,
@@ -312,9 +344,13 @@
 				8B7543202C588AD600B1C53D /* SettingViewModel.swift in Sources */,
 				7227C47A2C5918AC0060F430 /* ChallengeDetailView.swift in Sources */,
 				ADB8C45B2C4F7E2F00D5B9BC /* TeemonDeoApp.swift in Sources */,
+				ADBC5AFA2C59CD6D00237350 /* ChallengeMainView.swift in Sources */,
+				ADBC5B002C59CFE000237350 /* FirestoreChallengeManager.swift in Sources */,
+				ADBC5B0F2C59E2CC00237350 /* TextModifire.swift in Sources */,
 				8B7543182C588A0B00B1C53D /* Utilities.swift in Sources */,
 				8B75431E2C588AAB00B1C53D /* SignInAppleHelper.swift in Sources */,
 				8B7543162C5889C500B1C53D /* SettingView.swift in Sources */,
+				ADBC5AFC2C59CF3600237350 /* ChallengeMainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,14 +576,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.5.0;
-			};
-		};
-		ADB8C46C2C4F7F4400D5B9BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.29.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

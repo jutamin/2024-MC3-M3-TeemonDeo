@@ -48,7 +48,7 @@
 		8B7543192C588A4A00B1C53D /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationManager.swift; path = TeemonDeo/Utils/AuthenticationManager.swift; sourceTree = SOURCE_ROOT; };
 		8B75431B2C588A8C00B1C53D /* SignInGoogleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInGoogleHelper.swift; path = TeemonDeo/Utils/SignInGoogleHelper.swift; sourceTree = SOURCE_ROOT; };
 		8B75431D2C588AAB00B1C53D /* SignInAppleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInAppleHelper.swift; path = TeemonDeo/Utils/SignInAppleHelper.swift; sourceTree = SOURCE_ROOT; };
-		8B75431F2C588AD600B1C53D /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingViewModel.swift; path = TeemonDeo/Utils/SettingViewModel.swift; sourceTree = SOURCE_ROOT; };
+		8B75431F2C588AD600B1C53D /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingViewModel.swift; path = TeemonDeo/ViewModels/SettingViewModel.swift; sourceTree = SOURCE_ROOT; };
 		8B7543212C588CFC00B1C53D /* TeemonDeo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeemonDeo.entitlements; sourceTree = "<group>"; };
 		8B7543222C588D8E00B1C53D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8B7543242C588DA200B1C53D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };

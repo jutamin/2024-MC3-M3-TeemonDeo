@@ -22,7 +22,7 @@ struct TabbarView: View {
             }
             
             NavigationStack {
-                ChallengeMainView()
+                ContentView()
             }
             .tabItem {
                 Image(systemName: "star.fill")

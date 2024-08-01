@@ -17,7 +17,7 @@ struct ChallengeUser: Codable, Hashable {
     init(auth: AuthDataResultModel) {
         self.userId = auth.uid
         self.userEmail = auth.email
-        self.userNickname = ""
+        self.userNickname = "누구길래티몬데오"
         self.userTier = 1
     }
 }

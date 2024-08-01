@@ -39,6 +39,7 @@
 		ADBC5B0A2C59DE3700237350 /* LaundryOTF_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ADBC5B082C59DE3700237350 /* LaundryOTF_Regular.otf */; };
 		ADBC5B0F2C59E2CC00237350 /* TextModifire.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBC5B0E2C59E2CC00237350 /* TextModifire.swift */; };
 		ADBC5B132C59E32D00237350 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBC5B122C59E32D00237350 /* Colors.swift */; };
+		ADBC5B152C5A2BCD00237350 /* ChallengeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBC5B142C5A2BCD00237350 /* ChallengeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		ADBC5B082C59DE3700237350 /* LaundryOTF_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaundryOTF_Regular.otf; sourceTree = "<group>"; };
 		ADBC5B0E2C59E2CC00237350 /* TextModifire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifire.swift; sourceTree = "<group>"; };
 		ADBC5B122C59E32D00237350 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		ADBC5B142C5A2BCD00237350 /* ChallengeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				8B7543132C58898D00B1C53D /* LoginView.swift */,
 				8B7543152C5889C500B1C53D /* SettingView.swift */,
 				ADBC5AF92C59CD6D00237350 /* ChallengeMainView.swift */,
+				ADBC5B142C5A2BCD00237350 /* ChallengeDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				ADBC5B0F2C59E2CC00237350 /* TextModifire.swift in Sources */,
 				8B7543182C588A0B00B1C53D /* Utilities.swift in Sources */,
 				8B75431E2C588AAB00B1C53D /* SignInAppleHelper.swift in Sources */,
+				ADBC5B152C5A2BCD00237350 /* ChallengeDetailView.swift in Sources */,
 				8B7543162C5889C500B1C53D /* SettingView.swift in Sources */,
 				ADBC5AFC2C59CF3600237350 /* ChallengeMainViewModel.swift in Sources */,
 			);

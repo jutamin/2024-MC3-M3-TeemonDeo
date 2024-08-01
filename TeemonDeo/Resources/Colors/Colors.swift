@@ -32,9 +32,24 @@ extension Color {
     
     static let cameraButtonStroke = Color(hex: "#292C2C")
     static let gray800 = Color(hex: "#292C2C")
+    static let gray200 = Color(hex: "#DFE2E9")
+    static let gray100 = Color(hex: "F6F8FA")
 
-    
     static let mainBlue = Color(hex: "#00D1FF")
     
     
+
+}
+
+
+
+// MARK: ChallengeMainView 주차별 챌린지
+extension Color {
+    
+    static let periodBoxBlue = Color(hex:"00D1FF")
+    static let periodTextBlue = Color(hex:"1BC2E6")
+    static let periodBoxGreen = Color(hex:"66E55B")
+    static let periodTextGreen = Color(hex:"4DC542")
+    static let periodBoxPink = Color(hex:"FE88E4")
+    static let periodTextPink = Color(hex:"F276D7")
 }

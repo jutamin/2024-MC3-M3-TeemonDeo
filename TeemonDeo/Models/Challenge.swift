@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Challenge: Hashable {
+struct Challenge: Identifiable, Hashable {
     let id: String
     let challengeName: String
     let challengeStartDate: String

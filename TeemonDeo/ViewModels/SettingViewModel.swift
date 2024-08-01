@@ -15,6 +15,7 @@ final class SettingsViewModel: ObservableObject {
     //추가
     @Published var challengeUser: ChallengeUser? = nil
 
+
     func loadAuthProviders() {
         if let providers = try? AuthenticationManager.shared.getProviders() {
             authProviders = providers
@@ -38,4 +39,5 @@ final class SettingsViewModel: ObservableObject {
     func loadChallnegeUser() {
         self.challengeUser = try? AuthenticationManager.shared.getChallnegeUser()
     }
+
 }

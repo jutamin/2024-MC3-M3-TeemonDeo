@@ -27,6 +27,15 @@
 		8BAD01232C59CF5F002EC402 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAD01222C59CF5F002EC402 /* UserManager.swift */; };
 		8BAD01252C59D047002EC402 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8BAD01242C59D047002EC402 /* FirebaseFirestoreSwift */; };
 		8BAD01272C59D0FE002EC402 /* AuthDataResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAD01262C59D0FE002EC402 /* AuthDataResultModel.swift */; };
+		AD13C8112C5B35B100B87781 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8102C5B35B100B87781 /* Challenge.swift */; };
+		AD13C8132C5B35E000B87781 /* ChallengeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8122C5B35E000B87781 /* ChallengeMainView.swift */; };
+		AD13C8152C5B35FD00B87781 /* ChallengeMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8142C5B35FD00B87781 /* ChallengeMainViewModel.swift */; };
+		AD13C8172C5B362C00B87781 /* FireStoreChallengeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8162C5B362C00B87781 /* FireStoreChallengeManager.swift */; };
+		AD13C8192C5B364800B87781 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8182C5B364800B87781 /* Colors.swift */; };
+		AD13C81B2C5B366700B87781 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C81A2C5B366700B87781 /* CustomFont.swift */; };
+		AD13C81E2C5B368200B87781 /* LaundryOTF_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C81C2C5B368200B87781 /* LaundryOTF_Bold.otf */; };
+		AD13C81F2C5B368200B87781 /* LaundryOTF_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C81D2C5B368200B87781 /* LaundryOTF_Regular.otf */; };
+		AD13C8232C5B372000B87781 /* TextModifire.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8222C5B372000B87781 /* TextModifire.swift */; };
 		ADB8C45B2C4F7E2F00D5B9BC /* TeemonDeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB8C45A2C4F7E2F00D5B9BC /* TeemonDeoApp.swift */; };
 		ADB8C45D2C4F7E2F00D5B9BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */; };
 		ADB8C45F2C4F7E3000D5B9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB8C45E2C4F7E3000D5B9BC /* Assets.xcassets */; };
@@ -55,6 +64,15 @@
 		8BAD01202C59CF2D002EC402 /* ChallengeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeUser.swift; sourceTree = "<group>"; };
 		8BAD01222C59CF5F002EC402 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserManager.swift; path = TeemonDeo/Services/UserManager.swift; sourceTree = SOURCE_ROOT; };
 		8BAD01262C59D0FE002EC402 /* AuthDataResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataResultModel.swift; sourceTree = "<group>"; };
+		AD13C8102C5B35B100B87781 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		AD13C8122C5B35E000B87781 /* ChallengeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMainView.swift; sourceTree = "<group>"; };
+		AD13C8142C5B35FD00B87781 /* ChallengeMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMainViewModel.swift; sourceTree = "<group>"; };
+		AD13C8162C5B362C00B87781 /* FireStoreChallengeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreChallengeManager.swift; sourceTree = "<group>"; };
+		AD13C8182C5B364800B87781 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		AD13C81A2C5B366700B87781 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		AD13C81C2C5B368200B87781 /* LaundryOTF_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaundryOTF_Bold.otf; sourceTree = "<group>"; };
+		AD13C81D2C5B368200B87781 /* LaundryOTF_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaundryOTF_Regular.otf; sourceTree = "<group>"; };
+		AD13C8222C5B372000B87781 /* TextModifire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifire.swift; sourceTree = "<group>"; };
 		ADB8C4572C4F7E2F00D5B9BC /* TeemonDeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeemonDeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB8C45A2C4F7E2F00D5B9BC /* TeemonDeoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeemonDeoApp.swift; sourceTree = "<group>"; };
 		ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD13C8212C5B370600B87781 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				AD13C8222C5B372000B87781 /* TextModifire.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		ADB8C44E2C4F7E2F00D5B9BC = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				ADB8C45E2C4F7E3000D5B9BC /* Assets.xcassets */,
+				AD13C8212C5B370600B87781 /* Modifiers */,
 				ADB8C47C2C4F804300D5B9BC /* Colors */,
 				ADB8C47B2C4F803500D5B9BC /* Fonts */,
 			);
@@ -157,6 +184,7 @@
 				8BAD01222C59CF5F002EC402 /* UserManager.swift */,
 				8B75431B2C588A8C00B1C53D /* SignInGoogleHelper.swift */,
 				8B75431D2C588AAB00B1C53D /* SignInAppleHelper.swift */,
+				AD13C8162C5B362C00B87781 /* FireStoreChallengeManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -165,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				8B75431F2C588AD600B1C53D /* SettingViewModel.swift */,
+				AD13C8142C5B35FD00B87781 /* ChallengeMainViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -178,6 +207,7 @@
 				8B7543132C58898D00B1C53D /* LoginView.swift */,
 				8B7543152C5889C500B1C53D /* SettingView.swift */,
 				7227C4792C5918AC0060F430 /* ChallengeDetailView.swift */,
+				AD13C8122C5B35E000B87781 /* ChallengeMainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +217,7 @@
 			children = (
 				8BAD01202C59CF2D002EC402 /* ChallengeUser.swift */,
 				8BAD01262C59D0FE002EC402 /* AuthDataResultModel.swift */,
+				AD13C8102C5B35B100B87781 /* Challenge.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,6 +233,9 @@
 		ADB8C47B2C4F803500D5B9BC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				AD13C81C2C5B368200B87781 /* LaundryOTF_Bold.otf */,
+				AD13C81D2C5B368200B87781 /* LaundryOTF_Regular.otf */,
+				AD13C81A2C5B366700B87781 /* CustomFont.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -209,6 +243,7 @@
 		ADB8C47C2C4F804300D5B9BC /* Colors */ = {
 			isa = PBXGroup;
 			children = (
+				AD13C8182C5B364800B87781 /* Colors.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -287,7 +322,9 @@
 			files = (
 				ADB8C4622C4F7E3000D5B9BC /* Preview Assets.xcassets in Resources */,
 				8B7543232C588D8E00B1C53D /* GoogleService-Info.plist in Resources */,
+				AD13C81F2C5B368200B87781 /* LaundryOTF_Regular.otf in Resources */,
 				8B14B7032C57774500045B7A /* Splash.json in Resources */,
+				AD13C81E2C5B368200B87781 /* LaundryOTF_Bold.otf in Resources */,
 				ADB8C45F2C4F7E3000D5B9BC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,20 +338,27 @@
 			files = (
 				8B75431C2C588A8C00B1C53D /* SignInGoogleHelper.swift in Sources */,
 				8B7543142C58898D00B1C53D /* LoginView.swift in Sources */,
+				AD13C8192C5B364800B87781 /* Colors.swift in Sources */,
+				AD13C8232C5B372000B87781 /* TextModifire.swift in Sources */,
 				8BAD01232C59CF5F002EC402 /* UserManager.swift in Sources */,
 				8B7543102C58892500B1C53D /* RootView.swift in Sources */,
+				AD13C8112C5B35B100B87781 /* Challenge.swift in Sources */,
 				ADB8C45D2C4F7E2F00D5B9BC /* ContentView.swift in Sources */,
 				8B75431A2C588A4A00B1C53D /* AuthenticationManager.swift in Sources */,
+				AD13C81B2C5B366700B87781 /* CustomFont.swift in Sources */,
 				8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */,
+				AD13C8152C5B35FD00B87781 /* ChallengeMainViewModel.swift in Sources */,
 				8BAD01212C59CF2D002EC402 /* ChallengeUser.swift in Sources */,
 				8B7543122C58894300B1C53D /* TabbarView.swift in Sources */,
 				8BAD01272C59D0FE002EC402 /* AuthDataResultModel.swift in Sources */,
+				AD13C8132C5B35E000B87781 /* ChallengeMainView.swift in Sources */,
 				8B7543202C588AD600B1C53D /* SettingViewModel.swift in Sources */,
 				7227C47A2C5918AC0060F430 /* ChallengeDetailView.swift in Sources */,
 				ADB8C45B2C4F7E2F00D5B9BC /* TeemonDeoApp.swift in Sources */,
 				8B7543182C588A0B00B1C53D /* Utilities.swift in Sources */,
 				8B75431E2C588AAB00B1C53D /* SignInAppleHelper.swift in Sources */,
 				8B7543162C5889C500B1C53D /* SettingView.swift in Sources */,
+				AD13C8172C5B362C00B87781 /* FireStoreChallengeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

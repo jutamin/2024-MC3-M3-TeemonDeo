@@ -59,7 +59,7 @@ struct SettingView: View {
                     }
                     .padding(.horizontal)
                 
-                
+                // 로그아웃, 계정삭제 버튼
                 List {
                     // 로그아웃 버튼
                     Button("Log out") {
@@ -87,8 +87,8 @@ struct SettingView: View {
                     }
                 }
                 .onAppear {
+                    // 어떤 SSO로 로그인했는지 확인
                     viewModel.loadAuthProviders()
-                    viewModel.loadAuthUser()
                 }
             }
             .navigationBarItems(leading: Text("관리").font(.title).fontWeight(.bold))
@@ -98,6 +98,7 @@ struct SettingView: View {
 }
 
 struct profileView: View {
+    @StateObject private var viewModel = SettingsViewModel()
     var body: some View {
         HStack(spacing: 10) {
             Image("defaultProfileImage")
@@ -105,10 +106,10 @@ struct profileView: View {
                 .frame(maxWidth: 60, maxHeight: 60)
             
             VStack(alignment: .leading, spacing: 10) {
-                Text("누구길래티몬데오")
+                Text(viewModel.challengeUser?.userNickname ?? "유저닉네임")
                     .font(.headline)
                     .fontWeight(.bold)
-                Text("🎖️ 개쩌는 티어")
+                Text("🎖️ 개쩌는 티어: \(viewModel.challengeUser?.userTier ?? 111)")
                     .font(.footnote)
                     .foregroundStyle(.blue)
             }
@@ -129,7 +130,11 @@ struct profileView: View {
                     }
             })
             .padding(.bottom, 30)
-        }.padding(.horizontal)
+        }
+        .padding(.horizontal)
+        .onAppear(){
+            viewModel.loadChallnegeUser()
+        }
     }
 }
 

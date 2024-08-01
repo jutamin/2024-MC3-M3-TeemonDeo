@@ -12,6 +12,8 @@ final class SettingsViewModel: ObservableObject {
     
     @Published var authProviders: [AuthProviderOption] = []
     @Published var authUser: AuthDataResultModel? = nil
+    //추가
+    @Published var challengeUser: ChallengeUser? = nil
 
     func loadAuthProviders() {
         if let providers = try? AuthenticationManager.shared.getProviders() {
@@ -20,6 +22,7 @@ final class SettingsViewModel: ObservableObject {
     }
     
     func loadAuthUser() {
+        // SSO 로그인 정보 가져오기
         self.authUser = try? AuthenticationManager.shared.getAuthenticatedUser()
     }
     
@@ -29,5 +32,10 @@ final class SettingsViewModel: ObservableObject {
     
     func deleteAccount() async throws {
         try await AuthenticationManager.shared.delete()
+    }
+
+    // Friebase에서 유저 정보 가져오기
+    func loadChallnegeUser() {
+        self.challengeUser = try? AuthenticationManager.shared.getChallnegeUser()
     }
 }

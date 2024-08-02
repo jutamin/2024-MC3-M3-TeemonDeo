@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7227C47A2C5918AC0060F430 /* ChallengeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7227C4792C5918AC0060F430 /* ChallengeDetailView.swift */; };
+		72FEB9602C5A1D0100F64B71 /* ChallengeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEB95F2C5A1D0100F64B71 /* ChallengeDetailViewModel.swift */; };
+		72FEB9622C5A1D8900F64B71 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEB9612C5A1D8900F64B71 /* Challenge.swift */; };
 		8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B6FD2C57766800045B7A /* LottieManager.swift */; };
 		8B14B7032C57774500045B7A /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B14B7022C57774500045B7A /* Splash.json */; };
 		8B7543102C58892500B1C53D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B75430F2C58892500B1C53D /* RootView.swift */; };
@@ -47,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		7227C4792C5918AC0060F430 /* ChallengeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailView.swift; sourceTree = "<group>"; };
+		72FEB95F2C5A1D0100F64B71 /* ChallengeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailViewModel.swift; sourceTree = "<group>"; };
+		72FEB9612C5A1D8900F64B71 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		8B14B6FD2C57766800045B7A /* LottieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieManager.swift; sourceTree = "<group>"; };
 		8B14B7022C57774500045B7A /* Splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.json; sourceTree = "<group>"; };
 		8B75430F2C58892500B1C53D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				8B75431F2C588AD600B1C53D /* SettingViewModel.swift */,
+				72FEB95F2C5A1D0100F64B71 /* ChallengeDetailViewModel.swift */,
 				AD13C8142C5B35FD00B87781 /* ChallengeMainViewModel.swift */,
 			);
 			path = ViewModels;
@@ -215,6 +220,7 @@
 		ADB8C4792C4F801800D5B9BC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				72FEB9612C5A1D8900F64B71 /* Challenge.swift */,
 				8BAD01202C59CF2D002EC402 /* ChallengeUser.swift */,
 				8BAD01262C59D0FE002EC402 /* AuthDataResultModel.swift */,
 				AD13C8102C5B35B100B87781 /* Challenge.swift */,
@@ -344,6 +350,7 @@
 				8B7543102C58892500B1C53D /* RootView.swift in Sources */,
 				AD13C8112C5B35B100B87781 /* Challenge.swift in Sources */,
 				ADB8C45D2C4F7E2F00D5B9BC /* ContentView.swift in Sources */,
+				72FEB9622C5A1D8900F64B71 /* Challenge.swift in Sources */,
 				8B75431A2C588A4A00B1C53D /* AuthenticationManager.swift in Sources */,
 				AD13C81B2C5B366700B87781 /* CustomFont.swift in Sources */,
 				8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */,
@@ -356,6 +363,7 @@
 				7227C47A2C5918AC0060F430 /* ChallengeDetailView.swift in Sources */,
 				ADB8C45B2C4F7E2F00D5B9BC /* TeemonDeoApp.swift in Sources */,
 				8B7543182C588A0B00B1C53D /* Utilities.swift in Sources */,
+				72FEB9602C5A1D0100F64B71 /* ChallengeDetailViewModel.swift in Sources */,
 				8B75431E2C588AAB00B1C53D /* SignInAppleHelper.swift in Sources */,
 				8B7543162C5889C500B1C53D /* SettingView.swift in Sources */,
 				AD13C8172C5B362C00B87781 /* FireStoreChallengeManager.swift in Sources */,

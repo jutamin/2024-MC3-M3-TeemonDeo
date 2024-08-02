@@ -16,9 +16,6 @@ struct ContentView: View {
 //            Text("Hello, Daisy!")
 //        }
 //        .padding()
-        
-//        LottieView(filename: "Splash")
-//            .ignoresSafeArea(.all)
         Text("hello")
         
     }

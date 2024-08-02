@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Charts
 
 struct ContentView: View {
     @StateObject private var viewModel = SettingsViewModel()
@@ -15,12 +16,11 @@ struct ContentView: View {
             Text("유저 email : \(viewModel.challengeUser?.userEmail ?? "혹시나 에러 났을 때를 대비한 디폴트 값")")
             Text("유저 닉네임 : \(viewModel.challengeUser?.userNickname ?? "혹시나 에러 났을 때를 대비한 디폴트 값")")
             Text("유저 uid : \(viewModel.challengeUser?.userTier ?? 111)") //유저 못 불러오면 111로 뜸
+            
         }
         .onAppear(){
             viewModel.loadChallnegeUser()
         }
-
-        
 //        LottieView(filename: "Splash")
 //            .ignoresSafeArea(.all)
 //        Text("hello")
@@ -32,3 +32,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
+

@@ -66,6 +66,13 @@ class FireStoreChallengeManager {
         }
     }
     
+    func countChallenge() async throws -> Int {
+//        guard let userId = userId else { return }
+        
+//        let query = try await db.collection("user").document(userId ?? "").collection("challenges").getDocuments().count
+        let count = challenges.count
+        return(count)
+    }
     
     
 }

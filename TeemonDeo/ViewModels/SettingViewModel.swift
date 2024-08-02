@@ -12,7 +12,6 @@ final class SettingsViewModel: ObservableObject {
     
     @Published var authProviders: [AuthProviderOption] = []
     @Published var authUser: AuthDataResultModel? = nil
-    //추가
     @Published var challengeUser: ChallengeUser? = nil
 
 

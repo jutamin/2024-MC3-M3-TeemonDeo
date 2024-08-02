@@ -17,6 +17,7 @@ class ChallengeMainViewModel: ObservableObject{
     //@Published var challengeUser: ChallengeUser = ChallengeUser()
     
     let fireStoreChallengeManager = FireStoreChallengeManager()
+    @Published var challengesCount: Int = 0
     
 
 //    func fetchUserData() {
@@ -35,6 +36,8 @@ class ChallengeMainViewModel: ObservableObject{
         fireStoreChallengeManager.addChallenge(challenge: challenge)
     }
     
-
+    func countChallenge(challenge: Challenge) async throws {
+        challengesCount = try await fireStoreChallengeManager.countChallenge()
+    }
     
 }

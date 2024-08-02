@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @StateObject private var viewModel = SettingsViewModel()
     var body: some View {
+
         VStack {
             Text("유저 uid : \(viewModel.challengeUser?.userId ?? "혹시나 에러 났을 때를 대비한 디폴트 값")")
             Text("유저 email : \(viewModel.challengeUser?.userEmail ?? "혹시나 에러 났을 때를 대비한 디폴트 값")")

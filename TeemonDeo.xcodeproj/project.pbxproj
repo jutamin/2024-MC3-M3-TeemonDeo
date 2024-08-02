@@ -7,11 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		5B1935B92C59CFA6001AC5B2 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1935B82C59CFA6001AC5B2 /* TimerView.swift */; };
+		5B1935BB2C59DF27001AC5B2 /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B1935BA2C59DF27001AC5B2 /* Splash.json */; };
+		5B1935BF2C59E062001AC5B2 /* TimerStopLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B1935BE2C59E062001AC5B2 /* TimerStopLottie.json */; };
+		5B1935FD2C5A2BCC001AC5B2 /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1935FC2C5A2BCC001AC5B2 /* TimerHelper.swift */; };
+		5B1935FF2C5A2BDE001AC5B2 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1935FE2C5A2BDE001AC5B2 /* TimerManager.swift */; };
+		5B1936012C5A79C6001AC5B2 /* TimerStartLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B1936002C5A79C6001AC5B2 /* TimerStartLottie.json */; };
+		5B1936032C5B244E001AC5B2 /* AudioPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1936022C5B244E001AC5B2 /* AudioPlayerViewModel.swift */; };
+		5B1936052C5B2576001AC5B2 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5B1936042C5B2576001AC5B2 /* backgroundMusic.mp3 */; };
+		5B1936092C5BC7FE001AC5B2 /* ChallengeCompleteLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B1936082C5BC7FD001AC5B2 /* ChallengeCompleteLottie.json */; };
+		5B19360B2C5C750B001AC5B2 /* Hyukoh_youngman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5B19360A2C5C750B001AC5B2 /* Hyukoh_youngman.mp3 */; };
 		7227C47A2C5918AC0060F430 /* ChallengeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7227C4792C5918AC0060F430 /* ChallengeDetailView.swift */; };
 		72FEB9602C5A1D0100F64B71 /* ChallengeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEB95F2C5A1D0100F64B71 /* ChallengeDetailViewModel.swift */; };
 		72FEB9622C5A1D8900F64B71 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEB9612C5A1D8900F64B71 /* Challenge.swift */; };
 		8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B6FD2C57766800045B7A /* LottieManager.swift */; };
-		8B14B7032C57774500045B7A /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B14B7022C57774500045B7A /* Splash.json */; };
 		8B7543102C58892500B1C53D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B75430F2C58892500B1C53D /* RootView.swift */; };
 		8B7543122C58894300B1C53D /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7543112C58894300B1C53D /* TabbarView.swift */; };
 		8B7543142C58898D00B1C53D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7543132C58898D00B1C53D /* LoginView.swift */; };
@@ -48,11 +58,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B1935B82C59CFA6001AC5B2 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		5B1935BA2C59DF27001AC5B2 /* Splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.json; sourceTree = "<group>"; };
+		5B1935BE2C59E062001AC5B2 /* TimerStopLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TimerStopLottie.json; sourceTree = "<group>"; };
+		5B1935FC2C5A2BCC001AC5B2 /* TimerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimerHelper.swift; path = TeemonDeo/Services/TimerHelper.swift; sourceTree = SOURCE_ROOT; };
+		5B1935FE2C5A2BDE001AC5B2 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimerManager.swift; path = TeemonDeo/Services/TimerManager.swift; sourceTree = SOURCE_ROOT; };
+		5B1936002C5A79C6001AC5B2 /* TimerStartLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TimerStartLottie.json; path = ../../../TimerStartLottie.json; sourceTree = "<group>"; };
+		5B1936022C5B244E001AC5B2 /* AudioPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AudioPlayerViewModel.swift; path = TeemonDeo/ViewModels/AudioPlayerViewModel.swift; sourceTree = SOURCE_ROOT; };
+		5B1936042C5B2576001AC5B2 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
+		5B1936082C5BC7FD001AC5B2 /* ChallengeCompleteLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ChallengeCompleteLottie.json; path = ../../../ChallengeCompleteLottie.json; sourceTree = "<group>"; };
+		5B19360A2C5C750B001AC5B2 /* Hyukoh_youngman.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hyukoh_youngman.mp3; sourceTree = "<group>"; };
 		7227C4792C5918AC0060F430 /* ChallengeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailView.swift; sourceTree = "<group>"; };
 		72FEB95F2C5A1D0100F64B71 /* ChallengeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailViewModel.swift; sourceTree = "<group>"; };
 		72FEB9612C5A1D8900F64B71 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		8B14B6FD2C57766800045B7A /* LottieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieManager.swift; sourceTree = "<group>"; };
-		8B14B7022C57774500045B7A /* Splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.json; sourceTree = "<group>"; };
 		8B75430F2C58892500B1C53D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		8B7543112C58894300B1C53D /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		8B7543132C58898D00B1C53D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -156,7 +175,10 @@
 		ADB8C4732C4F7FCD00D5B9BC /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				8B14B7022C57774500045B7A /* Splash.json */,
+				5B1936082C5BC7FD001AC5B2 /* ChallengeCompleteLottie.json */,
+				5B1935BE2C59E062001AC5B2 /* TimerStopLottie.json */,
+				5B1936002C5A79C6001AC5B2 /* TimerStartLottie.json */,
+				5B1935BA2C59DF27001AC5B2 /* Splash.json */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -164,6 +186,8 @@
 		ADB8C4742C4F7FDA00D5B9BC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5B19360A2C5C750B001AC5B2 /* Hyukoh_youngman.mp3 */,
+				5B1936042C5B2576001AC5B2 /* backgroundMusic.mp3 */,
 				ADB8C45E2C4F7E3000D5B9BC /* Assets.xcassets */,
 				AD13C8212C5B370600B87781 /* Modifiers */,
 				ADB8C47C2C4F804300D5B9BC /* Colors */,
@@ -185,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				8B7543192C588A4A00B1C53D /* AuthenticationManager.swift */,
+				5B1935FE2C5A2BDE001AC5B2 /* TimerManager.swift */,
+				5B1935FC2C5A2BCC001AC5B2 /* TimerHelper.swift */,
 				8BAD01222C59CF5F002EC402 /* UserManager.swift */,
 				8B75431B2C588A8C00B1C53D /* SignInGoogleHelper.swift */,
 				8B75431D2C588AAB00B1C53D /* SignInAppleHelper.swift */,
@@ -197,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				8B75431F2C588AD600B1C53D /* SettingViewModel.swift */,
+				5B1936022C5B244E001AC5B2 /* AudioPlayerViewModel.swift */,
 				72FEB95F2C5A1D0100F64B71 /* ChallengeDetailViewModel.swift */,
 				AD13C8142C5B35FD00B87781 /* ChallengeMainViewModel.swift */,
 			);
@@ -207,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */,
+				5B1935B82C59CFA6001AC5B2 /* TimerView.swift */,
 				8B75430F2C58892500B1C53D /* RootView.swift */,
 				8B7543112C58894300B1C53D /* TabbarView.swift */,
 				8B7543132C58898D00B1C53D /* LoginView.swift */,
@@ -327,11 +355,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADB8C4622C4F7E3000D5B9BC /* Preview Assets.xcassets in Resources */,
+				5B1936092C5BC7FE001AC5B2 /* ChallengeCompleteLottie.json in Resources */,
+				5B1936052C5B2576001AC5B2 /* backgroundMusic.mp3 in Resources */,
+				5B1936012C5A79C6001AC5B2 /* TimerStartLottie.json in Resources */,
 				8B7543232C588D8E00B1C53D /* GoogleService-Info.plist in Resources */,
+				5B1935BF2C59E062001AC5B2 /* TimerStopLottie.json in Resources */,
 				AD13C81F2C5B368200B87781 /* LaundryOTF_Regular.otf in Resources */,
 				8B14B7032C57774500045B7A /* Splash.json in Resources */,
 				AD13C81E2C5B368200B87781 /* LaundryOTF_Bold.otf in Resources */,
 				ADB8C45F2C4F7E3000D5B9BC /* Assets.xcassets in Resources */,
+				5B1935BB2C59DF27001AC5B2 /* Splash.json in Resources */,
+				5B19360B2C5C750B001AC5B2 /* Hyukoh_youngman.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B1936032C5B244E001AC5B2 /* AudioPlayerViewModel.swift in Sources */,
 				8B75431C2C588A8C00B1C53D /* SignInGoogleHelper.swift in Sources */,
 				8B7543142C58898D00B1C53D /* LoginView.swift in Sources */,
 				AD13C8192C5B364800B87781 /* Colors.swift in Sources */,
@@ -352,6 +387,8 @@
 				ADB8C45D2C4F7E2F00D5B9BC /* ContentView.swift in Sources */,
 				72FEB9622C5A1D8900F64B71 /* Challenge.swift in Sources */,
 				8B75431A2C588A4A00B1C53D /* AuthenticationManager.swift in Sources */,
+				5B1935B92C59CFA6001AC5B2 /* TimerView.swift in Sources */,
+				5B1935FF2C5A2BDE001AC5B2 /* TimerManager.swift in Sources */,
 				AD13C81B2C5B366700B87781 /* CustomFont.swift in Sources */,
 				8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */,
 				AD13C8152C5B35FD00B87781 /* ChallengeMainViewModel.swift in Sources */,
@@ -363,6 +400,7 @@
 				7227C47A2C5918AC0060F430 /* ChallengeDetailView.swift in Sources */,
 				ADB8C45B2C4F7E2F00D5B9BC /* TeemonDeoApp.swift in Sources */,
 				8B7543182C588A0B00B1C53D /* Utilities.swift in Sources */,
+				5B1935FD2C5A2BCC001AC5B2 /* TimerHelper.swift in Sources */,
 				72FEB9602C5A1D0100F64B71 /* ChallengeDetailViewModel.swift in Sources */,
 				8B75431E2C588AAB00B1C53D /* SignInAppleHelper.swift in Sources */,
 				8B7543162C5889C500B1C53D /* SettingView.swift in Sources */,
@@ -501,7 +539,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TeemonDeo/Preview Content\"";
-				DEVELOPMENT_TEAM = GF3B5LP7RQ;
+				DEVELOPMENT_TEAM = YUF8364M59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeemonDeo/Info.plist;
@@ -532,7 +570,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TeemonDeo/Preview Content\"";
-				DEVELOPMENT_TEAM = GF3B5LP7RQ;
+				DEVELOPMENT_TEAM = YUF8364M59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeemonDeo/Info.plist;

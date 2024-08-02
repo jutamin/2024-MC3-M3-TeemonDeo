@@ -11,18 +11,14 @@ struct ChallengeSheetView: View {
     @State var challengeTitle: String = ""
     @State var theDate: Date = Date()
     @State private var isExpanded = false
+    @State private var isSelected: Int? = nil
 
-    private func selectCategory(){
-        
-        
-    }
-    
-    
+
     
     var body: some View {
         VStack{
             HStack{
-                Text("챌린지 추가") //LaundaryGothicOTF 18 Bold
+                Text("챌린지 추가")
                     .font(.laundryBold18)
                     .frame(height: 27)
                 
@@ -59,24 +55,8 @@ struct ChallengeSheetView: View {
                 DatePicker("korea", selection: $theDate, displayedComponents: .date)
                     .labelsHidden()
                 // Wheel 스타일을 사용하려면 사이즈 커스텀이 필요하다
-//                if isExpanded {
-//                    DatePicker("", selection: $theDate, displayedComponents: [.date])
-//                        .datePickerStyle(WheelDatePickerStyle())
-//                        .frame(height: 200)
-//                        .labelsHidden()
-//                } else {
-//                    Text(theDate, style: .date)
-//                        .padding()
-//                        .background(Color.gray.opacity(0.2))
-//                        .cornerRadius(10)
-//                }
             }
             .padding(10)
-//            .onTapGesture {
-//                withAnimation {
-//                    isExpanded.toggle()
-//                }
-//            }
 
             Divider()
                 .padding(.horizontal, 10)
@@ -87,11 +67,29 @@ struct ChallengeSheetView: View {
 
                 Spacer()
                 
-                Button{
-                    
-                } label: {
-                    Image(systemName: "xmark")
-                }
+                challengePeriodText(period: 1, boxColor: .LightBlue, textColor: .DarkBlue)
+//                    .contextMenu {
+//                        Button {
+//                            backgroundColor = .green
+//                        } label: {
+//                            Label("airtag", systemImage: "airtag.fill")
+//                        }
+//                        
+//                        Button {
+//                            backgroundColor = .cyan
+//                        } label: {
+//                            Label("applewatch", systemImage: "applewatch.watchface")
+//                        }
+//                        
+//                        Button {
+//                            backgroundColor = .pink
+//                        } label: {
+//                            HStack {
+//                                Text("airpods")
+//                                Image(systemName: "airpods.gen3")
+//                            }
+//                        }
+//                    }
             }
             .padding(10)
 
@@ -112,21 +110,53 @@ struct ChallengeSheetView: View {
             .padding(10)
             
             HStack{
-
+                SelectCategoryView(selected: isSelected == 1, item: "신발장")
+                    .onTapGesture {
+                        isSelected = (isSelected == 1) ? nil : 1
+                    }
+                SelectCategoryView(selected: isSelected == 2, item: "서랍")
+                    .onTapGesture {
+                        isSelected = (isSelected == 2) ? nil : 2
+                    }
+                SelectCategoryView(selected: isSelected == 3, item: "책상")
+                    .onTapGesture {
+                        isSelected = (isSelected == 3) ? nil : 3
+                    }
+                SelectCategoryView(selected: isSelected == 4, item: "옷장")
+                    .onTapGesture {
+                        isSelected = (isSelected == 4) ? nil : 4
+                    }
+                SelectCategoryView(selected: isSelected == 5, item: "화장대")
+                    .onTapGesture {
+                        isSelected = (isSelected == 5) ? nil : 5
+                    }
             }
             .padding(10)
 
         }
         .padding(10)
-
-        
     }
+    
+    func getPeriodColors(period: Int) -> (boxColor: Color, textColor: Color) {
+        switch period {
+        case 1:
+            return (.periodBoxBlue, .periodTextBlue)
+        case 2:
+            return (.periodBoxGreen, .periodTextGreen)
+        case 3:
+            return (.periodBoxPink, .periodTextPink)
+        default:
+            return (.periodBoxBlue, .periodTextBlue)
+        }
+    }
+    
+    
 }
 
 
 
-struct selectCategoryView: View {
-    @State var selected: Bool = false
+struct SelectCategoryView: View {
+    var selected: Bool
     var item: String
     
     var body: some View {
@@ -143,6 +173,18 @@ struct selectCategoryView: View {
 }
 
 
+extension ChallengeSheetView {
+    
+    @ViewBuilder
+    private func challengePeriodText(period: Int, boxColor: Color, textColor: Color) -> some View {
+        Text("\(period)주 챌린지")
+            .font(.SuitBody1)
+            .foregroundColor(textColor)
+            .padding(5)
+            .padding(.horizontal, 5)
+            .background(RoundedRectangle(cornerRadius: 8).fill(boxColor).frame(height: 32))
+    }
+}
 
 #Preview {
     ChallengeSheetView()

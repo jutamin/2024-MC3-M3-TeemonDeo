@@ -9,7 +9,11 @@ import SwiftUI
 
 struct ChallengeMainView: View {
     @StateObject private var viewModel = ChallengeMainViewModel()
+    @State var isShowingSheet = false
+    @State var detents: PresentationDetent = .height(613)
 
+    
+    
     var body: some View {
         NavigationStack{
             VStack{
@@ -49,7 +53,9 @@ struct ChallengeMainView: View {
                         
                         Spacer()
                         
-                        Button(action: {  }, label: {
+                        Button(action: { 
+                            isShowingSheet = true
+                        }, label: {
                             addChallengeButton()
                         })
                     }
@@ -86,7 +92,10 @@ struct ChallengeMainView: View {
             }
             
         }
-        
+        .sheet(isPresented: $isShowingSheet) {
+            ChallengeSheetView()
+                .presentationDetents([.height(613)], selection: $detents)
+        }
     }
 }
 

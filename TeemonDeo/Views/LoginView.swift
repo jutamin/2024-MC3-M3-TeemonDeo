@@ -14,14 +14,30 @@ final class AuthenticationViewModel: ObservableObject {
         
     func signInGoogle() async throws {
         let helper = SignInGoogleHelper()
-        let tokens = try await helper.signIn() // 구글 로그인 과정 (비동기로 진행)
-        try await AuthenticationManager.shared.signInWithGoogle(tokens: tokens) // 구글 로그인 토큰 값으로 firebase에 user 정보 저장
+        
+        // 구글 로그인 과정 (비동기로 진행)
+        let tokens = try await helper.signIn()
+        
+        // 구글 로그인 토큰 값으로 firebase에 user 정보 저장
+        let authDataResult = try await AuthenticationManager.shared.signInWithGoogle(tokens: tokens)
+        
+        // user 정보를 firestore에 저장
+        let user = ChallengeUser(auth: authDataResult)
+        try await UserManager.shared.createNewUser(user: user)
     }
     
     func signInApple() async throws {
         let helper = SignInAppleHelper()
-        let tokens = try await helper.startSignInWithAppleFlow() // 애플 로그인 과정 (비동기로 진행)
-        try await AuthenticationManager.shared.signInWithApple(tokens: tokens) // 애플 로그인 토큰 값으로 firebase에 user 정보 저장
+        
+        // 애플 로그인 과정 (비동기로 진행)
+        let tokens = try await helper.startSignInWithAppleFlow()
+        
+        // 애플 로그인 토큰 값으로 firebase에 user 정보 저장
+        let authDataResult = try await AuthenticationManager.shared.signInWithApple(tokens: tokens)
+        
+        // user 정보를 firestore에 저장
+        let user = ChallengeUser(auth: authDataResult)
+        try await UserManager.shared.createNewUser(user: user)
     }
 }
 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChallengeMainView: View {
-    @StateObject private var viewModel = ChallengeMainViewModel()
+    @StateObject var viewModel = ChallengeMainViewModel()
     @State var isShowingSheet = false
     @State var detents: PresentationDetent = .height(613)
 
@@ -43,10 +43,10 @@ struct ChallengeMainView: View {
                     .padding()
                     
                     //TODO: ProgressBar Status
+
                     
-                    
-                    // MARK: 임시
                     ScrollView{
+                        
                         HStack{
                             Text("진행 중인 챌린지")
                                 .font(.laundryBold18)
@@ -63,44 +63,38 @@ struct ChallengeMainView: View {
                         .padding(24)
                         .padding(.top)
                         
-                        ForEach([Challenge(id: UUID().uuidString, challengeName: "책상부터 비워보자", challengeStartDate: "2024.07.21", challengePeriod: 1, challengeSpace: "책상", isChallengeSucceed: false)]) { chall in
-                            NavigationLink(value: chall) {
-                                challengeCardView(challenge: chall)
+                        ForEach(viewModel.challenges) { data in
+                            NavigationLink(value: data) {
+                                challengeCardView(challenge: data)
                             }
                         }
-                        //                    .navigationDestination(for: Challenge.self) { value in
-                        //                        ChallengeDetailView(challengeData: value)
-                        //                    }
+//                        .navigationDestination(for: Challenge.self) { value in
+//                            ChallengeDetailView(challengeData: value)
+//                        }
+                        
                     }
                     .background(Color.gray100)
                     .padding(.top, 20)
-                    
-                    //                ScrollView{
-                    //                    ForEach(viewModel.challenges) { chall in
-                    //                        NavigationLink(value: chall) {
-                    //                            Text("fdsafdsa")
-                    //                        }
-                    //
-                    //
-                    //                    }
-                    //                    .navigationDestination(for: Challenge.self) { value in
-                    //                        ChallengeDetailView(challengeData: value)
-                    //                    }
-                    //
-                    //                }
+
                     
                     
                 }
-                
+                .onAppear{
+                    viewModel.loadChallenge()
+                }
+                .refreshable {
+                    viewModel.loadChallenge()
+                }
             }
             .sheet(isPresented: $isShowingSheet) {
-                ChallengeSheetView()
+                ChallengeSheetView(viewModel: viewModel,isShowingSheet: $isShowingSheet)
 //                    .presentationDetents([.height(geometry.size.height * 613.0 / 855.0)], selection: $detents)
-                    //.presentationDetents([.height(613)], selection: $detents)
+//                    .presentationDetents([.height(613)], selection: $detents)
                     .ignoresSafeArea(.keyboard)
                     .edgesIgnoringSafeArea(.bottom)
-                //.edgesIgnoringSafeArea(.bottom)
             }
+
+
             
     }
 }

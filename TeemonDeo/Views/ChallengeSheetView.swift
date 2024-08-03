@@ -5,15 +5,52 @@
 //  Created by TEO on 8/2/24.
 //
 
+import Foundation
 import SwiftUI
 
 struct ChallengeSheetView: View {
+    @ObservedObject var viewModel: ChallengeMainViewModel
+    
     @State var challengeTitle: String = ""
-    @State var theDate: Date = Date()
+    @State var startDate: Date = Date()
     @State private var isExpanded = false
     @State private var isSelected: Int? = nil
     @State private var challengePeriod: Int = 1
+    @State private var isContentsFilled: Bool = false
     
+    @Binding var isShowingSheet: Bool
+    
+    func isContentsFilled(_ challenge: Challenge) -> Bool {
+        if challenge.challengeName == "" || challenge.challengeSpace == "" || challenge.challengeStartDate == makeStrDate(Date()) || challenge.challengeSpace == "" {
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    func makeStrDate(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        return dateFormatter.string(from: date)
+    }
+    
+    var challengeSpace: String {
+        switch isSelected {
+        case 1:
+            return "신발장"
+        case 2:
+            return "서랍"
+        case 3:
+            return "책상"
+        case 4:
+            return "옷장"
+        case 5:
+            return "화장대"
+        default:
+            return ""
+        }
+    }
     
     var body: some View {
         VStack{
@@ -26,7 +63,7 @@ struct ChallengeSheetView: View {
                     Spacer()
                     
                     Button{
-                        
+                        isShowingSheet = false
                     } label: {
                         Image(systemName: "xmark")
                             .foregroundColor(.gray800)
@@ -54,7 +91,7 @@ struct ChallengeSheetView: View {
                     
                     Spacer()
                     
-                    DatePicker("korea", selection: $theDate, displayedComponents: .date)
+                    DatePicker("korea", selection: $startDate, displayedComponents: .date)
                         .labelsHidden()
                     // Wheel 스타일을 사용하려면 사이즈 커스텀이 필요하다
                 }
@@ -103,7 +140,7 @@ struct ChallengeSheetView: View {
                 .padding(10)
                 
                 HStack{
-                    SelectCategoryView(selected: isSelected == 1, item: "신발장")
+                    SelectCategoryView(selected: isSelected == 1, item: "dS")
                         .onTapGesture {
                             isSelected = (isSelected == 1) ? nil : 1
                         }
@@ -132,7 +169,18 @@ struct ChallengeSheetView: View {
             
             Spacer()
             
-            Button(action: {  }) {
+            
+            Button(action: {
+                let willUploadChallnege = Challenge(id: UUID().uuidString, challengeName: challengeTitle, challengeStartDate: makeStrDate(startDate), challengePeriod: challengePeriod, challengeSpace: challengeSpace, isChallengeSucceed: false)
+                let isContentsFilled = isContentsFilled(willUploadChallnege)
+                if isContentsFilled {
+                    viewModel.uploadChallenge(challenge: willUploadChallnege)
+                    isShowingSheet = false
+                } else {
+                    // TODO: 값이 없을 때 메시지
+                    print("모든 항목을 입력해주세요")
+                }
+            }) {
                 VStack{
                     Text("생성하기")
                         .font(.SuitTitle2)
@@ -145,22 +193,14 @@ struct ChallengeSheetView: View {
                 .frame(maxWidth: .infinity, maxHeight: 86)
                 .background(Rectangle().fill(.black))
             }
+            
+            
+            
         }
-
+        
     }
     
-    func getPeriodColors(period: Int) -> (boxColor: Color, textColor: Color) {
-        switch period {
-        case 1:
-            return (.LightBlue, .DarkBlue)
-        case 2:
-            return (.LightGreeen, .DarkGreen)
-        case 3:
-            return (.LightPink, .DarkPink)
-        default:
-            return (.LightBlue, .DarkBlue)
-        }
-    }
+    
 }
 
 
@@ -218,6 +258,6 @@ extension ChallengeSheetView {
     }
 }
 
-#Preview {
-    ChallengeSheetView()
-}
+//#Preview {
+//    ChallengeSheetView()
+//}

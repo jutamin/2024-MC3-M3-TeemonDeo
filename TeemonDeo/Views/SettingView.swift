@@ -115,11 +115,11 @@ struct endedChallengeListView: View {
                 
                 RoundedRectangle(cornerRadius: 2)
                     .frame(width: 10, height: 10)
-                    .foregroundStyle(Color.mainBlue)
+                    .foregroundStyle(Color.Blue)
                 
                 Text("3 완료")
                     .font(.callout)
-                    .foregroundStyle(Color.mainBlue)
+                    .foregroundStyle(Color.Blue)
                 
                 RoundedRectangle(cornerRadius: 2)
                     .frame(width: 10, height: 10)

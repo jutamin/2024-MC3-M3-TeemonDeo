@@ -15,7 +15,7 @@ struct RootView: View {
     var body: some View {
         ZStack{
             if showSplashView {
-                LottieView(filename: "Splash")
+                LottieView(filename: "Splash", loopMode: .loop)
                     .opacity(showSplashView ? 1 : 0)
                     .ignoresSafeArea(.all)
                     .onAppear {

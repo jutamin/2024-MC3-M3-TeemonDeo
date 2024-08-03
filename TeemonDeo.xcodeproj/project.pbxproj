@@ -701,6 +701,7 @@
 				minimumVersion = 7.1.0;
 			};
 		};
+
 		8BF2D1602C5B6ED30068A71E /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
@@ -735,6 +736,7 @@
 			package = ADB8C46C2C4F7F4400D5B9BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
 		};
+
 		8BF2D1612C5B6ED30068A71E /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8BF2D1602C5B6ED30068A71E /* XCRemoteSwiftPackageReference "lottie-ios" */;

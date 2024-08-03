@@ -11,14 +11,17 @@ struct RootView: View {
     
     @State private var showSignInView: Bool = false
     @State private var showSplashView: Bool = true
+    var startLottieView = LottieView(filename: "Splash", loopMode: .playOnce)
+
     
     var body: some View {
         ZStack{
             if showSplashView {
-                LottieView(filename: "Splash", loopMode: .loop)
+                startLottieView
                     .opacity(showSplashView ? 1 : 0)
                     .ignoresSafeArea(.all)
                     .onAppear {
+                        startLottieView.play()
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
                             withAnimation(.easeIn(duration: 0.3)) {
                                 showSplashView = false

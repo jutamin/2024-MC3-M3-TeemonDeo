@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5B1935B92C59CFA6001AC5B2 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1935B82C59CFA6001AC5B2 /* TimerView.swift */; };
-		5B1935BB2C59DF27001AC5B2 /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B1935BA2C59DF27001AC5B2 /* Splash.json */; };
 		5B1935BF2C59E062001AC5B2 /* TimerStopLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B1935BE2C59E062001AC5B2 /* TimerStopLottie.json */; };
 		5B1935FD2C5A2BCC001AC5B2 /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1935FC2C5A2BCC001AC5B2 /* TimerHelper.swift */; };
 		5B1935FF2C5A2BDE001AC5B2 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1935FE2C5A2BDE001AC5B2 /* TimerManager.swift */; };
@@ -36,9 +35,10 @@
 		8BAD01272C59D0FE002EC402 /* AuthDataResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAD01262C59D0FE002EC402 /* AuthDataResultModel.swift */; };
 		8BF2D1622C5B6ED30068A71E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8BF2D1612C5B6ED30068A71E /* Lottie */; };
 		8BF2D1642C5BEB1A0068A71E /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2D1632C5BEB1A0068A71E /* PieChartView.swift */; };
+		8BF2D16C2C5E0A630068A71E /* ChallengeCompleteLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BF2D16B2C5E0A630068A71E /* ChallengeCompleteLottie.json */; };
+		8BF2D16E2C5E0A6E0068A71E /* TimerStartLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BF2D16D2C5E0A6E0068A71E /* TimerStartLottie.json */; };
+		8BF2D1702C5E0B240068A71E /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BF2D16F2C5E0B230068A71E /* Splash.json */; };
 		AB44FE6B2C5D26E70060310F /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB44FE6A2C5D26E70060310F /* Challenge.swift */; };
-		AB44FE6E2C5D27230060310F /* ChallengeCompleteLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = AB44FE6C2C5D27230060310F /* ChallengeCompleteLottie.json */; };
-		AB44FE6F2C5D27230060310F /* TimerStartLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = AB44FE6D2C5D27230060310F /* TimerStartLottie.json */; };
 		AD13C8132C5B35E000B87781 /* ChallengeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8122C5B35E000B87781 /* ChallengeMainView.swift */; };
 		AD13C8152C5B35FD00B87781 /* ChallengeMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8142C5B35FD00B87781 /* ChallengeMainViewModel.swift */; };
 		AD13C8172C5B362C00B87781 /* FireStoreChallengeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8162C5B362C00B87781 /* FireStoreChallengeManager.swift */; };
@@ -77,7 +77,6 @@
 
 /* Begin PBXFileReference section */
 		5B1935B82C59CFA6001AC5B2 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
-		5B1935BA2C59DF27001AC5B2 /* Splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.json; sourceTree = "<group>"; };
 		5B1935BE2C59E062001AC5B2 /* TimerStopLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TimerStopLottie.json; sourceTree = "<group>"; };
 		5B1935FC2C5A2BCC001AC5B2 /* TimerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimerHelper.swift; path = TeemonDeo/Services/TimerHelper.swift; sourceTree = SOURCE_ROOT; };
 		5B1935FE2C5A2BDE001AC5B2 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimerManager.swift; path = TeemonDeo/Services/TimerManager.swift; sourceTree = SOURCE_ROOT; };
@@ -103,9 +102,10 @@
 		8BAD01222C59CF5F002EC402 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserManager.swift; path = TeemonDeo/Services/UserManager.swift; sourceTree = SOURCE_ROOT; };
 		8BAD01262C59D0FE002EC402 /* AuthDataResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataResultModel.swift; sourceTree = "<group>"; };
 		8BF2D1632C5BEB1A0068A71E /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		8BF2D16B2C5E0A630068A71E /* ChallengeCompleteLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ChallengeCompleteLottie.json; sourceTree = "<group>"; };
+		8BF2D16D2C5E0A6E0068A71E /* TimerStartLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TimerStartLottie.json; sourceTree = "<group>"; };
+		8BF2D16F2C5E0B230068A71E /* Splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.json; sourceTree = "<group>"; };
 		AB44FE6A2C5D26E70060310F /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
-		AB44FE6C2C5D27230060310F /* ChallengeCompleteLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ChallengeCompleteLottie.json; path = ../../../../ChallengeCompleteLottie.json; sourceTree = "<group>"; };
-		AB44FE6D2C5D27230060310F /* TimerStartLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TimerStartLottie.json; path = ../../../../TimerStartLottie.json; sourceTree = "<group>"; };
 		AD13C8122C5B35E000B87781 /* ChallengeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMainView.swift; sourceTree = "<group>"; };
 		AD13C8142C5B35FD00B87781 /* ChallengeMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMainViewModel.swift; sourceTree = "<group>"; };
 		AD13C8162C5B362C00B87781 /* FireStoreChallengeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreChallengeManager.swift; sourceTree = "<group>"; };
@@ -212,10 +212,10 @@
 		ADB8C4732C4F7FCD00D5B9BC /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				AB44FE6C2C5D27230060310F /* ChallengeCompleteLottie.json */,
-				AB44FE6D2C5D27230060310F /* TimerStartLottie.json */,
+				8BF2D16B2C5E0A630068A71E /* ChallengeCompleteLottie.json */,
+				8BF2D16D2C5E0A6E0068A71E /* TimerStartLottie.json */,
 				5B1935BE2C59E062001AC5B2 /* TimerStopLottie.json */,
-				5B1935BA2C59DF27001AC5B2 /* Splash.json */,
+				8BF2D16F2C5E0B230068A71E /* Splash.json */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -423,9 +423,10 @@
 				AD13C81F2C5B368200B87781 /* LaundryOTF_Regular.otf in Resources */,
 				AD13C8662C5CBC3400B87781 /* SUIT-ExtraBold.otf in Resources */,
 				AD13C8762C5CC63D00B87781 /* Pretendard-SemiBold.otf in Resources */,
+				8BF2D16E2C5E0A6E0068A71E /* TimerStartLottie.json in Resources */,
+				8BF2D1702C5E0B240068A71E /* Splash.json in Resources */,
 				AD13C8622C5CBC3400B87781 /* SUIT-Bold.otf in Resources */,
 				AD13C8742C5CC63D00B87781 /* Pretendard-Thin.otf in Resources */,
-				8B14B7032C57774500045B7A /* Splash.json in Resources */,
 				AD13C8612C5CBC3400B87781 /* SUIT-Thin.otf in Resources */,
 				AD13C8632C5CBC3400B87781 /* SUIT-Medium.otf in Resources */,
 				AD13C8722C5CC63D00B87781 /* Pretendard-Regular.otf in Resources */,
@@ -433,13 +434,11 @@
 				8B7543232C588D8E00B1C53D /* GoogleService-Info.plist in Resources */,
 				5B1935BF2C59E062001AC5B2 /* TimerStopLottie.json in Resources */,
 				AD13C81F2C5B368200B87781 /* LaundryOTF_Regular.otf in Resources */,
-				AB44FE6E2C5D27230060310F /* ChallengeCompleteLottie.json in Resources */,
 				AD13C81E2C5B368200B87781 /* LaundryOTF_Bold.otf in Resources */,
-				AB44FE6F2C5D27230060310F /* TimerStartLottie.json in Resources */,
 				ADB8C45F2C4F7E3000D5B9BC /* Assets.xcassets in Resources */,
+				8BF2D16C2C5E0A630068A71E /* ChallengeCompleteLottie.json in Resources */,
 				AD13C8702C5CC63D00B87781 /* Pretendard-Black.otf in Resources */,
 				AD13C8652C5CBC3400B87781 /* SUIT-Light.otf in Resources */,
-				5B1935BB2C59DF27001AC5B2 /* Splash.json in Resources */,
 				5B19360B2C5C750B001AC5B2 /* Hyukoh_youngman.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,7 +460,6 @@
 				8B7543102C58892500B1C53D /* RootView.swift in Sources */,
 				ADB8C45D2C4F7E2F00D5B9BC /* ContentView.swift in Sources */,
 				AD13C83A2C5C72A800B87781 /* ChallengeSheetView.swift in Sources */,
-				72FEB9622C5A1D8900F64B71 /* Challenge.swift in Sources */,
 				8B75431A2C588A4A00B1C53D /* AuthenticationManager.swift in Sources */,
 				5B1935B92C59CFA6001AC5B2 /* TimerView.swift in Sources */,
 				5B1935FF2C5A2BDE001AC5B2 /* TimerManager.swift in Sources */,
@@ -701,7 +699,6 @@
 				minimumVersion = 7.1.0;
 			};
 		};
-
 		8BF2D1602C5B6ED30068A71E /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
@@ -736,7 +733,6 @@
 			package = ADB8C46C2C4F7F4400D5B9BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
 		};
-
 		8BF2D1612C5B6ED30068A71E /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8BF2D1602C5B6ED30068A71E /* XCRemoteSwiftPackageReference "lottie-ios" */;

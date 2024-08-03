@@ -47,41 +47,44 @@ struct LoginView: View {
     @Binding var showSignInView: Bool
     
     var body: some View {
-        VStack {
-            Text("로그인하기")
-            
-            // Sign in with Google 버튼
-            GoogleSignInButton(viewModel: GoogleSignInButtonViewModel(scheme: .dark, style: .wide, state: .normal)) {
-                Task {
-                    do {
-                        try await viewModel.signInGoogle() //signInGoogle 과정 시작 (비동기로 진행)
-                        showSignInView = false //signInGoogle 과정 끝나면 AuthenticationView 종료
-                    } catch {
-                        print(error)
+        ZStack{
+            Image("loginViewBG")
+                .resizable()
+                .ignoresSafeArea()
+            VStack {
+                Spacer()
+                // Sign in with Google 버튼
+                GoogleSignInButton(viewModel: GoogleSignInButtonViewModel(scheme: .light, style: .wide, state: .normal)) {
+                    Task {
+                        do {
+                            try await viewModel.signInGoogle() //signInGoogle 과정 시작 (비동기로 진행)
+                            showSignInView = false //signInGoogle 과정 끝나면 AuthenticationView 종료
+                        } catch {
+                            print(error)
+                        }
                     }
                 }
+                
+                // Sign in with Apple 버튼
+                Button(action: {
+                    Task {
+                        do {
+                            try await viewModel.signInApple() //signInApple 과정 시작 (비동기로 진행)
+                            showSignInView = false //signInApple 과정 끝나면 AuthenticationView 종료
+                        } catch {
+                            print(error)
+                        }
+                    }
+                }, label: {
+                    SignInWithAppleButtonViewRepresentable(type: .default, style: .black)
+                        .allowsHitTesting(false)
+                })
+                .frame(height: 55)
+                
+                Spacer().frame(height: 50)
             }
-            
-            // Sign in with Apple 버튼
-            Button(action: {
-                Task {
-                    do {
-                        try await viewModel.signInApple() //signInApple 과정 시작 (비동기로 진행)
-                        showSignInView = false //signInApple 과정 끝나면 AuthenticationView 종료
-                    } catch {
-                        print(error)
-                    }
-                }
-            }, label: {
-                SignInWithAppleButtonViewRepresentable(type: .default, style: .black)
-                    .allowsHitTesting(false)
-            })
-            .frame(height: 55)
-            
-            Spacer()
+            .padding()
         }
-        .padding()
-        .navigationTitle("Sign In")
     }
 }
 

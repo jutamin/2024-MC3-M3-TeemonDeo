@@ -12,15 +12,18 @@ import SwiftUI
 
 struct LottieView: UIViewRepresentable {
     var filename: String
-    var loopMode: LottieLoopMode = .playOnce
+    //var loopMode: LottieLoopMode = .loop
+    var loopMode: LottieLoopMode
+    //let animationView = LottieAnimationView(name: filename)
+    let animationView = LottieAnimationView()
 
     func makeUIView(context: Context) -> some UIView {
         let view = UIView()
-        let animationView = LottieAnimationView(name: filename)
         
+        animationView.animation = LottieAnimation.named(filename)
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = loopMode
-        animationView.play()
+        //animationView.play()
 
         animationView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -37,4 +40,12 @@ struct LottieView: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: UIViewType, context: Context) {}
+    
+    func play() {
+        animationView.play()
+    }
+    
+    func stop() {
+        animationView.stop()
+    }
 }

@@ -26,6 +26,7 @@ struct TeemonDeoApp: App {
         WindowGroup {
             NavigationView {
                 RootView()
+                //TimerView()
             }
         }
     }

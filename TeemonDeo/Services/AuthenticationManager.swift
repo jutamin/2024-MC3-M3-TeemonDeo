@@ -68,12 +68,14 @@ final class AuthenticationManager {
         }
         try await user.delete()
     }
-    
+
+
     //추가: SSO 로그인 정보와 동일한 유저를 firebase에서 찾아서 return
     func getChallnegeUser() throws -> ChallengeUser {
         let challnegeUser = try getAuthenticatedUser()
         return ChallengeUser(auth: challnegeUser)
     }
+
 }
 
 // MARK: SIGN IN SSO (SSO: Sigle Sign On)

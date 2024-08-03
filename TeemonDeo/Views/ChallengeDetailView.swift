@@ -1,14 +1,28 @@
 import SwiftUI
 
+// 데이터 모델을 정의하는 구조체
+struct ChallengeModel: Identifiable {
+    var id: String
+    var challengeName: String
+    var challengeStartDate: String // "yyyy.MM.dd" 형식의 날짜 문자열
+    var challengePeriod: Int // 기간 (일 단위)
+    var challengeSpace: String
+    var isChallengeSucceed: Bool
+    var challengePercent: Int
+}
+
 struct ChallengeDetailView: View {
+    var challengeData: ChallengeModel
+    
     var body: some View {
         VStack {
             VStack {
-                Text("책상부터 비워보자")
+                Text(challengeData.challengeName)
                     .font(.system(size: 32, weight: .bold))
                     .padding(.bottom, 7)
-                Text("2024.07.21 ~ 2024.07.08")
-                    .foregroundStyle(Color.gray)
+                
+                Text("\(challengeData.challengeStartDate) ~ \(DateHelper.calculateEndDate(startDate: challengeData.challengeStartDate, period: challengeData.challengePeriod))")
+                    .foregroundColor(Color.gray)
                 
             }
             .padding(.bottom, 20)
@@ -18,7 +32,7 @@ struct ChallengeDetailView: View {
                     .fill(Color.lightSkyBlue)
                     .frame(width: 100, height: 35)
                     .overlay(
-                        Text("1주 챌린지")
+                        Text("\(challengeData.challengePeriod)주 챌린지")
                             .font(.system(size: 18, weight: .semibold))
                             .foregroundColor(Color.darkSkyBlue)
                     )
@@ -27,7 +41,7 @@ struct ChallengeDetailView: View {
                     .fill(Color.lightGray)
                     .frame(width: 55, height: 35)
                     .overlay(
-                        Text("책상")
+                        Text(challengeData.challengeSpace)
                             .font(.system(size: 18, weight: .semibold))
                             .foregroundColor(Color.darkGray)
                     )
@@ -42,14 +56,16 @@ struct ChallengeDetailView: View {
                         .frame(maxWidth: .infinity)
                     
                     HStack {
-                        Text("3일차 도전!")
+                        let currentDay = DateHelper.calculateCurrentDay(startDate: challengeData.challengeStartDate)
+                        Text("\(currentDay)일차 도전!")
                             .font(.system(size: 16, weight: .bold))
                             .padding(.leading, 26)
                             .foregroundColor(Color.black)
                             
                         Spacer()
                         
-                        Text("진행도 14%")
+                        let progress = DateHelper.calculateProgress(startDate: challengeData.challengeStartDate, period: challengeData.challengePeriod)
+                        Text("진행도 \(progress)%")
                             .font(.system(size: 16, weight: .medium))
                             .padding(.trailing, 26)
                             .foregroundColor(Color.darkGray)
@@ -93,6 +109,9 @@ extension Color {
     static let LightGray = Color(red: 0.9, green: 0.9, blue: 0.9)
 }
 
-#Preview {
-    ChallengeDetailView()
+// 미리보기에서 사용하는 타입 수정
+struct ChallengeDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        ChallengeDetailView(challengeData: ChallengeModel(id: "1", challengeName: "책상부터 비워보자", challengeStartDate: "2024.07.31", challengePeriod: 1, challengeSpace: "책상", isChallengeSucceed: false, challengePercent: 14))
+    }
 }

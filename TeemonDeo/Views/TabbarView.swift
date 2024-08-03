@@ -15,6 +15,7 @@ struct TabbarView: View {
         TabView {
             NavigationStack {
                 ContentView()
+                PieChartView(data: iPhoneOperationSystem.dummyData())
             }
             .tabItem {
                 Image(systemName: "cart")

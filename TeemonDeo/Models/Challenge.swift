@@ -2,12 +2,12 @@
 //  Challenge.swift
 //  TeemonDeo
 //
-//  Created by 김민정 on 7/31/24.
-
+//  Created by TEO on 8/2/24.
+//
 
 import Foundation
 
-struct Challenge: Identifiable, Hashable {
+struct Challenge : Identifiable, Hashable {
     let id: String
     let challengeName: String
     let challengeStartDate: String

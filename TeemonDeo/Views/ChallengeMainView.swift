@@ -8,85 +8,94 @@
 import SwiftUI
 
 struct ChallengeMainView: View {
-    @StateObject private var viewModel = ChallengeMainViewModel()
+    @StateObject var viewModel = ChallengeMainViewModel()
+    @State var isShowingSheet = false
+    @State var detents: PresentationDetent = .height(613)
 
+    
+    
     var body: some View {
-        NavigationStack{
-            VStack{
-                HStack{
-                    Text("복세단살")
-                        .font(Font.laundryBold20)
-                    
-                    Spacer()
-                    
-                    //TODO: User의 Tire에 따른 이미지 변화
-                    Text("개쩌는 티어")
-                }
-                .padding()
-                
-                HStack{
-                    //Text("\(viewModel.challengeUser)님!\n오늘의 챌린지를\n시작해보세요!") 852 521
-                    Text("쭈쭈님!\n오늘의 챌린지를\n시작해보세요!")
-                        .font(.title)
-                    
-                    Spacer()
-
-                    Image("mainviewcharactor")
-                        .resizable()
-                        .frame(width: 150, height: 158)
-                }
-                .padding()
-
-                //TODO: ProgressBar Status
-
-                
-                // MARK: 임시
-                ScrollView{
+            
+            NavigationStack{
+                VStack{
                     HStack{
-                        Text("진행 중인 챌린지")
-                            .font(.laundryBold18)
-                            .foregroundColor(.gray800)
+                        Text("복세단살")
+                            .font(Font.laundryBold20)
                         
                         Spacer()
                         
-                        Button(action: {  }, label: {
-                            addChallengeButton()
-                        })
+                        //TODO: User의 Tire에 따른 이미지 변화
+                        Text("개쩌는 티어")
                     }
-                    .padding(24)
-                    .padding(.top)
+                    .padding()
                     
-                    ForEach([Challenge(id: UUID().uuidString, challengeName: "책상부터 비워보자", challengeStartDate: "2024.07.21", challengePeriod: 1, challengeSpace: "책상", isChallengeSucceed: false)]) { chall in
-                        NavigationLink(value: chall) {
-                            challengeCardView(challenge: chall)
-                        }
+                    HStack{
+                        //Text("\(viewModel.challengeUser)님!\n오늘의 챌린지를\n시작해보세요!") 852 521
+                        Text("쭈쭈님!\n오늘의 챌린지를\n시작해보세요!")
+                            .font(.title)
+                        
+                        Spacer()
+                        
+                        Image("mainviewcharactor")
+                            .resizable()
+                            .frame(width: 150, height: 158)
                     }
-//                    .navigationDestination(for: Challenge.self) { value in
-//                        ChallengeDetailView(challengeData: value)
-//                    }
-                }
-                .background(Color.gray100)
-                .padding(.top, 20)
-                
-//                ScrollView{
-//                    ForEach(viewModel.challenges) { chall in
-//                        NavigationLink(value: chall) {
-//                            Text("fdsafdsa")
+                    .padding()
+                    
+                    //TODO: ProgressBar Status
+
+                    
+                    ScrollView{
+                        
+                        HStack{
+                            Text("진행 중인 챌린지")
+                                .font(.laundryBold18)
+                                .foregroundColor(.gray800)
+                            
+                            Spacer()
+                            
+                            Button(action: {
+                                isShowingSheet = true
+                            }, label: {
+                                addChallengeButton()
+                            })
+                        }
+                        .padding(24)
+                        .padding(.top)
+                        
+                        ForEach(viewModel.challenges) { data in
+                            NavigationLink(value: data) {
+                                challengeCardView(challenge: data)
+                            }
+                        }
+//                        .navigationDestination(for: Challenge.self) { value in
+//                            ChallengeDetailView(challengeData: value)
 //                        }
-//
-//
-//                    }
-//                    .navigationDestination(for: Challenge.self) { value in
-//                        ChallengeDetailView(challengeData: value)
-//                    }
-//
-//                }
-                
-                
+                        
+                    }
+                    .background(Color.gray100)
+                    .padding(.top, 20)
+
+                    
+                    
+                }
+                .onAppear{
+                    viewModel.loadChallenge()
+                }
+                .refreshable {
+                    viewModel.loadChallenge()
+                }
             }
+            .sheet(isPresented: $isShowingSheet) {
+                ChallengeSheetView(viewModel: viewModel,isShowingSheet: $isShowingSheet)
+//                    .presentationDetents([.height(geometry.size.height * 613.0 / 855.0)], selection: $detents)
+//                    .presentationDetents([.height(613)], selection: $detents)
+                    .ignoresSafeArea(.keyboard)
+                    .edgesIgnoringSafeArea(.bottom)
+            }
+
+
             
-        }
-        
     }
 }
 
@@ -178,13 +187,13 @@ extension ChallengeMainView {
     func getPeriodColors(period: Int) -> (boxColor: Color, textColor: Color) {
         switch period {
         case 1:
-            return (.periodBoxBlue, .periodTextBlue)
+            return (.LightBlue, .DarkBlue)
         case 2:
-            return (.periodBoxGreen, .periodTextGreen)
+            return (.LightGreeen, .DarkGreen)
         case 3:
-            return (.periodBoxPink, .periodTextPink)
+            return (.LightPink, .DarkPink)
         default:
-            return (.periodBoxBlue, .periodTextBlue)
+            return (.LightBlue, .DarkBlue)
         }
     }
     

@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B1935B92C59CFA6001AC5B2 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1935B82C59CFA6001AC5B2 /* TimerView.swift */; };
+		5B1935BB2C59DF27001AC5B2 /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B1935BA2C59DF27001AC5B2 /* Splash.json */; };
+		5B1935BF2C59E062001AC5B2 /* TimerStopLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B1935BE2C59E062001AC5B2 /* TimerStopLottie.json */; };
+		5B1935FD2C5A2BCC001AC5B2 /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1935FC2C5A2BCC001AC5B2 /* TimerHelper.swift */; };
+		5B1935FF2C5A2BDE001AC5B2 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1935FE2C5A2BDE001AC5B2 /* TimerManager.swift */; };
+		5B1936032C5B244E001AC5B2 /* AudioPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1936022C5B244E001AC5B2 /* AudioPlayerViewModel.swift */; };
+		5B1936052C5B2576001AC5B2 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5B1936042C5B2576001AC5B2 /* backgroundMusic.mp3 */; };
+		5B19360B2C5C750B001AC5B2 /* Hyukoh_youngman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5B19360A2C5C750B001AC5B2 /* Hyukoh_youngman.mp3 */; };
 		7227C47A2C5918AC0060F430 /* ChallengeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7227C4792C5918AC0060F430 /* ChallengeDetailView.swift */; };
 		72FEB9602C5A1D0100F64B71 /* ChallengeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEB95F2C5A1D0100F64B71 /* ChallengeDetailViewModel.swift */; };
-		72FEB9622C5A1D8900F64B71 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEB9612C5A1D8900F64B71 /* Challenge.swift */; };
 		8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B6FD2C57766800045B7A /* LottieManager.swift */; };
-		8B14B7032C57774500045B7A /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B14B7022C57774500045B7A /* Splash.json */; };
 		8B7543102C58892500B1C53D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B75430F2C58892500B1C53D /* RootView.swift */; };
 		8B7543122C58894300B1C53D /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7543112C58894300B1C53D /* TabbarView.swift */; };
 		8B7543142C58898D00B1C53D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7543132C58898D00B1C53D /* LoginView.swift */; };
@@ -29,7 +35,9 @@
 		8BAD01232C59CF5F002EC402 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAD01222C59CF5F002EC402 /* UserManager.swift */; };
 		8BAD01252C59D047002EC402 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8BAD01242C59D047002EC402 /* FirebaseFirestoreSwift */; };
 		8BAD01272C59D0FE002EC402 /* AuthDataResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAD01262C59D0FE002EC402 /* AuthDataResultModel.swift */; };
-		AD13C8112C5B35B100B87781 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8102C5B35B100B87781 /* Challenge.swift */; };
+		AB44FE6B2C5D26E70060310F /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB44FE6A2C5D26E70060310F /* Challenge.swift */; };
+		AB44FE6E2C5D27230060310F /* ChallengeCompleteLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = AB44FE6C2C5D27230060310F /* ChallengeCompleteLottie.json */; };
+		AB44FE6F2C5D27230060310F /* TimerStartLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = AB44FE6D2C5D27230060310F /* TimerStartLottie.json */; };
 		AD13C8132C5B35E000B87781 /* ChallengeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8122C5B35E000B87781 /* ChallengeMainView.swift */; };
 		AD13C8152C5B35FD00B87781 /* ChallengeMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8142C5B35FD00B87781 /* ChallengeMainViewModel.swift */; };
 		AD13C8172C5B362C00B87781 /* FireStoreChallengeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8162C5B362C00B87781 /* FireStoreChallengeManager.swift */; };
@@ -67,11 +75,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B1935B82C59CFA6001AC5B2 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		5B1935BA2C59DF27001AC5B2 /* Splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.json; sourceTree = "<group>"; };
+		5B1935BE2C59E062001AC5B2 /* TimerStopLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TimerStopLottie.json; sourceTree = "<group>"; };
+		5B1935FC2C5A2BCC001AC5B2 /* TimerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimerHelper.swift; path = TeemonDeo/Services/TimerHelper.swift; sourceTree = SOURCE_ROOT; };
+		5B1935FE2C5A2BDE001AC5B2 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimerManager.swift; path = TeemonDeo/Services/TimerManager.swift; sourceTree = SOURCE_ROOT; };
+		5B1936022C5B244E001AC5B2 /* AudioPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AudioPlayerViewModel.swift; path = TeemonDeo/ViewModels/AudioPlayerViewModel.swift; sourceTree = SOURCE_ROOT; };
+		5B1936042C5B2576001AC5B2 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
+		5B19360A2C5C750B001AC5B2 /* Hyukoh_youngman.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hyukoh_youngman.mp3; sourceTree = "<group>"; };
 		7227C4792C5918AC0060F430 /* ChallengeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailView.swift; sourceTree = "<group>"; };
 		72FEB95F2C5A1D0100F64B71 /* ChallengeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailViewModel.swift; sourceTree = "<group>"; };
-		72FEB9612C5A1D8900F64B71 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		8B14B6FD2C57766800045B7A /* LottieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieManager.swift; sourceTree = "<group>"; };
-		8B14B7022C57774500045B7A /* Splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.json; sourceTree = "<group>"; };
 		8B75430F2C58892500B1C53D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		8B7543112C58894300B1C53D /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		8B7543132C58898D00B1C53D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -87,7 +101,9 @@
 		8BAD01202C59CF2D002EC402 /* ChallengeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeUser.swift; sourceTree = "<group>"; };
 		8BAD01222C59CF5F002EC402 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserManager.swift; path = TeemonDeo/Services/UserManager.swift; sourceTree = SOURCE_ROOT; };
 		8BAD01262C59D0FE002EC402 /* AuthDataResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataResultModel.swift; sourceTree = "<group>"; };
-		AD13C8102C5B35B100B87781 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		AB44FE6A2C5D26E70060310F /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		AB44FE6C2C5D27230060310F /* ChallengeCompleteLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ChallengeCompleteLottie.json; path = ../../../../ChallengeCompleteLottie.json; sourceTree = "<group>"; };
+		AB44FE6D2C5D27230060310F /* TimerStartLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TimerStartLottie.json; path = ../../../../TimerStartLottie.json; sourceTree = "<group>"; };
 		AD13C8122C5B35E000B87781 /* ChallengeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMainView.swift; sourceTree = "<group>"; };
 		AD13C8142C5B35FD00B87781 /* ChallengeMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMainViewModel.swift; sourceTree = "<group>"; };
 		AD13C8162C5B362C00B87781 /* FireStoreChallengeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreChallengeManager.swift; sourceTree = "<group>"; };
@@ -194,7 +210,10 @@
 		ADB8C4732C4F7FCD00D5B9BC /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				8B14B7022C57774500045B7A /* Splash.json */,
+				AB44FE6C2C5D27230060310F /* ChallengeCompleteLottie.json */,
+				AB44FE6D2C5D27230060310F /* TimerStartLottie.json */,
+				5B1935BE2C59E062001AC5B2 /* TimerStopLottie.json */,
+				5B1935BA2C59DF27001AC5B2 /* Splash.json */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -202,6 +221,8 @@
 		ADB8C4742C4F7FDA00D5B9BC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5B19360A2C5C750B001AC5B2 /* Hyukoh_youngman.mp3 */,
+				5B1936042C5B2576001AC5B2 /* backgroundMusic.mp3 */,
 				ADB8C45E2C4F7E3000D5B9BC /* Assets.xcassets */,
 				AD13C8212C5B370600B87781 /* Modifiers */,
 				ADB8C47C2C4F804300D5B9BC /* Colors */,
@@ -223,6 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				8B7543192C588A4A00B1C53D /* AuthenticationManager.swift */,
+				5B1935FE2C5A2BDE001AC5B2 /* TimerManager.swift */,
+				5B1935FC2C5A2BCC001AC5B2 /* TimerHelper.swift */,
 				8BAD01222C59CF5F002EC402 /* UserManager.swift */,
 				8B75431B2C588A8C00B1C53D /* SignInGoogleHelper.swift */,
 				8B75431D2C588AAB00B1C53D /* SignInAppleHelper.swift */,
@@ -235,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				8B75431F2C588AD600B1C53D /* SettingViewModel.swift */,
+				5B1936022C5B244E001AC5B2 /* AudioPlayerViewModel.swift */,
 				72FEB95F2C5A1D0100F64B71 /* ChallengeDetailViewModel.swift */,
 				AD13C8142C5B35FD00B87781 /* ChallengeMainViewModel.swift */,
 			);
@@ -245,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */,
+				5B1935B82C59CFA6001AC5B2 /* TimerView.swift */,
 				8B75430F2C58892500B1C53D /* RootView.swift */,
 				8B7543112C58894300B1C53D /* TabbarView.swift */,
 				8B7543132C58898D00B1C53D /* LoginView.swift */,
@@ -259,10 +284,9 @@
 		ADB8C4792C4F801800D5B9BC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				72FEB9612C5A1D8900F64B71 /* Challenge.swift */,
 				8BAD01202C59CF2D002EC402 /* ChallengeUser.swift */,
 				8BAD01262C59D0FE002EC402 /* AuthDataResultModel.swift */,
-				AD13C8102C5B35B100B87781 /* Challenge.swift */,
+				AB44FE6A2C5D26E70060310F /* Challenge.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -392,7 +416,6 @@
 				AD13C8712C5CC63D00B87781 /* Pretendard-Medium.otf in Resources */,
 				ADB8C4622C4F7E3000D5B9BC /* Preview Assets.xcassets in Resources */,
 				AD13C8732C5CC63D00B87781 /* Pretendard-ExtraLight.otf in Resources */,
-				8B7543232C588D8E00B1C53D /* GoogleService-Info.plist in Resources */,
 				AD13C85F2C5CBC3400B87781 /* SUIT-Regular.otf in Resources */,
 				AD13C81F2C5B368200B87781 /* LaundryOTF_Regular.otf in Resources */,
 				AD13C8662C5CBC3400B87781 /* SUIT-ExtraBold.otf in Resources */,
@@ -403,10 +426,18 @@
 				AD13C8612C5CBC3400B87781 /* SUIT-Thin.otf in Resources */,
 				AD13C8632C5CBC3400B87781 /* SUIT-Medium.otf in Resources */,
 				AD13C8722C5CC63D00B87781 /* Pretendard-Regular.otf in Resources */,
+				5B1936052C5B2576001AC5B2 /* backgroundMusic.mp3 in Resources */,
+				8B7543232C588D8E00B1C53D /* GoogleService-Info.plist in Resources */,
+				5B1935BF2C59E062001AC5B2 /* TimerStopLottie.json in Resources */,
+				AD13C81F2C5B368200B87781 /* LaundryOTF_Regular.otf in Resources */,
+				AB44FE6E2C5D27230060310F /* ChallengeCompleteLottie.json in Resources */,
 				AD13C81E2C5B368200B87781 /* LaundryOTF_Bold.otf in Resources */,
+				AB44FE6F2C5D27230060310F /* TimerStartLottie.json in Resources */,
 				ADB8C45F2C4F7E3000D5B9BC /* Assets.xcassets in Resources */,
 				AD13C8702C5CC63D00B87781 /* Pretendard-Black.otf in Resources */,
 				AD13C8652C5CBC3400B87781 /* SUIT-Light.otf in Resources */,
+				5B1935BB2C59DF27001AC5B2 /* Splash.json in Resources */,
+				5B19360B2C5C750B001AC5B2 /* Hyukoh_youngman.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,17 +448,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B1936032C5B244E001AC5B2 /* AudioPlayerViewModel.swift in Sources */,
 				8B75431C2C588A8C00B1C53D /* SignInGoogleHelper.swift in Sources */,
 				8B7543142C58898D00B1C53D /* LoginView.swift in Sources */,
 				AD13C8192C5B364800B87781 /* Colors.swift in Sources */,
 				AD13C8232C5B372000B87781 /* TextModifire.swift in Sources */,
 				8BAD01232C59CF5F002EC402 /* UserManager.swift in Sources */,
 				8B7543102C58892500B1C53D /* RootView.swift in Sources */,
-				AD13C8112C5B35B100B87781 /* Challenge.swift in Sources */,
 				ADB8C45D2C4F7E2F00D5B9BC /* ContentView.swift in Sources */,
 				AD13C83A2C5C72A800B87781 /* ChallengeSheetView.swift in Sources */,
 				72FEB9622C5A1D8900F64B71 /* Challenge.swift in Sources */,
 				8B75431A2C588A4A00B1C53D /* AuthenticationManager.swift in Sources */,
+				5B1935B92C59CFA6001AC5B2 /* TimerView.swift in Sources */,
+				5B1935FF2C5A2BDE001AC5B2 /* TimerManager.swift in Sources */,
 				AD13C81B2C5B366700B87781 /* CustomFont.swift in Sources */,
 				8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */,
 				AD13C8152C5B35FD00B87781 /* ChallengeMainViewModel.swift in Sources */,
@@ -438,7 +471,9 @@
 				8B7543202C588AD600B1C53D /* SettingViewModel.swift in Sources */,
 				7227C47A2C5918AC0060F430 /* ChallengeDetailView.swift in Sources */,
 				ADB8C45B2C4F7E2F00D5B9BC /* TeemonDeoApp.swift in Sources */,
+				AB44FE6B2C5D26E70060310F /* Challenge.swift in Sources */,
 				8B7543182C588A0B00B1C53D /* Utilities.swift in Sources */,
+				5B1935FD2C5A2BCC001AC5B2 /* TimerHelper.swift in Sources */,
 				72FEB9602C5A1D0100F64B71 /* ChallengeDetailViewModel.swift in Sources */,
 				8B75431E2C588AAB00B1C53D /* SignInAppleHelper.swift in Sources */,
 				8B7543162C5889C500B1C53D /* SettingView.swift in Sources */,
@@ -577,7 +612,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TeemonDeo/Preview Content\"";
-				DEVELOPMENT_TEAM = GF3B5LP7RQ;
+				DEVELOPMENT_TEAM = YUF8364M59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeemonDeo/Info.plist;
@@ -608,7 +643,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TeemonDeo/Preview Content\"";
-				DEVELOPMENT_TEAM = GF3B5LP7RQ;
+				DEVELOPMENT_TEAM = YUF8364M59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeemonDeo/Info.plist;

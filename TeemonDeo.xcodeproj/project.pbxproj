@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7227C47A2C5918AC0060F430 /* ChallengeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7227C4792C5918AC0060F430 /* ChallengeDetailView.swift */; };
+		722AD50E2C5C72EA0008D556 /* SettingProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722AD50D2C5C72EA0008D556 /* SettingProfileView.swift */; };
 		72FEB9602C5A1D0100F64B71 /* ChallengeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEB95F2C5A1D0100F64B71 /* ChallengeDetailViewModel.swift */; };
 		72FEB9622C5A1D8900F64B71 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEB9612C5A1D8900F64B71 /* Challenge.swift */; };
 		8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B6FD2C57766800045B7A /* LottieManager.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		7227C4792C5918AC0060F430 /* ChallengeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailView.swift; sourceTree = "<group>"; };
+		722AD50D2C5C72EA0008D556 /* SettingProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileView.swift; sourceTree = "<group>"; };
 		72FEB95F2C5A1D0100F64B71 /* ChallengeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailViewModel.swift; sourceTree = "<group>"; };
 		72FEB9612C5A1D8900F64B71 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		8B14B6FD2C57766800045B7A /* LottieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieManager.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				8B7543152C5889C500B1C53D /* SettingView.swift */,
 				7227C4792C5918AC0060F430 /* ChallengeDetailView.swift */,
 				AD13C8122C5B35E000B87781 /* ChallengeMainView.swift */,
+				722AD50D2C5C72EA0008D556 /* SettingProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				AD13C8152C5B35FD00B87781 /* ChallengeMainViewModel.swift in Sources */,
 				8BAD01212C59CF2D002EC402 /* ChallengeUser.swift in Sources */,
 				8B7543122C58894300B1C53D /* TabbarView.swift in Sources */,
+				722AD50E2C5C72EA0008D556 /* SettingProfileView.swift in Sources */,
 				8BAD01272C59D0FE002EC402 /* AuthDataResultModel.swift in Sources */,
 				AD13C8132C5B35E000B87781 /* ChallengeMainView.swift in Sources */,
 				8B7543202C588AD600B1C53D /* SettingViewModel.swift in Sources */,

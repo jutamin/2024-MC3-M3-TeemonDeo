@@ -46,6 +46,25 @@
 		AD13C81E2C5B368200B87781 /* LaundryOTF_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C81C2C5B368200B87781 /* LaundryOTF_Bold.otf */; };
 		AD13C81F2C5B368200B87781 /* LaundryOTF_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C81D2C5B368200B87781 /* LaundryOTF_Regular.otf */; };
 		AD13C8232C5B372000B87781 /* TextModifire.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8222C5B372000B87781 /* TextModifire.swift */; };
+		AD13C83A2C5C72A800B87781 /* ChallengeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8392C5C72A800B87781 /* ChallengeSheetView.swift */; };
+		AD13C85E2C5CBC3400B87781 /* SUIT-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C8552C5CBC3300B87781 /* SUIT-ExtraLight.otf */; };
+		AD13C85F2C5CBC3400B87781 /* SUIT-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C8562C5CBC3300B87781 /* SUIT-Regular.otf */; };
+		AD13C8602C5CBC3400B87781 /* SUIT-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C8572C5CBC3300B87781 /* SUIT-Heavy.otf */; };
+		AD13C8612C5CBC3400B87781 /* SUIT-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C8582C5CBC3300B87781 /* SUIT-Thin.otf */; };
+		AD13C8622C5CBC3400B87781 /* SUIT-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C8592C5CBC3300B87781 /* SUIT-Bold.otf */; };
+		AD13C8632C5CBC3400B87781 /* SUIT-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C85A2C5CBC3300B87781 /* SUIT-Medium.otf */; };
+		AD13C8642C5CBC3400B87781 /* SUIT-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C85B2C5CBC3400B87781 /* SUIT-SemiBold.otf */; };
+		AD13C8652C5CBC3400B87781 /* SUIT-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C85C2C5CBC3400B87781 /* SUIT-Light.otf */; };
+		AD13C8662C5CBC3400B87781 /* SUIT-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C85D2C5CBC3400B87781 /* SUIT-ExtraBold.otf */; };
+		AD13C8702C5CC63D00B87781 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C8672C5CC63C00B87781 /* Pretendard-Black.otf */; };
+		AD13C8712C5CC63D00B87781 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C8682C5CC63C00B87781 /* Pretendard-Medium.otf */; };
+		AD13C8722C5CC63D00B87781 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C8692C5CC63C00B87781 /* Pretendard-Regular.otf */; };
+		AD13C8732C5CC63D00B87781 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C86A2C5CC63D00B87781 /* Pretendard-ExtraLight.otf */; };
+		AD13C8742C5CC63D00B87781 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C86B2C5CC63D00B87781 /* Pretendard-Thin.otf */; };
+		AD13C8752C5CC63D00B87781 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C86C2C5CC63D00B87781 /* Pretendard-ExtraBold.otf */; };
+		AD13C8762C5CC63D00B87781 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C86D2C5CC63D00B87781 /* Pretendard-SemiBold.otf */; };
+		AD13C8772C5CC63D00B87781 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C86E2C5CC63D00B87781 /* Pretendard-Light.otf */; };
+		AD13C8782C5CC63D00B87781 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C86F2C5CC63D00B87781 /* Pretendard-Bold.otf */; };
 		ADB8C45B2C4F7E2F00D5B9BC /* TeemonDeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB8C45A2C4F7E2F00D5B9BC /* TeemonDeoApp.swift */; };
 		ADB8C45D2C4F7E2F00D5B9BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */; };
 		ADB8C45F2C4F7E3000D5B9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB8C45E2C4F7E3000D5B9BC /* Assets.xcassets */; };
@@ -93,6 +112,25 @@
 		AD13C81C2C5B368200B87781 /* LaundryOTF_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaundryOTF_Bold.otf; sourceTree = "<group>"; };
 		AD13C81D2C5B368200B87781 /* LaundryOTF_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaundryOTF_Regular.otf; sourceTree = "<group>"; };
 		AD13C8222C5B372000B87781 /* TextModifire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifire.swift; sourceTree = "<group>"; };
+		AD13C8392C5C72A800B87781 /* ChallengeSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeSheetView.swift; sourceTree = "<group>"; };
+		AD13C8552C5CBC3300B87781 /* SUIT-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-ExtraLight.otf"; sourceTree = "<group>"; };
+		AD13C8562C5CBC3300B87781 /* SUIT-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Regular.otf"; sourceTree = "<group>"; };
+		AD13C8572C5CBC3300B87781 /* SUIT-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Heavy.otf"; sourceTree = "<group>"; };
+		AD13C8582C5CBC3300B87781 /* SUIT-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Thin.otf"; sourceTree = "<group>"; };
+		AD13C8592C5CBC3300B87781 /* SUIT-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Bold.otf"; sourceTree = "<group>"; };
+		AD13C85A2C5CBC3300B87781 /* SUIT-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Medium.otf"; sourceTree = "<group>"; };
+		AD13C85B2C5CBC3400B87781 /* SUIT-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-SemiBold.otf"; sourceTree = "<group>"; };
+		AD13C85C2C5CBC3400B87781 /* SUIT-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Light.otf"; sourceTree = "<group>"; };
+		AD13C85D2C5CBC3400B87781 /* SUIT-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-ExtraBold.otf"; sourceTree = "<group>"; };
+		AD13C8672C5CC63C00B87781 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		AD13C8682C5CC63C00B87781 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		AD13C8692C5CC63C00B87781 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		AD13C86A2C5CC63D00B87781 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		AD13C86B2C5CC63D00B87781 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		AD13C86C2C5CC63D00B87781 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		AD13C86D2C5CC63D00B87781 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		AD13C86E2C5CC63D00B87781 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		AD13C86F2C5CC63D00B87781 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		ADB8C4572C4F7E2F00D5B9BC /* TeemonDeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeemonDeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB8C45A2C4F7E2F00D5B9BC /* TeemonDeoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeemonDeoApp.swift; sourceTree = "<group>"; };
 		ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -238,6 +276,7 @@
 				8B7543152C5889C500B1C53D /* SettingView.swift */,
 				7227C4792C5918AC0060F430 /* ChallengeDetailView.swift */,
 				AD13C8122C5B35E000B87781 /* ChallengeMainView.swift */,
+				AD13C8392C5C72A800B87781 /* ChallengeSheetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -263,6 +302,24 @@
 		ADB8C47B2C4F803500D5B9BC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				AD13C8672C5CC63C00B87781 /* Pretendard-Black.otf */,
+				AD13C86F2C5CC63D00B87781 /* Pretendard-Bold.otf */,
+				AD13C86C2C5CC63D00B87781 /* Pretendard-ExtraBold.otf */,
+				AD13C86A2C5CC63D00B87781 /* Pretendard-ExtraLight.otf */,
+				AD13C86E2C5CC63D00B87781 /* Pretendard-Light.otf */,
+				AD13C8682C5CC63C00B87781 /* Pretendard-Medium.otf */,
+				AD13C8692C5CC63C00B87781 /* Pretendard-Regular.otf */,
+				AD13C86D2C5CC63D00B87781 /* Pretendard-SemiBold.otf */,
+				AD13C86B2C5CC63D00B87781 /* Pretendard-Thin.otf */,
+				AD13C8592C5CBC3300B87781 /* SUIT-Bold.otf */,
+				AD13C85D2C5CBC3400B87781 /* SUIT-ExtraBold.otf */,
+				AD13C8552C5CBC3300B87781 /* SUIT-ExtraLight.otf */,
+				AD13C8572C5CBC3300B87781 /* SUIT-Heavy.otf */,
+				AD13C85C2C5CBC3400B87781 /* SUIT-Light.otf */,
+				AD13C85A2C5CBC3300B87781 /* SUIT-Medium.otf */,
+				AD13C8562C5CBC3300B87781 /* SUIT-Regular.otf */,
+				AD13C85B2C5CBC3400B87781 /* SUIT-SemiBold.otf */,
+				AD13C8582C5CBC3300B87781 /* SUIT-Thin.otf */,
 				AD13C81C2C5B368200B87781 /* LaundryOTF_Bold.otf */,
 				AD13C81D2C5B368200B87781 /* LaundryOTF_Regular.otf */,
 				AD13C81A2C5B366700B87781 /* CustomFont.swift */,
@@ -350,7 +407,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD13C8602C5CBC3400B87781 /* SUIT-Heavy.otf in Resources */,
+				AD13C8782C5CC63D00B87781 /* Pretendard-Bold.otf in Resources */,
+				AD13C85E2C5CBC3400B87781 /* SUIT-ExtraLight.otf in Resources */,
+				AD13C8752C5CC63D00B87781 /* Pretendard-ExtraBold.otf in Resources */,
+				AD13C8772C5CC63D00B87781 /* Pretendard-Light.otf in Resources */,
+				AD13C8642C5CBC3400B87781 /* SUIT-SemiBold.otf in Resources */,
+				AD13C8712C5CC63D00B87781 /* Pretendard-Medium.otf in Resources */,
 				ADB8C4622C4F7E3000D5B9BC /* Preview Assets.xcassets in Resources */,
+				AD13C8732C5CC63D00B87781 /* Pretendard-ExtraLight.otf in Resources */,
+				AD13C85F2C5CBC3400B87781 /* SUIT-Regular.otf in Resources */,
+				AD13C81F2C5B368200B87781 /* LaundryOTF_Regular.otf in Resources */,
+				AD13C8662C5CBC3400B87781 /* SUIT-ExtraBold.otf in Resources */,
+				AD13C8762C5CC63D00B87781 /* Pretendard-SemiBold.otf in Resources */,
+				AD13C8622C5CBC3400B87781 /* SUIT-Bold.otf in Resources */,
+				AD13C8742C5CC63D00B87781 /* Pretendard-Thin.otf in Resources */,
+				8B14B7032C57774500045B7A /* Splash.json in Resources */,
+				AD13C8612C5CBC3400B87781 /* SUIT-Thin.otf in Resources */,
+				AD13C8632C5CBC3400B87781 /* SUIT-Medium.otf in Resources */,
+				AD13C8722C5CC63D00B87781 /* Pretendard-Regular.otf in Resources */,
 				5B1936052C5B2576001AC5B2 /* backgroundMusic.mp3 in Resources */,
 				8B7543232C588D8E00B1C53D /* GoogleService-Info.plist in Resources */,
 				5B1935BF2C59E062001AC5B2 /* TimerStopLottie.json in Resources */,
@@ -359,6 +434,8 @@
 				AD13C81E2C5B368200B87781 /* LaundryOTF_Bold.otf in Resources */,
 				AB44FE6F2C5D27230060310F /* TimerStartLottie.json in Resources */,
 				ADB8C45F2C4F7E3000D5B9BC /* Assets.xcassets in Resources */,
+				AD13C8702C5CC63D00B87781 /* Pretendard-Black.otf in Resources */,
+				AD13C8652C5CBC3400B87781 /* SUIT-Light.otf in Resources */,
 				5B1935BB2C59DF27001AC5B2 /* Splash.json in Resources */,
 				5B19360B2C5C750B001AC5B2 /* Hyukoh_youngman.mp3 in Resources */,
 			);
@@ -379,6 +456,8 @@
 				8BAD01232C59CF5F002EC402 /* UserManager.swift in Sources */,
 				8B7543102C58892500B1C53D /* RootView.swift in Sources */,
 				ADB8C45D2C4F7E2F00D5B9BC /* ContentView.swift in Sources */,
+				AD13C83A2C5C72A800B87781 /* ChallengeSheetView.swift in Sources */,
+				72FEB9622C5A1D8900F64B71 /* Challenge.swift in Sources */,
 				8B75431A2C588A4A00B1C53D /* AuthenticationManager.swift in Sources */,
 				5B1935B92C59CFA6001AC5B2 /* TimerView.swift in Sources */,
 				5B1935FF2C5A2BDE001AC5B2 /* TimerManager.swift in Sources */,

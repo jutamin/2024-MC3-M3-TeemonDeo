@@ -19,11 +19,6 @@ struct ContentView: View {
         .onAppear(){
             viewModel.loadChallnegeUser()
         }
-
-        
-//        LottieView(filename: "Splash")
-//            .ignoresSafeArea(.all)
-//        Text("hello")
         
     }
     

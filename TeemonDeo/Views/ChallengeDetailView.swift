@@ -28,7 +28,6 @@ struct ChallengeDetailView: View {
                 
                 Text("\(challengeData.challengeStartDate) ~ \(DateHelper.calculateEndDate(startDate: challengeData.challengeStartDate, period: challengeData.challengePeriod))")
                     .foregroundColor(Color.gray)
-                
             }
             .padding(.bottom, 20)
             
@@ -134,3 +133,4 @@ extension ChallengeDetailView {
 //        ChallengeDetailView(challengeData)
 //    }
 //}
+    

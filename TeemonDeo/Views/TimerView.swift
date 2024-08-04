@@ -9,24 +9,20 @@ import SwiftUI
 import AVFoundation
 
 struct TimerView: View {
-
     @ObservedObject var timerManager = TimerManager()
     //@EnvironmentObject var soundViewModel: SoundViewModel
-    
     @StateObject var audioPlayerViewModel = AudioPlayerViewModel()
-    
     @State var isFinished : Bool = false
 
     var startLottieView = LottieView(filename: "TimerStartLottie", loopMode: .loop)
-    
     var stopLottieView = LottieView(filename: "TimerStopLottie", loopMode: .loop)
-    
     var completeLottieView = LottieView(filename: "ChallengeCompleteLottie", loopMode: .loop)
         
     var body: some View {
         VStack{
             HStack{
                 Spacer()
+                
                 // 음악 버튼
                 Button (action: {
                     if audioPlayerViewModel.isPlaying {
@@ -66,23 +62,24 @@ struct TimerView: View {
                     VStack{
                         Spacer()
                         Text("책상부터 비워보자")
-                            .font(.system(size: 18))
-                            .foregroundColor(.gray)
+                            .font(.SuitTitle3)
+                            .foregroundColor(.gray400)
                             .padding(.bottom, 12)
                         Text("비움 챌린지를 시작하세요")
-                            .font(.system(size: 24, weight: .semibold))
+                            .font(.SuitTitle1)
                         Spacer()
                     }
                     .frame(height: 140)
                 }
             }
             .padding(.bottom, 20)
+            
             //타이머
             ZStack {
                 HStack{
                     Rectangle()
                         .frame(width: 58, height: 48)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.gray100)
                         .overlay {
                             Text(secToMin(seconds: timerManager.secondsLeft))
                                 .frame(width: 70)
@@ -90,37 +87,57 @@ struct TimerView: View {
                     Text(":")
                     Rectangle()
                         .frame(width: 58, height: 48)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.gray100)
                         .overlay {
                             Text(secToSec(seconds: timerManager.secondsLeft))
                                 .frame(width: 70)
                         }
                 }
-                .font(.system(size: 36, weight: .semibold))
+                .font(.SuitTimer)
             }
             .padding(.bottom, 70)
+            
+            
             //시작/종료 버튼
-            Button ( action: {
-                if self.timerManager.timerMode == .running {
-                    self.timerManager.pause()
-                    startLottieView.stop()
-                    isFinished = true
-                } else {
-                    self.timerManager.start()
-                    startLottieView.play()
+            if self.timerManager.timerMode == .running {
+                NavigationLink(destination: CertifyingPicView()) {
+                    Text(self.timerManager.timerMode == .running ? "인증하기" : "시작하기")
+                        .font(.SuitTitle2)
+                        .fontWeight(.semibold)
+                        .padding(12)
+                        .padding(.horizontal, 20)
+                        .foregroundColor(.white)
+                        .background(
+                            RoundedRectangle(cornerRadius: 8)
+                        )           .foregroundColor(.black)
                 }
-                audioPlayerViewModel.playOrPause()
-            }) {
-                Text(self.timerManager.timerMode == .running ? "종료하기" : "시작하기")
-                    .font(.system(size: 16))
-                    .fontWeight(.semibold)
-                    .padding(12)
-                    .padding(.horizontal, 20)
-                    .foregroundColor(.white)
-                    .background(
-                        RoundedRectangle(cornerRadius: 8)
-                    )           .foregroundColor(.black)
+            } else{
+                Button ( action: {
+                    if self.timerManager.timerMode == .running {
+                        self.timerManager.pause()
+                        startLottieView.stop()
+                        isFinished = true
+                    } else {
+                        self.timerManager.start()
+                        startLottieView.play()
+                    }
+                    audioPlayerViewModel.playOrPause()
+                }) {
+                    Text(self.timerManager.timerMode == .running ? "인증하기" : "시작하기")
+                        .font(.SuitTitle2)
+                        .fontWeight(.semibold)
+                        .padding(12)
+                        .padding(.horizontal, 20)
+                        .foregroundColor(.white)
+                        .background(
+                            RoundedRectangle(cornerRadius: 8)
+                        )           .foregroundColor(.black)
+                }
             }
+
+            
+            
+            
             //로티
             startLottieView
                 .ignoresSafeArea(.all)

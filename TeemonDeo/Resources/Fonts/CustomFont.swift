@@ -36,6 +36,7 @@ extension Font {
     //=== SUIT-Bold
     //=== SUIT-ExtraBold
     //=== SUIT-Heavy
+    static let SuitTimer: Font = .custom("SUIT-ExtraBold", size: 36)
     static let SuitHeadline: Font = .custom("SUIT-Bold", size: 25)
     static let SuitTitle1: Font = .custom("SUIT-Bold", size: 24)
     static let SuitTitle2: Font = .custom("SUIT-Bold", size: 20)

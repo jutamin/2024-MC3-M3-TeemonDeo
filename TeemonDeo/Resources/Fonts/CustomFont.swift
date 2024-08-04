@@ -82,4 +82,13 @@ extension Font {
     static let PretendardExtraBold22: Font = .custom("Pretendard-ExtraBold", size: 22)
     static let PretendardExtraBold24: Font = .custom("Pretendard-ExtraBold", size: 24)
     static let PretendardExtraBold28: Font = .custom("Pretendard-ExtraBold", size: 26)
+    
+    static let PretendardSemiBold12: Font = .custom("Pretendard-SemiBold", size: 12)
+    static let PretendardSemiBold14: Font = .custom("Pretendard-SemiBold", size: 14)
+    static let PretendardSemiBold16: Font = .custom("Pretendard-SemiBold", size: 16)
+    static let PretendardSemiBold18: Font = .custom("Pretendard-SemiBold", size: 18)
+    static let PretendardSemiBold20: Font = .custom("Pretendard-SemiBold", size: 20)
+    static let PretendardSemiBold22: Font = .custom("Pretendard-SemiBold", size: 22)
+    static let PretendardSemiBold24: Font = .custom("Pretendard-SemiBold", size: 24)
+    static let PretendardSemiBold28: Font = .custom("Pretendard-SemiBold", size: 26)
 }

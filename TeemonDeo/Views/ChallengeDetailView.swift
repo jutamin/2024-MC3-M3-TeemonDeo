@@ -1,18 +1,23 @@
+
+
 import SwiftUI
 
-// 데이터 모델을 정의하는 구조체
-struct ChallengeModel: Identifiable {
-    var id: String
-    var challengeName: String
-    var challengeStartDate: String // "yyyy.MM.dd" 형식의 날짜 문자열
-    var challengePeriod: Int // 기간 (일 단위)
-    var challengeSpace: String
-    var isChallengeSucceed: Bool
-    var challengePercent: Int
-}
 
 struct ChallengeDetailView: View {
-    var challengeData: ChallengeModel
+    var challengeData: Challenge
+    
+    func getPeriodColors(period: Int) -> (boxColor: Color, textColor: Color) {
+        switch period {
+        case 1:
+            return (.LightBlue, .DarkBlue)
+        case 2:
+            return (.LightGreeen, .DarkGreen)
+        case 3:
+            return (.LightPink, .DarkPink)
+        default:
+            return (.LightBlue, .DarkBlue)
+        }
+    }
     
     var body: some View {
         VStack {
@@ -28,30 +33,19 @@ struct ChallengeDetailView: View {
             .padding(.bottom, 20)
             
             HStack(spacing: 10) {
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.lightSkyBlue)
-                    .frame(width: 100, height: 35)
-                    .overlay(
-                        Text("\(challengeData.challengePeriod)주 챌린지")
-                            .font(.system(size: 18, weight: .semibold))
-                            .foregroundColor(Color.darkSkyBlue)
-                    )
-                
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.lightGray)
-                    .frame(width: 55, height: 35)
-                    .overlay(
-                        Text(challengeData.challengeSpace)
-                            .font(.system(size: 18, weight: .semibold))
-                            .foregroundColor(Color.darkGray)
-                    )
+                challengePeriodText(period: challengeData.challengePeriod, boxColor: getPeriodColors(period: challengeData.challengePeriod).0, textColor: getPeriodColors(period: challengeData.challengePeriod).1)
+                    .cornerRadius(8)
+
+                challengeSpaceText(space: challengeData.challengeSpace, boxColor: .gray200, textColor: .gray800)
+                    .cornerRadius(8)
+
             }
             .padding(.bottom, 20)
 
             VStack(spacing: 0) {
                 ZStack {
                     Rectangle()
-                        .fill(Color.LightGray)
+                        .fill(Color.gray100)
                         .frame(height: 46)
                         .frame(maxWidth: .infinity)
                     
@@ -68,7 +62,7 @@ struct ChallengeDetailView: View {
                         Text("진행도 \(progress)%")
                             .font(.system(size: 16, weight: .medium))
                             .padding(.trailing, 26)
-                            .foregroundColor(Color.darkGray)
+                            .foregroundColor(Color.gray600)
                     }
                 }
                 .padding(.bottom, -4)
@@ -101,17 +95,35 @@ struct ChallengeDetailView: View {
     }
 }
 
-extension Color {
-    static let lightSkyBlue = Color(red: 0.70, green: 0.9, blue: 0.95)
-    static let darkSkyBlue = Color(red: 0.12, green: 0.70, blue: 0.75)
-    static let lightGray = Color(red: 0.8, green: 0.8, blue: 0.8)
-    static let darkGray = Color(red: 0.4, green: 0.4, blue: 0.4)
-    static let LightGray = Color(red: 0.9, green: 0.9, blue: 0.9)
+
+extension ChallengeDetailView {
+
+    @ViewBuilder
+    private func challengePeriodText(period: Int, boxColor: Color, textColor: Color) -> some View {
+        Text("\(period)주 챌린지")
+            .font(.PretendardSemiBold14)
+            .foregroundColor(textColor)
+            .padding(5)
+            .padding(.horizontal, 5)
+            .background(Rectangle().fill(boxColor))
+    }
+    
+    @ViewBuilder
+    private func challengeSpaceText(space: String, boxColor: Color, textColor: Color) -> some View {
+        Text("\(space)")
+            .font(.PretendardSemiBold14)
+            .foregroundColor(textColor)
+            .padding(5)
+            .padding(.horizontal, 5)
+            .background(Rectangle().fill(boxColor))
+    }
+    
 }
 
+
 // 미리보기에서 사용하는 타입 수정
-struct ChallengeDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChallengeDetailView(challengeData: ChallengeModel(id: "1", challengeName: "책상부터 비워보자", challengeStartDate: "2024.07.31", challengePeriod: 1, challengeSpace: "책상", isChallengeSucceed: false, challengePercent: 14))
-    }
-}
+//struct ChallengeDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ChallengeDetailView(challengeData)
+//    }
+//}

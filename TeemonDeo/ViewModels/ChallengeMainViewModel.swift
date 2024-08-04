@@ -7,14 +7,27 @@
 
 import Foundation
 import SwiftUI
-
+import Firebase
+import FirebaseAuth
 
 class ChallengeMainViewModel: ObservableObject {
-    
     @Published var challenges: [Challenge] = []
-    
-    let fireStoreChallengeManager = FireStoreChallengeManager()
+    @Published var challengeUser: ChallengeUser? = nil
+
     @Published var challengesCount: Int = 0
+    @Published var userId = Auth.auth().currentUser?.uid
+
+    let fireStoreChallengeManager = FireStoreChallengeManager()
+
+    // READ - ChallengeUser
+    func loadChallengerUser(){
+        Task {
+            let challnegeUser = try await fireStoreChallengeManager.fetchUser()
+            DispatchQueue.main.async {
+                self.challengeUser = challnegeUser
+            }
+        }
+    }
     
     // READ
     func loadChallenge() {

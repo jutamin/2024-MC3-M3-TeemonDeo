@@ -12,30 +12,31 @@ struct TabbarView: View {
     @Binding var showSignInView: Bool
     
     var body: some View {
-        TabView {
-            NavigationStack {
-                ContentView()
-                PieChartView(data: iPhoneOperationSystem.dummyData())
-            }
-            .tabItem {
-                Image(systemName: "cart")
-                Text("Products")
-            }
-            
-            NavigationStack {
+        NavigationStack{
+            TabView {
+                VStack {
+                    ContentView()
+                    PieChartView(data: iPhoneOperationSystem.dummyData())
+                }
+                .tag(0)
+                .tabItem {
+                    Image(systemName: "cart")
+                    Text("Products")
+                }
+                
                 ChallengeMainView()
-            }
-            .tabItem {
-                Image(systemName: "star.fill")
-                Text("Favorites")
-            }
-            
-            NavigationStack {
+                    .tag(1)
+                    .tabItem {
+                        Image(systemName: "star.fill")
+                        Text("Favorites")
+                    }
+                
                 SettingView(showSignInView: $showSignInView)
-            }
-            .tabItem {
-                Image(systemName: "person")
-                Text("Profile")
+                    .tag(2)
+                    .tabItem {
+                        Image(systemName: "person")
+                        Text("Profile")
+                    }
             }
         }
     }

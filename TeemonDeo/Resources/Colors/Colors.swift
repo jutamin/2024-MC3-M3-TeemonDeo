@@ -32,6 +32,7 @@ extension Color {
     static let cameraButtonStroke = Color(hex: "#292C2C")
     
     static let gray800 = Color(hex: "#292C2C")
+    static let gray600 = Color(hex: "#7C7B85")
     static let gray400 = Color(hex: "#A9AAB4")
     static let gray200 = Color(hex: "#DFE2E9")
     static let gray100 = Color(hex: "F6F8FA")

@@ -14,12 +14,27 @@ import FirebaseFirestoreSwift
 
 class FireStoreChallengeManager {
     var challenges: [Challenge] = []
-    
+    var challengeUser: ChallengeUser? = nil
+
     private let db = Firestore.firestore()
     
     var userId: String? {
         Auth.auth().currentUser?.uid
     }
+    
+    func fetchUser() async throws -> ChallengeUser {
+        guard let userId = userId else {
+            throw NSError(domain: "FireStoreChallengeManager", code: 1, userInfo: [NSLocalizedDescriptionKey: "User ID not available"])
+        }
+        
+        /// ChallengeUser타입의 snapshot
+        let snapshot = try await db.collection("user").document(userId).getDocument(as: ChallengeUser.self)
+
+        self.challengeUser = snapshot
+        
+        return snapshot
+    }
+    
     
     func addChallenge(challenge: Challenge) async throws {
         guard let userId = userId else {
@@ -38,6 +53,8 @@ class FireStoreChallengeManager {
         try await db.collection("user").document(userId)
             .collection("challenges").document(challenge.id).setData(data)
     }
+    
+
     
     func fetchChallenges() async throws -> [Challenge] {
         guard let userId = userId else {

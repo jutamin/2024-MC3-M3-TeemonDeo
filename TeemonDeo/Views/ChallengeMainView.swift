@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChallengeMainView: View {
-    @StateObject var viewModel = ChallengeMainViewModel()
+    @ObservedObject var viewModel = ChallengeMainViewModel()
     @State var isShowingSheet = false
     @State var detents: PresentationDetent = .height(613)
     
@@ -62,7 +62,7 @@ struct ChallengeMainView: View {
                     .padding(24)
                     .padding(.top)
                     
-                    ForEach(viewModel.challenges) { data in
+                    ForEach(viewModel.challenges, id: \.self) { data in
                         NavigationLink(destination: ChallengeDetailView(challengeData: data)) {
                             challengeCardView(challenge: data)
                         }
@@ -76,9 +76,7 @@ struct ChallengeMainView: View {
                 
                 
             }
-            .onAppear{
-                viewModel.loadChallenge()
-            }
+
             .refreshable {
                 viewModel.loadChallenge()
             }

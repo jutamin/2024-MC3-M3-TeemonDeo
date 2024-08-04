@@ -55,7 +55,7 @@ struct ChallengeDetailView: View {
                             .font(.system(size: 16, weight: .bold))
                             .padding(.leading, 26)
                             .foregroundColor(Color.black)
-                            
+                        
                         Spacer()
                         
                         let progress = DateHelper.calculateProgress(startDate: challengeData.challengeStartDate, period: challengeData.challengePeriod)
@@ -66,32 +66,39 @@ struct ChallengeDetailView: View {
                     }
                 }
                 .padding(.bottom, -4)
-
+                
                 Image("stamp")
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
                     .padding(.bottom, -4)
-
-                ZStack {
-                    Rectangle()
-                        .fill(Color.black)
-                        .frame(height: 86)
-                        .frame(maxWidth: .infinity)
-                    
-                    Text("오늘의 비움 실천하기")
-                        .font(.system(size: 20, weight: .bold))
-                        .foregroundColor(Color.white)
-                        .padding(.horizontal, 20)
-                        .offset(y: -10)
+                
+                
+                NavigationLink {
+                    TimerView()
+                } label: {
+                    VStack{
+                        Text("오늘의 비움 실천하기")
+                            .font(.SuitTitle2)
+                            .foregroundColor(.white)
+                            .padding(.top, 20)
+                        Spacer()
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: 86)
+                    .background(Rectangle().fill(.black))
                 }
-                .padding(.bottom, 0)
-            }
-            .ignoresSafeArea()
 
+            }
+            .edgesIgnoringSafeArea(.bottom)
         }
         .padding(.top, 50)
-        .navigationBarItems(trailing: Image("more"))
+        .navigationBarItems(trailing: 
+                                Button(action: {
+            //
+        }, label: {
+            Image(systemName: "ellipsis")
+        })
+        )
     }
 }
 

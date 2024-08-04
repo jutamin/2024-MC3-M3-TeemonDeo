@@ -74,7 +74,7 @@ struct ChallengeDetailView: View {
                 
                 
                 NavigationLink {
-                    TimerView()
+                    TimerView(timerChalData: challengeData)
                 } label: {
                     VStack{
                         Text("오늘의 비움 실천하기")

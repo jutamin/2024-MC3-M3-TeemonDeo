@@ -12,6 +12,7 @@ import FirebaseStorage
 
 class FireStorageManager {
     var imageUrl: String = ""
+    var imageId: String = UUID().uuidString
 
     func uploadImage(image: UIImage?) {
         guard let image = image, let imageData = image.jpegData(compressionQuality: 0.8) else {
@@ -19,7 +20,7 @@ class FireStorageManager {
             return
         }
         
-        let storageRef = Storage.storage().reference().child("images/\(UUID().uuidString).jpg")
+        let storageRef = Storage.storage().reference().child("images/\(imageId).jpg")
         
         storageRef.putData(imageData, metadata: nil) { metadata, error in
             if let error = error {

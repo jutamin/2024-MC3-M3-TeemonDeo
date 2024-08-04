@@ -121,11 +121,9 @@ extension Camera: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         guard let imageData = photo.fileDataRepresentation() else { return }
         
-        // self.recentImage = UIImage(data: imageData)
-        print("dododo \(UIImage(data: imageData)!.size)")
         self.recentImage = squareImage(from: UIImage(data: imageData)!)
         self.savePhoto(self.recentImage!)
-        print(self.recentImage?.size)
+
         print("[CameraModel]: Capture routine's done")
     }
 

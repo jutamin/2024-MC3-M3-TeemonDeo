@@ -36,6 +36,9 @@ extension Color {
     static let gray400 = Color(hex: "#A9AAB4")
     static let gray200 = Color(hex: "#DFE2E9")
     static let gray100 = Color(hex: "F6F8FA")
+    
+    static let imageTextBox = Color(hex: "#454545").opacity(0.7)
+
 }
 
 

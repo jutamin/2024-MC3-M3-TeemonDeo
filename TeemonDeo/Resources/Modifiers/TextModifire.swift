@@ -13,9 +13,9 @@ struct TextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .frame(width: 100, height: 30)
-            .font(.body)
-            .foregroundStyle(Color.certifyLabelText)
-            .background(Color.certifyLabel)
+            .font(.SuitBody1)
+            .foregroundStyle(Color.Blue)
+            .background(Color.LightBlue)
             .clipShape(RoundedRectangle(cornerRadius: 20))
             
         // Clipp shape 방법 조금 안좋은 것 같다

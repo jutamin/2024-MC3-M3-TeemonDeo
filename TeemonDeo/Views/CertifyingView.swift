@@ -7,37 +7,54 @@
 
 import SwiftUI
 
-struct CertifyingPicView: View {
-    @State private var isFinishedCapture = false
-    //@State private var userComment = "world class"
+struct CertifyingView: View {
+    var certiChalData: Challenge
     
     @ObservedObject var cameraViewModel = CameraViewModel()
-    @ObservedObject var certifyingPicViewModel = CertifyingViewModel()
+    @ObservedObject var certifyingiewModel = CertifyingViewModel()
+    
+    @State private var isFinishedCapture = false
+    @State private var imageMemo: String = ""
+    
+
     
     var body: some View {
         GeometryReader{ geometry in
             VStack(alignment: .center) {
                 Spacer()
                 
-                Text("버리는 물건을 찍어 인증하세요")
-                    .font(.system(size: 24, weight: .semibold))
-                    .foregroundColor(.white)
-                
                 Text("7번째 비움")
                     .modifier(TextModifier())
+                    .padding(.bottom)
+                
+                Text("버리는 물건을 찍어 인증하세요")
+                    .font(.SuitTitle2)
+                    .foregroundColor(.white)
                 
                 
                 // CameraPreview가 자꾸 왼쪽으로 붙는다 -> HStack, Spacer로 강제 해결
                 if let previewImage = cameraViewModel.recentImage {
                     HStack{
                         Spacer()
-                        Image(uiImage: previewImage)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: max(0, geometry.size.width - 16), height: max(0, geometry.size.width - 16))
-                            .clipped()
-                            .cornerRadius(20)
-                            .frame(width: max(0, geometry.size.width - 16), height: max(0, geometry.size.width - 16))
+                        ZStack(alignment: .bottom){
+                            Image(uiImage: previewImage)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: max(0, geometry.size.width - 16), height: max(0, geometry.size.width - 16))
+                                .clipped()
+                                .cornerRadius(20)
+                                .frame(width: max(0, geometry.size.width - 16), height: max(0, geometry.size.width - 16))
+                            TextField("간단한 메모를 남겨보세요", text: $imageMemo)
+                                .font(.SuitBody1)
+                                .frame(width: 196, height: 46)
+                                .padding(.horizontal)
+                                .foregroundColor(.white)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .fill(Color.imageTextBox)
+                                )
+                                .padding(.bottom)
+                        }
                         Spacer()
                     }
                     .padding(.vertical, 40)
@@ -64,12 +81,13 @@ struct CertifyingPicView: View {
                 
             }
             .background(.black)
+            .navigationBarBackButtonHidden()
         }
     }
 }
 
 
-extension CertifyingPicView {
+extension CertifyingView {
     
     @ViewBuilder
     private func afterCaptureView() -> some View {
@@ -84,19 +102,17 @@ extension CertifyingPicView {
             
             // 사진찍기 버튼
             Button(action: {
-                certifyingPicViewModel.willUploadImg = cameraViewModel.recentImage
-                print(certifyingPicViewModel.willUploadImg)
-                certifyingPicViewModel.uploadImg()
                 print("완료")
+                Task {
+                    try await certifyingiewModel.uploadImg(challengeId: certiChalData.id, recordMemo: imageMemo, willUploadImg: cameraViewModel.recentImage)
+                }
             })
             {
                 ZStack{
                     Circle()
-                        .fill(Color.Blue)
+                        .fill(Color.LightBlue)
+                        .stroke(Color.Blue, lineWidth: 3.64)
                         .frame(width: 85, height: 85)
-                    Circle()
-                        .fill(Color.cameraButtonStroke)
-                        .frame(width: 72.86, height: 72.86)
                     Image(systemName: "checkmark")
                         .frame(width: 33, height: 35)
                 }
@@ -122,7 +138,6 @@ extension CertifyingPicView {
     }
     
     
-    
     @ViewBuilder
     private func beforeCaptureView() -> some View {
         HStack(alignment: .center) {
@@ -134,7 +149,7 @@ extension CertifyingPicView {
                       "bolt.fill" : "bolt.slash.fill")
                 .resizable()
                 .frame(width: 30, height: 36)
-                .foregroundColor(Color.Blue)
+                .foregroundColor(Color.gray600)
             }
             .frame(width: 42)
             
@@ -142,6 +157,7 @@ extension CertifyingPicView {
             
             // 사진찍기 버튼
             Button(action: {
+                print("before cameraViewModel.capturePhoto()")
                 cameraViewModel.capturePhoto()
                 // 잠시 보류: isFinishedCapture = true
             })
@@ -151,7 +167,7 @@ extension CertifyingPicView {
                         .fill(Color.Blue)
                         .frame(width: 85, height: 85)
                     Circle()
-                        .stroke(Color.cameraButtonStroke, lineWidth: 3)
+                        .stroke(Color.cameraButtonStroke, lineWidth: 5)
                         .fill(Color.Blue)
                         .frame(width: 72.86, height: 72.86)
                 }
@@ -168,15 +184,11 @@ extension CertifyingPicView {
                     .frame(width: 42, height: 36)
             }
             .frame(width: 42)
-            .foregroundColor(.Blue)
+            .foregroundColor(.gray600)
             
             Spacer()
-            
         }
     }
 }
 
 
-#Preview {
-    CertifyingPicView()
-}

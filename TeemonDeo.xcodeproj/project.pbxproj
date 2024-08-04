@@ -47,6 +47,7 @@
 		AB7AD46A2C5F817A002DB693 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AD4692C5F817A002DB693 /* CameraPreviewView.swift */; };
 		AB7AD46C2C5F82CD002DB693 /* FireStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AD46B2C5F82CD002DB693 /* FireStorageManager.swift */; };
 		AB7AD46E2C5F82F0002DB693 /* ChallengeRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AD46D2C5F82F0002DB693 /* ChallengeRecord.swift */; };
+		AB7AD4742C5FE745002DB693 /* FireStoreRecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AD4732C5FE745002DB693 /* FireStoreRecordManager.swift */; };
 		AD13C8132C5B35E000B87781 /* ChallengeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8122C5B35E000B87781 /* ChallengeMainView.swift */; };
 		AD13C8152C5B35FD00B87781 /* ChallengeMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8142C5B35FD00B87781 /* ChallengeMainViewModel.swift */; };
 		AD13C8172C5B362C00B87781 /* FireStoreChallengeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8162C5B362C00B87781 /* FireStoreChallengeManager.swift */; };
@@ -122,6 +123,7 @@
 		AB7AD4692C5F817A002DB693 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
 		AB7AD46B2C5F82CD002DB693 /* FireStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStorageManager.swift; sourceTree = "<group>"; };
 		AB7AD46D2C5F82F0002DB693 /* ChallengeRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeRecord.swift; sourceTree = "<group>"; };
+		AB7AD4732C5FE745002DB693 /* FireStoreRecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreRecordManager.swift; sourceTree = "<group>"; };
 		AD13C8122C5B35E000B87781 /* ChallengeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMainView.swift; sourceTree = "<group>"; };
 		AD13C8142C5B35FD00B87781 /* ChallengeMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMainViewModel.swift; sourceTree = "<group>"; };
 		AD13C8162C5B362C00B87781 /* FireStoreChallengeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreChallengeManager.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				AD13C8162C5B362C00B87781 /* FireStoreChallengeManager.swift */,
 				AB7AD4612C5F806A002DB693 /* Camera.swift */,
 				AB7AD46B2C5F82CD002DB693 /* FireStorageManager.swift */,
+				AB7AD4732C5FE745002DB693 /* FireStoreRecordManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				5B1935FF2C5A2BDE001AC5B2 /* TimerManager.swift in Sources */,
 				AD13C81B2C5B366700B87781 /* CustomFont.swift in Sources */,
 				8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */,
+				AB7AD4742C5FE745002DB693 /* FireStoreRecordManager.swift in Sources */,
 				AD13C8152C5B35FD00B87781 /* ChallengeMainViewModel.swift in Sources */,
 				AB7AD4622C5F806A002DB693 /* Camera.swift in Sources */,
 				AB7AD4682C5F8162002DB693 /* CameraViewModel.swift in Sources */,

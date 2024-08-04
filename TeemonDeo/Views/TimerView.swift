@@ -9,6 +9,10 @@ import SwiftUI
 import AVFoundation
 
 struct TimerView: View {
+    var timerChalData: Challenge
+
+    @State private var isActive = false
+    
     @ObservedObject var timerManager = TimerManager()
     //@EnvironmentObject var soundViewModel: SoundViewModel
     @StateObject var audioPlayerViewModel = AudioPlayerViewModel()
@@ -98,56 +102,44 @@ struct TimerView: View {
             .padding(.bottom, 70)
             
             
-            //시작/종료 버튼
-            if self.timerManager.timerMode == .running {
-                NavigationLink(destination: CertifyingPicView()) {
-                    Text(self.timerManager.timerMode == .running ? "인증하기" : "시작하기")
-                        .font(.SuitTitle2)
-                        .fontWeight(.semibold)
-                        .padding(12)
-                        .padding(.horizontal, 20)
-                        .foregroundColor(.white)
-                        .background(
-                            RoundedRectangle(cornerRadius: 8)
-                        )           .foregroundColor(.black)
+            Button ( action: {
+                if self.timerManager.timerMode == .running {
+                    self.timerManager.pause()
+                    startLottieView.stop()
+                    isFinished = true
+                    isActive = true
+                    
+                } else {
+                    self.timerManager.start()
+                    startLottieView.play()
                 }
-            } else{
-                Button ( action: {
-                    if self.timerManager.timerMode == .running {
-                        self.timerManager.pause()
-                        startLottieView.stop()
-                        isFinished = true
-                    } else {
-                        self.timerManager.start()
-                        startLottieView.play()
-                    }
-                    audioPlayerViewModel.playOrPause()
-                }) {
-                    Text(self.timerManager.timerMode == .running ? "인증하기" : "시작하기")
-                        .font(.SuitTitle2)
-                        .fontWeight(.semibold)
-                        .padding(12)
-                        .padding(.horizontal, 20)
-                        .foregroundColor(.white)
-                        .background(
-                            RoundedRectangle(cornerRadius: 8)
-                        )           .foregroundColor(.black)
-                }
+                audioPlayerViewModel.playOrPause()
+            }) {
+                Text(self.timerManager.timerMode == .running ? "종료하기" : "시작하기")
+                    .font(.system(size: 16))
+                    .fontWeight(.semibold)
+                    .padding(12)
+                    .padding(.horizontal, 20)
+                    .foregroundColor(.white)
+                    .background(
+                        RoundedRectangle(cornerRadius: 8)
+                    )           .foregroundColor(.black)
             }
+            
+            // TODO: 다른 버전의 NavigationLink로 변경
+            NavigationLink(destination: CertifyingView(certiChalData: timerChalData), isActive: $isActive){
+                Text("")
+            }
+            
 
-            
-            
-            
             //로티
             startLottieView
                 .ignoresSafeArea(.all)
                 .frame(width: 360)
         }
         .padding(.top, 30)
+
     }
 
 }
 
-#Preview {
-    TimerView()
-}

@@ -11,7 +11,7 @@ import Foundation
 struct ChallengeUser: Codable, Hashable {
     let userId: String
     let userEmail: String?
-    let userNickname: String
+    var userNickname: String
     let userTier: Int
     
     init(auth: AuthDataResultModel) {

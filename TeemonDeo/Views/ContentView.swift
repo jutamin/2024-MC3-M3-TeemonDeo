@@ -20,7 +20,7 @@ struct ContentView: View {
             
         }
         .onAppear(){
-            viewModel.loadChallnegeUser()
+            Task {await viewModel.loadChallengeUser2()}
         }
 
 //        LottieView(filename: "Splash")

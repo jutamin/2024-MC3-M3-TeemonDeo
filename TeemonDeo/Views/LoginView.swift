@@ -45,6 +45,7 @@ struct LoginView: View {
     
     @StateObject private var viewModel = AuthenticationViewModel()
     @Binding var showSignInView: Bool
+    @Binding var showOnboardingView: Bool
     
     var body: some View {
         ZStack{
@@ -58,11 +59,13 @@ struct LoginView: View {
                     Task {
                         do {
                             try await viewModel.signInGoogle() //signInGoogle 과정 시작 (비동기로 진행)
-                            showSignInView = false //signInGoogle 과정 끝나면 AuthenticationView 종료
+                            showOnboardingView = true
+//                            showSignInView = false //signInGoogle 과정 끝나면 AuthenticationView 종료
                         } catch {
                             print(error)
                         }
                     }
+//                    showOnboardingView = true
                 }
                 
                 // Sign in with Apple 버튼
@@ -70,11 +73,14 @@ struct LoginView: View {
                     Task {
                         do {
                             try await viewModel.signInApple() //signInApple 과정 시작 (비동기로 진행)
-                            showSignInView = false //signInApple 과정 끝나면 AuthenticationView 종료
+                            showOnboardingView = true
+
+//                            showSignInView = false //signInApple 과정 끝나면 AuthenticationView 종료
                         } catch {
                             print(error)
                         }
                     }
+//                    showOnboardingView = true
                 }, label: {
                     SignInWithAppleButtonViewRepresentable(type: .default, style: .black)
                         .allowsHitTesting(false)
@@ -84,6 +90,9 @@ struct LoginView: View {
                 Spacer().frame(height: 50)
             }
             .padding()
+        }
+        .navigationDestination(isPresented: $showOnboardingView){
+            OnboardingView(showSignInView: $showSignInView, showOnboardingView: $showOnboardingView)
         }
     }
 }

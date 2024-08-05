@@ -11,6 +11,7 @@ struct RootView: View {
     
     @State private var showSignInView: Bool = false
     @State private var showSplashView: Bool = true
+    @State private var showOnboardingView: Bool = false
     var startLottieView = LottieView(filename: "Splash", loopMode: .playOnce)
 
     
@@ -31,19 +32,19 @@ struct RootView: View {
             } else {
                 ZStack {
                     if !showSignInView {
-                        TabbarView(showSignInView: $showSignInView)
+                        TabbarView(showSignInView: $showSignInView, showOnboardingView: $showOnboardingView)
                     }
                 }
                 .onAppear {
                     //currentUser를 받아옴
                     let authUser = try? AuthenticationManager.shared.getAuthenticatedUser()
                     
-                    //authUser의 값이 nil이라면(=currentUser가 없다면) showSignInView를 true로 바꿔줌 -> SignIn 뷰 띄움
+                    //authUser의 값이 nil이라면(=currentUser가 없다면) showSignInView를 true로 바꿔줌 -> 로그인뷰 띄움
                     self.showSignInView = authUser == nil
                 }
                 .fullScreenCover(isPresented: $showSignInView) {
                     NavigationStack {
-                        LoginView(showSignInView: $showSignInView)
+                        LoginView(showSignInView: $showSignInView, showOnboardingView: $showOnboardingView)
                     }
                 }
             }

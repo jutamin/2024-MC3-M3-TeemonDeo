@@ -10,6 +10,7 @@ import SwiftUI
 struct TabbarView: View {
     
     @Binding var showSignInView: Bool
+    @Binding var showOnboardingView: Bool
     
     var body: some View {
         NavigationStack{
@@ -44,6 +45,6 @@ struct TabbarView: View {
 
 struct TabbarView_Previews: PreviewProvider {
     static var previews: some View {
-        TabbarView(showSignInView: .constant(false))
+        TabbarView(showSignInView: .constant(false), showOnboardingView: .constant(false))
     }
 }

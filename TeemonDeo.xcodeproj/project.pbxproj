@@ -34,11 +34,13 @@
 		8BAD01232C59CF5F002EC402 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAD01222C59CF5F002EC402 /* UserManager.swift */; };
 		8BAD01252C59D047002EC402 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8BAD01242C59D047002EC402 /* FirebaseFirestoreSwift */; };
 		8BAD01272C59D0FE002EC402 /* AuthDataResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAD01262C59D0FE002EC402 /* AuthDataResultModel.swift */; };
-		8BF2D1622C5B6ED30068A71E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8BF2D1612C5B6ED30068A71E /* Lottie */; };
 		8BF2D1642C5BEB1A0068A71E /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2D1632C5BEB1A0068A71E /* PieChartView.swift */; };
 		8BF2D16C2C5E0A630068A71E /* ChallengeCompleteLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BF2D16B2C5E0A630068A71E /* ChallengeCompleteLottie.json */; };
 		8BF2D16E2C5E0A6E0068A71E /* TimerStartLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BF2D16D2C5E0A6E0068A71E /* TimerStartLottie.json */; };
 		8BF2D1702C5E0B240068A71E /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BF2D16F2C5E0B230068A71E /* Splash.json */; };
+		8BF2D1782C5E2AE70068A71E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8BF2D1772C5E2AE70068A71E /* Lottie */; };
+		8BF2D17A2C5E2B0E0068A71E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2D1792C5E2B0E0068A71E /* OnboardingView.swift */; };
+		8BF2D17C2C60B2B30068A71E /* SettingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2D17B2C60B2B30068A71E /* SettingInfoView.swift */; };
 		AB44FE6B2C5D26E70060310F /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB44FE6A2C5D26E70060310F /* Challenge.swift */; };
 		AB7AD4622C5F806A002DB693 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AD4612C5F806A002DB693 /* Camera.swift */; };
 		AB7AD4642C5F8133002DB693 /* CertifyingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AD4632C5F8133002DB693 /* CertifyingView.swift */; };
@@ -116,6 +118,8 @@
 		8BF2D16B2C5E0A630068A71E /* ChallengeCompleteLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ChallengeCompleteLottie.json; sourceTree = "<group>"; };
 		8BF2D16D2C5E0A6E0068A71E /* TimerStartLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TimerStartLottie.json; sourceTree = "<group>"; };
 		8BF2D16F2C5E0B230068A71E /* Splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.json; sourceTree = "<group>"; };
+		8BF2D1792C5E2B0E0068A71E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		8BF2D17B2C60B2B30068A71E /* SettingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInfoView.swift; sourceTree = "<group>"; };
 		AB44FE6A2C5D26E70060310F /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		AB7AD4612C5F806A002DB693 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		AB7AD4632C5F8133002DB693 /* CertifyingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifyingView.swift; sourceTree = "<group>"; };
@@ -166,7 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B7543272C588E0100B1C53D /* GoogleSignIn in Frameworks */,
-				8BF2D1622C5B6ED30068A71E /* Lottie in Frameworks */,
+				8BF2D1782C5E2AE70068A71E /* Lottie in Frameworks */,
 				ADB8C46E2C4F7F4400D5B9BC /* FirebaseAuth in Frameworks */,
 				ADB8C4702C4F7F4400D5B9BC /* FirebaseFirestore in Frameworks */,
 				8BAD01252C59D047002EC402 /* FirebaseFirestoreSwift in Frameworks */,
@@ -309,6 +313,8 @@
 				AB7AD4632C5F8133002DB693 /* CertifyingView.swift */,
 				AB7AD4692C5F817A002DB693 /* CameraPreviewView.swift */,
 				AD63FA602C60BA9900BBA80A /* CertifyingFinishedView.swift */,
+				8BF2D1792C5E2B0E0068A71E /* OnboardingView.swift */,
+				8BF2D17B2C60B2B30068A71E /* SettingInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -391,7 +397,7 @@
 				8B7543262C588E0100B1C53D /* GoogleSignIn */,
 				8B7543282C588E0100B1C53D /* GoogleSignInSwift */,
 				8BAD01242C59D047002EC402 /* FirebaseFirestoreSwift */,
-				8BF2D1612C5B6ED30068A71E /* Lottie */,
+				8BF2D1772C5E2AE70068A71E /* Lottie */,
 			);
 			productName = TeemonDeo;
 			productReference = ADB8C4572C4F7E2F00D5B9BC /* TeemonDeo.app */;
@@ -424,7 +430,7 @@
 			packageReferences = (
 				ADB8C46C2C4F7F4400D5B9BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				8B7543252C588E0100B1C53D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
-				8BF2D1602C5B6ED30068A71E /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				8BF2D1762C5E2AE70068A71E /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = ADB8C4582C4F7E2F00D5B9BC /* Products */;
 			projectDirPath = "";
@@ -495,6 +501,7 @@
 				AB7AD4662C5F8146002DB693 /* CertifyingViewModel.swift in Sources */,
 				5B1935B92C59CFA6001AC5B2 /* TimerView.swift in Sources */,
 				5B1935FF2C5A2BDE001AC5B2 /* TimerManager.swift in Sources */,
+				8BF2D17A2C5E2B0E0068A71E /* OnboardingView.swift in Sources */,
 				AD13C81B2C5B366700B87781 /* CustomFont.swift in Sources */,
 				8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */,
 				AB7AD4742C5FE745002DB693 /* FireStoreRecordManager.swift in Sources */,
@@ -515,6 +522,7 @@
 				AB7AD4642C5F8133002DB693 /* CertifyingView.swift in Sources */,
 				8B7543182C588A0B00B1C53D /* Utilities.swift in Sources */,
 				AD63FA612C60BA9900BBA80A /* CertifyingFinishedView.swift in Sources */,
+				8BF2D17C2C60B2B30068A71E /* SettingInfoView.swift in Sources */,
 				5B1935FD2C5A2BCC001AC5B2 /* TimerHelper.swift in Sources */,
 				72FEB9602C5A1D0100F64B71 /* DateHelper.swift in Sources */,
 				8B75431E2C588AAB00B1C53D /* SignInAppleHelper.swift in Sources */,
@@ -655,7 +663,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TeemonDeo/Preview Content\"";
-				DEVELOPMENT_TEAM = 583985W8L5;
+				DEVELOPMENT_TEAM = GF3B5LP7RQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeemonDeo/Info.plist;
@@ -690,7 +698,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TeemonDeo/Preview Content\"";
-				DEVELOPMENT_TEAM = 583985W8L5;
+				DEVELOPMENT_TEAM = GF3B5LP7RQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeemonDeo/Info.plist;
@@ -747,7 +755,7 @@
 				minimumVersion = 7.1.0;
 			};
 		};
-		8BF2D1602C5B6ED30068A71E /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		8BF2D1762C5E2AE70068A71E /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
 			requirement = {
@@ -781,9 +789,9 @@
 			package = ADB8C46C2C4F7F4400D5B9BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
 		};
-		8BF2D1612C5B6ED30068A71E /* Lottie */ = {
+		8BF2D1772C5E2AE70068A71E /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8BF2D1602C5B6ED30068A71E /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = 8BF2D1762C5E2AE70068A71E /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
 		ADB8C46D2C4F7F4400D5B9BC /* FirebaseAuth */ = {

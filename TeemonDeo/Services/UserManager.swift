@@ -39,6 +39,9 @@ class UserManager {
     
     /// Firestore User 수정
     func updateUser(user: ChallengeUser) async throws {
+        //추가
+        
+        //
         try userDB.collection("user").document(user.userId).setData(from: user)
     }
     

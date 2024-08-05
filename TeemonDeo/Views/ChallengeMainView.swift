@@ -50,6 +50,7 @@ struct ChallengeMainView: View {
                         Text("진행 중인 챌린지")
                             .font(.laundryBold18)
                             .foregroundColor(.gray800)
+
                         
                         Spacer()
                         
@@ -67,8 +68,6 @@ struct ChallengeMainView: View {
                             challengeCardView(challenge: data)
                         }
                     }
-                    
-                    
                 }
                 .background(Color.gray100)
                 .padding(.top, 20)

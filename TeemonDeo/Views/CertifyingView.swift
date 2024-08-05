@@ -16,6 +16,7 @@ struct CertifyingView: View {
     @State private var isFinishedCapture = false
     @State private var imageMemo: String = ""
     
+    @State private var allFinished = false
 
     
     var body: some View {
@@ -30,7 +31,9 @@ struct CertifyingView: View {
                 Text("버리는 물건을 찍어 인증하세요")
                     .font(.SuitTitle2)
                     .foregroundColor(.white)
-                
+                NavigationLink(destination: CertifyingFinishedView(), isActive: $allFinished) {
+                    Text("")
+                }
                 
                 // CameraPreview가 자꾸 왼쪽으로 붙는다 -> HStack, Spacer로 강제 해결
                 if let previewImage = cameraViewModel.recentImage {
@@ -106,6 +109,8 @@ extension CertifyingView {
                 Task {
                     try await certifyingiewModel.uploadImg(challengeId: certiChalData.id, recordMemo: imageMemo, willUploadImg: cameraViewModel.recentImage)
                 }
+                allFinished = true
+
             })
             {
                 ZStack{

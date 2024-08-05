@@ -75,6 +75,7 @@
 		AD13C8762C5CC63D00B87781 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C86D2C5CC63D00B87781 /* Pretendard-SemiBold.otf */; };
 		AD13C8772C5CC63D00B87781 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C86E2C5CC63D00B87781 /* Pretendard-Light.otf */; };
 		AD13C8782C5CC63D00B87781 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C86F2C5CC63D00B87781 /* Pretendard-Bold.otf */; };
+		AD63FA612C60BA9900BBA80A /* CertifyingFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD63FA602C60BA9900BBA80A /* CertifyingFinishedView.swift */; };
 		ADB8C45B2C4F7E2F00D5B9BC /* TeemonDeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB8C45A2C4F7E2F00D5B9BC /* TeemonDeoApp.swift */; };
 		ADB8C45D2C4F7E2F00D5B9BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */; };
 		ADB8C45F2C4F7E3000D5B9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB8C45E2C4F7E3000D5B9BC /* Assets.xcassets */; };
@@ -151,6 +152,7 @@
 		AD13C86D2C5CC63D00B87781 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		AD13C86E2C5CC63D00B87781 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
 		AD13C86F2C5CC63D00B87781 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		AD63FA602C60BA9900BBA80A /* CertifyingFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifyingFinishedView.swift; sourceTree = "<group>"; };
 		ADB8C4572C4F7E2F00D5B9BC /* TeemonDeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeemonDeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB8C45A2C4F7E2F00D5B9BC /* TeemonDeoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeemonDeoApp.swift; sourceTree = "<group>"; };
 		ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				AD13C8392C5C72A800B87781 /* ChallengeSheetView.swift */,
 				AB7AD4632C5F8133002DB693 /* CertifyingView.swift */,
 				AB7AD4692C5F817A002DB693 /* CameraPreviewView.swift */,
+				AD63FA602C60BA9900BBA80A /* CertifyingFinishedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				AB44FE6B2C5D26E70060310F /* Challenge.swift in Sources */,
 				AB7AD4642C5F8133002DB693 /* CertifyingView.swift in Sources */,
 				8B7543182C588A0B00B1C53D /* Utilities.swift in Sources */,
+				AD63FA612C60BA9900BBA80A /* CertifyingFinishedView.swift in Sources */,
 				5B1935FD2C5A2BCC001AC5B2 /* TimerHelper.swift in Sources */,
 				72FEB9602C5A1D0100F64B71 /* DateHelper.swift in Sources */,
 				8B75431E2C588AAB00B1C53D /* SignInAppleHelper.swift in Sources */,

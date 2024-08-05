@@ -13,7 +13,15 @@ struct DateHelper {
     
     // 날짜 형식 설정
     private static let dateFormat = "yyyy.MM.dd"
-
+    
+    // 날짜를 yy년 mm월 dd일 로 출력하는 함수
+    static func translateDate() -> String {
+        let today = Date()
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_KR")
+        formatter.dateFormat = "yy년 MM월 dd일"
+        return formatter.string(from: today)
+    }
     
     // 종료 날짜를 계산하는 함수
     static func calculateEndDate(startDate: String, period: Int) -> String {

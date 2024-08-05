@@ -16,7 +16,7 @@
 		5B19360B2C5C750B001AC5B2 /* Hyukoh_youngman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5B19360A2C5C750B001AC5B2 /* Hyukoh_youngman.mp3 */; };
 		7227C47A2C5918AC0060F430 /* ChallengeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7227C4792C5918AC0060F430 /* ChallengeDetailView.swift */; };
 		722AD50E2C5C72EA0008D556 /* SettingProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722AD50D2C5C72EA0008D556 /* SettingProfileView.swift */; };
-		72FEB9602C5A1D0100F64B71 /* ChallengeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEB95F2C5A1D0100F64B71 /* ChallengeDetailViewModel.swift */; };
+		72FEB9602C5A1D0100F64B71 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEB95F2C5A1D0100F64B71 /* DateHelper.swift */; };
 		8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14B6FD2C57766800045B7A /* LottieManager.swift */; };
 		8B7543102C58892500B1C53D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B75430F2C58892500B1C53D /* RootView.swift */; };
 		8B7543122C58894300B1C53D /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7543112C58894300B1C53D /* TabbarView.swift */; };
@@ -42,6 +42,14 @@
 		8BF2D17A2C5E2B0E0068A71E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2D1792C5E2B0E0068A71E /* OnboardingView.swift */; };
 		8BF2D17C2C60B2B30068A71E /* SettingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2D17B2C60B2B30068A71E /* SettingInfoView.swift */; };
 		AB44FE6B2C5D26E70060310F /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB44FE6A2C5D26E70060310F /* Challenge.swift */; };
+		AB7AD4622C5F806A002DB693 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AD4612C5F806A002DB693 /* Camera.swift */; };
+		AB7AD4642C5F8133002DB693 /* CertifyingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AD4632C5F8133002DB693 /* CertifyingView.swift */; };
+		AB7AD4662C5F8146002DB693 /* CertifyingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AD4652C5F8146002DB693 /* CertifyingViewModel.swift */; };
+		AB7AD4682C5F8162002DB693 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AD4672C5F8162002DB693 /* CameraViewModel.swift */; };
+		AB7AD46A2C5F817A002DB693 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AD4692C5F817A002DB693 /* CameraPreviewView.swift */; };
+		AB7AD46C2C5F82CD002DB693 /* FireStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AD46B2C5F82CD002DB693 /* FireStorageManager.swift */; };
+		AB7AD46E2C5F82F0002DB693 /* ChallengeRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AD46D2C5F82F0002DB693 /* ChallengeRecord.swift */; };
+		AB7AD4742C5FE745002DB693 /* FireStoreRecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AD4732C5FE745002DB693 /* FireStoreRecordManager.swift */; };
 		AD13C8132C5B35E000B87781 /* ChallengeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8122C5B35E000B87781 /* ChallengeMainView.swift */; };
 		AD13C8152C5B35FD00B87781 /* ChallengeMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8142C5B35FD00B87781 /* ChallengeMainViewModel.swift */; };
 		AD13C8172C5B362C00B87781 /* FireStoreChallengeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8162C5B362C00B87781 /* FireStoreChallengeManager.swift */; };
@@ -69,6 +77,7 @@
 		AD13C8762C5CC63D00B87781 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C86D2C5CC63D00B87781 /* Pretendard-SemiBold.otf */; };
 		AD13C8772C5CC63D00B87781 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C86E2C5CC63D00B87781 /* Pretendard-Light.otf */; };
 		AD13C8782C5CC63D00B87781 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C86F2C5CC63D00B87781 /* Pretendard-Bold.otf */; };
+		AD63FA612C60BA9900BBA80A /* CertifyingFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD63FA602C60BA9900BBA80A /* CertifyingFinishedView.swift */; };
 		ADB8C45B2C4F7E2F00D5B9BC /* TeemonDeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB8C45A2C4F7E2F00D5B9BC /* TeemonDeoApp.swift */; };
 		ADB8C45D2C4F7E2F00D5B9BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */; };
 		ADB8C45F2C4F7E3000D5B9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB8C45E2C4F7E3000D5B9BC /* Assets.xcassets */; };
@@ -88,7 +97,7 @@
 		5B19360A2C5C750B001AC5B2 /* Hyukoh_youngman.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hyukoh_youngman.mp3; sourceTree = "<group>"; };
 		7227C4792C5918AC0060F430 /* ChallengeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailView.swift; sourceTree = "<group>"; };
 		722AD50D2C5C72EA0008D556 /* SettingProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileView.swift; sourceTree = "<group>"; };
-		72FEB95F2C5A1D0100F64B71 /* ChallengeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailViewModel.swift; sourceTree = "<group>"; };
+		72FEB95F2C5A1D0100F64B71 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		8B14B6FD2C57766800045B7A /* LottieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieManager.swift; sourceTree = "<group>"; };
 		8B75430F2C58892500B1C53D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		8B7543112C58894300B1C53D /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
@@ -112,6 +121,14 @@
 		8BF2D1792C5E2B0E0068A71E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		8BF2D17B2C60B2B30068A71E /* SettingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInfoView.swift; sourceTree = "<group>"; };
 		AB44FE6A2C5D26E70060310F /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		AB7AD4612C5F806A002DB693 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		AB7AD4632C5F8133002DB693 /* CertifyingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifyingView.swift; sourceTree = "<group>"; };
+		AB7AD4652C5F8146002DB693 /* CertifyingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifyingViewModel.swift; sourceTree = "<group>"; };
+		AB7AD4672C5F8162002DB693 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		AB7AD4692C5F817A002DB693 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
+		AB7AD46B2C5F82CD002DB693 /* FireStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStorageManager.swift; sourceTree = "<group>"; };
+		AB7AD46D2C5F82F0002DB693 /* ChallengeRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeRecord.swift; sourceTree = "<group>"; };
+		AB7AD4732C5FE745002DB693 /* FireStoreRecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreRecordManager.swift; sourceTree = "<group>"; };
 		AD13C8122C5B35E000B87781 /* ChallengeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMainView.swift; sourceTree = "<group>"; };
 		AD13C8142C5B35FD00B87781 /* ChallengeMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMainViewModel.swift; sourceTree = "<group>"; };
 		AD13C8162C5B362C00B87781 /* FireStoreChallengeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreChallengeManager.swift; sourceTree = "<group>"; };
@@ -139,6 +156,7 @@
 		AD13C86D2C5CC63D00B87781 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		AD13C86E2C5CC63D00B87781 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
 		AD13C86F2C5CC63D00B87781 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		AD63FA602C60BA9900BBA80A /* CertifyingFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifyingFinishedView.swift; sourceTree = "<group>"; };
 		ADB8C4572C4F7E2F00D5B9BC /* TeemonDeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeemonDeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB8C45A2C4F7E2F00D5B9BC /* TeemonDeoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeemonDeoApp.swift; sourceTree = "<group>"; };
 		ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -242,6 +260,7 @@
 		ADB8C4752C4F7FE700D5B9BC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				72FEB95F2C5A1D0100F64B71 /* DateHelper.swift */,
 				8B14B6FD2C57766800045B7A /* LottieManager.swift */,
 				8B7543172C588A0B00B1C53D /* Utilities.swift */,
 			);
@@ -258,6 +277,9 @@
 				8B75431B2C588A8C00B1C53D /* SignInGoogleHelper.swift */,
 				8B75431D2C588AAB00B1C53D /* SignInAppleHelper.swift */,
 				AD13C8162C5B362C00B87781 /* FireStoreChallengeManager.swift */,
+				AB7AD4612C5F806A002DB693 /* Camera.swift */,
+				AB7AD46B2C5F82CD002DB693 /* FireStorageManager.swift */,
+				AB7AD4732C5FE745002DB693 /* FireStoreRecordManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -267,8 +289,9 @@
 			children = (
 				8B75431F2C588AD600B1C53D /* SettingViewModel.swift */,
 				5B1936022C5B244E001AC5B2 /* AudioPlayerViewModel.swift */,
-				72FEB95F2C5A1D0100F64B71 /* ChallengeDetailViewModel.swift */,
 				AD13C8142C5B35FD00B87781 /* ChallengeMainViewModel.swift */,
+				AB7AD4652C5F8146002DB693 /* CertifyingViewModel.swift */,
+				AB7AD4672C5F8162002DB693 /* CameraViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -287,6 +310,9 @@
 				722AD50D2C5C72EA0008D556 /* SettingProfileView.swift */,
 				8BF2D1632C5BEB1A0068A71E /* PieChartView.swift */,
 				AD13C8392C5C72A800B87781 /* ChallengeSheetView.swift */,
+				AB7AD4632C5F8133002DB693 /* CertifyingView.swift */,
+				AB7AD4692C5F817A002DB693 /* CameraPreviewView.swift */,
+				AD63FA602C60BA9900BBA80A /* CertifyingFinishedView.swift */,
 				8BF2D1792C5E2B0E0068A71E /* OnboardingView.swift */,
 				8BF2D17B2C60B2B30068A71E /* SettingInfoView.swift */,
 			);
@@ -299,6 +325,7 @@
 				8BAD01202C59CF2D002EC402 /* ChallengeUser.swift */,
 				8BAD01262C59D0FE002EC402 /* AuthDataResultModel.swift */,
 				AB44FE6A2C5D26E70060310F /* Challenge.swift */,
+				AB7AD46D2C5F82F0002DB693 /* ChallengeRecord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -467,28 +494,37 @@
 				AD13C8232C5B372000B87781 /* TextModifire.swift in Sources */,
 				8BAD01232C59CF5F002EC402 /* UserManager.swift in Sources */,
 				8B7543102C58892500B1C53D /* RootView.swift in Sources */,
+				AB7AD46C2C5F82CD002DB693 /* FireStorageManager.swift in Sources */,
 				ADB8C45D2C4F7E2F00D5B9BC /* ContentView.swift in Sources */,
 				AD13C83A2C5C72A800B87781 /* ChallengeSheetView.swift in Sources */,
 				8B75431A2C588A4A00B1C53D /* AuthenticationManager.swift in Sources */,
+				AB7AD4662C5F8146002DB693 /* CertifyingViewModel.swift in Sources */,
 				5B1935B92C59CFA6001AC5B2 /* TimerView.swift in Sources */,
 				5B1935FF2C5A2BDE001AC5B2 /* TimerManager.swift in Sources */,
 				8BF2D17A2C5E2B0E0068A71E /* OnboardingView.swift in Sources */,
 				AD13C81B2C5B366700B87781 /* CustomFont.swift in Sources */,
 				8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */,
+				AB7AD4742C5FE745002DB693 /* FireStoreRecordManager.swift in Sources */,
 				AD13C8152C5B35FD00B87781 /* ChallengeMainViewModel.swift in Sources */,
+				AB7AD4622C5F806A002DB693 /* Camera.swift in Sources */,
+				AB7AD4682C5F8162002DB693 /* CameraViewModel.swift in Sources */,
 				8BAD01212C59CF2D002EC402 /* ChallengeUser.swift in Sources */,
+				AB7AD46A2C5F817A002DB693 /* CameraPreviewView.swift in Sources */,
 				8B7543122C58894300B1C53D /* TabbarView.swift in Sources */,
 				722AD50E2C5C72EA0008D556 /* SettingProfileView.swift in Sources */,
 				8BAD01272C59D0FE002EC402 /* AuthDataResultModel.swift in Sources */,
 				AD13C8132C5B35E000B87781 /* ChallengeMainView.swift in Sources */,
+				AB7AD46E2C5F82F0002DB693 /* ChallengeRecord.swift in Sources */,
 				8B7543202C588AD600B1C53D /* SettingViewModel.swift in Sources */,
 				7227C47A2C5918AC0060F430 /* ChallengeDetailView.swift in Sources */,
 				ADB8C45B2C4F7E2F00D5B9BC /* TeemonDeoApp.swift in Sources */,
 				AB44FE6B2C5D26E70060310F /* Challenge.swift in Sources */,
+				AB7AD4642C5F8133002DB693 /* CertifyingView.swift in Sources */,
 				8B7543182C588A0B00B1C53D /* Utilities.swift in Sources */,
+				AD63FA612C60BA9900BBA80A /* CertifyingFinishedView.swift in Sources */,
 				8BF2D17C2C60B2B30068A71E /* SettingInfoView.swift in Sources */,
 				5B1935FD2C5A2BCC001AC5B2 /* TimerHelper.swift in Sources */,
-				72FEB9602C5A1D0100F64B71 /* ChallengeDetailViewModel.swift in Sources */,
+				72FEB9602C5A1D0100F64B71 /* DateHelper.swift in Sources */,
 				8B75431E2C588AAB00B1C53D /* SignInAppleHelper.swift in Sources */,
 				8B7543162C5889C500B1C53D /* SettingView.swift in Sources */,
 				AD13C8172C5B362C00B87781 /* FireStoreChallengeManager.swift in Sources */,
@@ -623,6 +659,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TeemonDeo/TeemonDeo.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TeemonDeo/Preview Content\"";
@@ -630,6 +667,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeemonDeo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "이 앱은 사진을 촬영하기 위해 카메라를 사용합니다. 카메라 접근을 허용해주세요.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "이 앱은 사진을 촬영하기 위해 카메라를 사용합니다. 카메라 접근을 허용해주세요.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -642,6 +681,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.teemondeo.TeemonDeo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -654,6 +694,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TeemonDeo/TeemonDeo.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TeemonDeo/Preview Content\"";
@@ -661,6 +702,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeemonDeo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "이 앱은 사진을 촬영하기 위해 카메라를 사용합니다. 카메라 접근을 허용해주세요.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "이 앱은 사진을 촬영하기 위해 카메라를 사용합니다. 카메라 접근을 허용해주세요.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -673,6 +716,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.teemondeo.TeemonDeo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

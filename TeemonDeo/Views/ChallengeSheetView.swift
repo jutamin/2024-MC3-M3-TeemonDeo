@@ -21,7 +21,7 @@ struct ChallengeSheetView: View {
     @Binding var isShowingSheet: Bool
     
     func isContentsFilled(_ challenge: Challenge) -> Bool {
-        if challenge.challengeName == "" || challenge.challengeSpace == "" || challenge.challengeStartDate == makeStrDate(Date()) || challenge.challengeSpace == "" {
+        if challenge.challengeName == "" || challenge.challengeSpace == "" {
             return false
         } else {
             return true

@@ -7,14 +7,28 @@
 
 import Foundation
 import SwiftUI
-
+import Firebase
+import FirebaseAuth
 
 class ChallengeMainViewModel: ObservableObject {
-    
     @Published var challenges: [Challenge] = []
-    
-    let fireStoreChallengeManager = FireStoreChallengeManager()
+    @Published var challengeUser: ChallengeUser? = nil
+
     @Published var challengesCount: Int = 0
+    @Published var userId = Auth.auth().currentUser?.uid
+
+    let fireStoreChallengeManager = FireStoreChallengeManager()
+
+    // READ
+    // - ChallengeUser
+    func loadChallengerUser(){
+        Task {
+            let challnegeUser = try await fireStoreChallengeManager.fetchUser()
+            DispatchQueue.main.async {
+                self.challengeUser = challnegeUser
+            }
+        }
+    }
     
     // READ
     func loadChallenge() {
@@ -23,21 +37,21 @@ class ChallengeMainViewModel: ObservableObject {
                 let fetchedChallenges = try await fireStoreChallengeManager.fetchChallenges()
                 DispatchQueue.main.async {
                     self.challenges = fetchedChallenges
+                    print(self.challenges)
                 }
             } catch {
                 print("Error loading challenges: \(error)")
-                // 여기에 에러 처리 로직을 추가할 수 있습니다.
-                // 예: 사용자에게 알림을 보여주거나 로그를 남기는 등
             }
         }
     }
+
     
     // CREATE
     func uploadChallenge(challenge: Challenge) {
         Task {
             do {
                 try await fireStoreChallengeManager.addChallenge(challenge: challenge)
-                await loadChallenge() // 새로운 챌린지를 추가한 후 목록을 다시 불러옵니다.
+                //await loadChallenge() // 새로운 챌린지를 추가한 후 목록을 다시 불러옵니다.
             } catch {
                 print("Error uploading challenge: \(error)")
                 // 여기에 에러 처리 로직을 추가할 수 있습니다.

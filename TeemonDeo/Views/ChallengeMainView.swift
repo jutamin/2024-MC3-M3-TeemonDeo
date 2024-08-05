@@ -30,7 +30,7 @@ struct ChallengeMainView: View {
                     .padding()
                     
                     HStack{
-                        //Text("\(viewModel.challengeUser)님!\n오늘의 챌린지를\n시작해보세요!") 852 521
+                        //Text("\(viewModel.challengeUser)님!\n오늘의 챌린지를\n시작해보세요!")
                         Text("쭈쭈님!\n오늘의 챌린지를\n시작해보세요!")
                             .font(.title)
                         
@@ -68,16 +68,9 @@ struct ChallengeMainView: View {
                                 challengeCardView(challenge: data)
                             }
                         }
-//                        .navigationDestination(for: Challenge.self) { value in
-//                            ChallengeDetailView(challengeData: value)
-//                        }
-                        
                     }
                     .background(Color.gray100)
                     .padding(.top, 20)
-
-                    
-                    
                 }
                 .onAppear{
                     viewModel.loadChallenge()

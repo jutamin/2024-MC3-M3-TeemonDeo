@@ -24,7 +24,6 @@ final class SettingsViewModel: ObservableObject {
     }
     
     func loadAuthUser() {
-
         // SSO 로그인 정보 가져오기
         self.authUser = try? AuthenticationManager.shared.getAuthenticatedUser()
     }
@@ -37,10 +36,22 @@ final class SettingsViewModel: ObservableObject {
         try await AuthenticationManager.shared.delete()
     }
 
-
     // Friebase에서 유저 정보 가져오기
     func loadChallnegeUser() {
         self.challengeUser = try? AuthenticationManager.shared.getChallnegeUser()
     }
-
+    
+    func loadChallengeUser2() async {
+        loadChallnegeUser()
+        self.challengeUser = try? await UserManager.shared.getUser(userId: challengeUser?.userId ?? "err")
+        print(self.challengeUser)
+    }
+    
+    func updateChallengeUserNickname(nickname: String) async {
+        loadChallnegeUser()
+        self.challengeUser?.userNickname = nickname
+        guard let challUser = challengeUser else { return print("err") }
+        print("challUser: \(challUser)")
+        try? await UserManager.shared.updateUser(user: challUser)
+    }
 }

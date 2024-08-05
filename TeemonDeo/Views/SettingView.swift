@@ -11,7 +11,6 @@ struct SettingView: View {
     
     @Binding var showSignInView: Bool
     @StateObject private var settingViewModel = SettingsViewModel()
-    @StateObject private var mainViewModel = ChallengeMainViewModel()
     
     var body: some View {
         NavigationStack{
@@ -22,49 +21,22 @@ struct SettingView: View {
                     
                     Spacer()
                     
-                    Image(systemName: "gearshape")
+                    NavigationLink(destination: SettingInfoView(showSignInView: $showSignInView),
+                                   label:{
+                        Image(systemName: "gearshape")
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                            .foregroundStyle(.black)
+                    }
+                    )
                 }
                 .padding()
-                
-                Spacer()
-                
+                        
                 profileView()
                     .padding(8)
                 
                 endedChallengeListView()
                     .background(Color.gray100)
-                
-                // 로그아웃, 계정삭제 버튼
-                List {
-                    // 로그아웃 버튼
-                    Button("Log out") {
-                        Task {
-                            do {
-                                try settingViewModel.signOut()
-                                showSignInView = true
-                            } catch {
-                                print(error)
-                            }
-                        }
-                    }
-                    // 계정삭제 버튼
-                    Button(role: .destructive) {
-                        Task {
-                            do {
-                                try await settingViewModel.deleteAccount()
-                                showSignInView = true
-                            } catch {
-                                print(error)
-                            }
-                        }
-                    } label: {
-                        Text("Delete account")
-                    }
-                }
-                .onAppear {
-                    // 어떤 SSO로 로그인했는지 확인
-                    settingViewModel.loadAuthProviders()
-                }
             }
         }
     }
@@ -92,10 +64,12 @@ struct profileView: View {
             (Text(Image(systemName: "seal.fill")) + Text(" 개쩌는 티어: \(settingViewModel.challengeUser?.userTier ?? 111)"))
                     .font(.footnote)
                     .foregroundStyle(Color.gray800)
+            
         }
         .padding(.horizontal)
         .onAppear(){
-            settingViewModel.loadChallnegeUser()
+            Task { await settingViewModel.loadChallengeUser2()
+            }
         }
     }
 }
@@ -142,10 +116,8 @@ struct endedChallengeListView: View {
                         }
                 }
             }
+            Spacer()
         }
-//        .onAppear(){
-//            mainViewModel.countChallenge(challenge: )
-//        }
     }
 }
 

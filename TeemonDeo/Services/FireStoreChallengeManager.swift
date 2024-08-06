@@ -15,6 +15,7 @@ import FirebaseFirestoreSwift
 class FireStoreChallengeManager {
     var challenges: [Challenge] = []
     var challengeUser: ChallengeUser? = nil
+    var completedChallenges: [Challenge] = []
 
     private let db = Firestore.firestore()
     
@@ -83,18 +84,11 @@ class FireStoreChallengeManager {
                                       isChallengeSucceed: isChallengeSucceed)
             
             self.challenges.append(challenge)
+            if challenge.isChallengeSucceed {
+                self.completedChallenges.append(challenge)
+            }
         }
         
         return self.challenges
     }
-    
-    func countChallenge() async throws -> Int {
-//        guard let userId = userId else { return }
-        
-//        let query = try await db.collection("user").document(userId ?? "").collection("challenges").getDocuments().count
-        let count = challenges.count
-        return(count)
-    }
-    
-
 }

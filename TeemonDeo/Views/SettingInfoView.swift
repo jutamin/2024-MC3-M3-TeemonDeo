@@ -42,19 +42,19 @@ struct SettingInfoView: View {
                     } label: {
                         Text("회원탈퇴")
                     }
-                }.listStyle(.plain)
-                    .padding()
+                }
+                .listStyle(.plain)
                 .onAppear {
                     // 어떤 SSO로 로그인했는지 확인
                     Task {
                         await settingViewModel.loadChallengeUser2()
                     }
                 }
-            }.navigationBarTitle("설정", displayMode: .inline).font(.SuitTitle2)
-        }/*.navigationBarTitle("설정", displayMode: .inline).font(.SuitTitle2)*/
+            }.navigationBarTitle("설정", displayMode: .inline)
+        }
     }
 }
 
-//#Preview {
-//    SettingInfoView()
-//}
+#Preview {
+    SettingInfoView(showSignInView: .constant(false))
+}

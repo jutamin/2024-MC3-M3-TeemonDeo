@@ -14,7 +14,7 @@ class ChallengeMainViewModel: ObservableObject {
     @Published var challenges: [Challenge] = []
     @Published var challengeUser: ChallengeUser? = nil
 
-    @Published var challengesCount: Int = 0
+    @Published var completedChallengeCount: Int = 0
     @Published var userId = Auth.auth().currentUser?.uid
 
     let fireStoreChallengeManager = FireStoreChallengeManager()
@@ -59,9 +59,14 @@ class ChallengeMainViewModel: ObservableObject {
         }
     }
     
-    func countChallenge(challenge: Challenge) async throws {
-        challengesCount = try await fireStoreChallengeManager.countChallenge()
+    func countChallenge() -> Int {
+        return self.challenges.count
     }
     
+    func countCompletedChallenge(challenge: Challenge)/* -> Int*/ {
+        if challenge.isChallengeSucceed {
+            completedChallengeCount += 1
+        }
+    }
 
 }

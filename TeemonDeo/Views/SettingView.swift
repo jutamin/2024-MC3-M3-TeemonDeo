@@ -60,9 +60,17 @@ struct profileView: View {
             
             NavigationLink(destination: TierInfoView(),
                            label: {
-                (Text(Image(systemName: "seal.fill")) + Text(" 개쩌는 티어: \(settingViewModel.challengeUser?.userTier ?? 111)"))
-                    .font(.footnote)
-                    .foregroundStyle(Color.gray800)
+                HStack{
+                    Text(Image(systemName: "seal.fill"))
+                        .font(.SuitBody2)
+                        .foregroundStyle(Color.gray800)
+                    Text("티어: \(settingViewModel.challengeUser?.userTier ?? 111)")
+                        .font(.SuitBody1)
+                        .foregroundStyle(Color.gray800)
+                    Text(Image(systemName: "questionmark.circle.fill"))
+                        .font(.SuitBody2)
+                        .foregroundStyle(Color.gray200)
+                }
             })
             
         }

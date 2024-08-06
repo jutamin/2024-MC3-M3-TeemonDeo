@@ -21,22 +21,22 @@ struct TabbarView: View {
                 }
                 .tag(0)
                 .tabItem {
-                    Image(systemName: "cart")
-                    Text("Products")
+                    Image("tabbar1Image")
+                    Text("챌린지")
                 }
                 
                 ChallengeMainView()
                     .tag(1)
                     .tabItem {
-                        Image(systemName: "star.fill")
-                        Text("Favorites")
+                        Image("tabbar2Image")
+                        Text("공개처형")
                     }
                 
                 SettingView(showSignInView: $showSignInView)
                     .tag(2)
                     .tabItem {
-                        Image(systemName: "person")
-                        Text("Profile")
+                        Image(systemName: "gearshape")
+                        Text("관리")
                     }
             }
         }

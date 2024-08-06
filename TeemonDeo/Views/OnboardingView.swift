@@ -41,15 +41,23 @@ struct OnboardingView: View {
             }
             .padding(.vertical)
             
-            TextField( "닉네임을 입력해주세요",
-                       text: $userNickname,
-                       prompt: Text("닉네임을 입력해주세요.")
-                .font(Font.SuitTitle2)
-            )
-            .padding()
-            .background{
-                RoundedRectangle(cornerRadius: 8)
-                    .foregroundStyle(Color.gray100)
+
+            ZStack(alignment: .trailing) {
+                TextField("닉네임을 입력해주세요", text: $userNickname)
+                    .font(.SuitTitle2)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 8).fill(Color.gray100))
+                    .onChange(of: userNickname) { newValue in
+                        if newValue.count > 10 {
+                            userNickname = String(newValue.prefix(10))
+                        }
+                    }
+                    .padding(.horizontal)
+                
+                Text("\(userNickname.count)/10자")
+                    .font(.SuitBody2)
+                    .foregroundColor(.gray400)
+                    .padding(.trailing, 35)
             }
             
             Spacer()
@@ -84,7 +92,7 @@ struct OnboardingView: View {
         .navigationBarBackButtonHidden()
     }
 }
-//
-//#Preview {
-//    OnboardingView()
-//}
+
+#Preview {
+    OnboardingView(showSignInView: .constant(false), showOnboardingView: .constant(false))
+}

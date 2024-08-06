@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct CertifyingFinishedView: View {
-
+    @StateObject var mainViewModel = ChallengeMainViewModel()
+    var challengeData: Challenge
     
     var body: some View {
         VStack{
@@ -47,7 +48,7 @@ struct CertifyingFinishedView: View {
             Spacer()
 
             Button {
-                //
+                mainViewModel.countCompletedChallenge(challenge: challengeData)
             } label: {
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)

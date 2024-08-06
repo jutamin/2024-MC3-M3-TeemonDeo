@@ -31,7 +31,7 @@ struct CertifyingView: View {
                 Text("버리는 물건을 찍어 인증하세요")
                     .font(.SuitTitle2)
                     .foregroundColor(.white)
-                NavigationLink(destination: CertifyingFinishedView(), isActive: $allFinished) {
+                NavigationLink(destination: CertifyingFinishedView(challengeData: certiChalData), isActive: $allFinished) {
                     Text("")
                 }
                 

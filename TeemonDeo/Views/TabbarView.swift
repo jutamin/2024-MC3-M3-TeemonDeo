@@ -17,7 +17,7 @@ struct TabbarView: View {
             TabView {
                 VStack {
                     ContentView()
-                    PieChartView(data: iPhoneOperationSystem.dummyData())
+//                    PieChartView(data: iPhoneOperationSystem.dummyData())
                 }
                 .tag(0)
                 .tabItem {

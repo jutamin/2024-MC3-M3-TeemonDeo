@@ -38,10 +38,14 @@
 		8BF2D16C2C5E0A630068A71E /* ChallengeCompleteLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BF2D16B2C5E0A630068A71E /* ChallengeCompleteLottie.json */; };
 		8BF2D16E2C5E0A6E0068A71E /* TimerStartLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BF2D16D2C5E0A6E0068A71E /* TimerStartLottie.json */; };
 		8BF2D1702C5E0B240068A71E /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BF2D16F2C5E0B230068A71E /* Splash.json */; };
-		8BF2D1782C5E2AE70068A71E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8BF2D1772C5E2AE70068A71E /* Lottie */; };
 		8BF2D17A2C5E2B0E0068A71E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2D1792C5E2B0E0068A71E /* OnboardingView.swift */; };
 		8BF2D17C2C60B2B30068A71E /* SettingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2D17B2C60B2B30068A71E /* SettingInfoView.swift */; };
 		8BF2D17E2C61C5010068A71E /* TierInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2D17D2C61C5010068A71E /* TierInfoView.swift */; };
+		8BF2D1812C624C1C0068A71E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8BF2D1802C624C1C0068A71E /* Lottie */; };
+		8BF2D1832C624D6B0068A71E /* EndedChallengeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2D1822C624D6B0068A71E /* EndedChallengeDetailView.swift */; };
+		8BF2D1852C6251980068A71E /* ChallengeRecordComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2D1842C6251980068A71E /* ChallengeRecordComponent.swift */; };
+		8BF2D1872C6251A10068A71E /* ChallengeRecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2D1862C6251A10068A71E /* ChallengeRecordDetailView.swift */; };
+		8BF2D1892C6251AD0068A71E /* ChallengeRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2D1882C6251AD0068A71E /* ChallengeRecordView.swift */; };
 		AB44FE6B2C5D26E70060310F /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB44FE6A2C5D26E70060310F /* Challenge.swift */; };
 		AB7AD4622C5F806A002DB693 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AD4612C5F806A002DB693 /* Camera.swift */; };
 		AB7AD4642C5F8133002DB693 /* CertifyingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AD4632C5F8133002DB693 /* CertifyingView.swift */; };
@@ -123,6 +127,10 @@
 		8BF2D1792C5E2B0E0068A71E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		8BF2D17B2C60B2B30068A71E /* SettingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInfoView.swift; sourceTree = "<group>"; };
 		8BF2D17D2C61C5010068A71E /* TierInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TierInfoView.swift; sourceTree = "<group>"; };
+		8BF2D1822C624D6B0068A71E /* EndedChallengeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndedChallengeDetailView.swift; sourceTree = "<group>"; };
+		8BF2D1842C6251980068A71E /* ChallengeRecordComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeRecordComponent.swift; sourceTree = "<group>"; };
+		8BF2D1862C6251A10068A71E /* ChallengeRecordDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeRecordDetailView.swift; sourceTree = "<group>"; };
+		8BF2D1882C6251AD0068A71E /* ChallengeRecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeRecordView.swift; sourceTree = "<group>"; };
 		AB44FE6A2C5D26E70060310F /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		AB7AD4612C5F806A002DB693 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		AB7AD4632C5F8133002DB693 /* CertifyingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifyingView.swift; sourceTree = "<group>"; };
@@ -174,7 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B7543272C588E0100B1C53D /* GoogleSignIn in Frameworks */,
-				8BF2D1782C5E2AE70068A71E /* Lottie in Frameworks */,
+				8BF2D1812C624C1C0068A71E /* Lottie in Frameworks */,
 				ADB8C46E2C4F7F4400D5B9BC /* FirebaseAuth in Frameworks */,
 				ADB8C4702C4F7F4400D5B9BC /* FirebaseFirestore in Frameworks */,
 				8BAD01252C59D047002EC402 /* FirebaseFirestoreSwift in Frameworks */,
@@ -304,6 +312,9 @@
 		ADB8C4782C4F800D00D5B9BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8BF2D1842C6251980068A71E /* ChallengeRecordComponent.swift */,
+				8BF2D1862C6251A10068A71E /* ChallengeRecordDetailView.swift */,
+				8BF2D1882C6251AD0068A71E /* ChallengeRecordView.swift */,
 				ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */,
 				5B1935B82C59CFA6001AC5B2 /* TimerView.swift */,
 				8B75430F2C58892500B1C53D /* RootView.swift */,
@@ -321,6 +332,7 @@
 				8BF2D1792C5E2B0E0068A71E /* OnboardingView.swift */,
 				8BF2D17B2C60B2B30068A71E /* SettingInfoView.swift */,
 				8BF2D17D2C61C5010068A71E /* TierInfoView.swift */,
+				8BF2D1822C624D6B0068A71E /* EndedChallengeDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -403,7 +415,7 @@
 				8B7543262C588E0100B1C53D /* GoogleSignIn */,
 				8B7543282C588E0100B1C53D /* GoogleSignInSwift */,
 				8BAD01242C59D047002EC402 /* FirebaseFirestoreSwift */,
-				8BF2D1772C5E2AE70068A71E /* Lottie */,
+				8BF2D1802C624C1C0068A71E /* Lottie */,
 			);
 			productName = TeemonDeo;
 			productReference = ADB8C4572C4F7E2F00D5B9BC /* TeemonDeo.app */;
@@ -436,7 +448,7 @@
 			packageReferences = (
 				ADB8C46C2C4F7F4400D5B9BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				8B7543252C588E0100B1C53D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
-				8BF2D1762C5E2AE70068A71E /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				8BF2D17F2C624C1C0068A71E /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = ADB8C4582C4F7E2F00D5B9BC /* Products */;
 			projectDirPath = "";
@@ -493,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BF2D1642C5BEB1A0068A71E /* PieChartView.swift in Sources */,
+				8BF2D1892C6251AD0068A71E /* ChallengeRecordView.swift in Sources */,
 				5B1936032C5B244E001AC5B2 /* AudioPlayerViewModel.swift in Sources */,
 				8BF2D17E2C61C5010068A71E /* TierInfoView.swift in Sources */,
 				8B75431C2C588A8C00B1C53D /* SignInGoogleHelper.swift in Sources */,
@@ -516,6 +529,7 @@
 				AD13C8152C5B35FD00B87781 /* ChallengeMainViewModel.swift in Sources */,
 				AB7AD4622C5F806A002DB693 /* Camera.swift in Sources */,
 				AB7AD4682C5F8162002DB693 /* CameraViewModel.swift in Sources */,
+				8BF2D1872C6251A10068A71E /* ChallengeRecordDetailView.swift in Sources */,
 				8BAD01212C59CF2D002EC402 /* ChallengeUser.swift in Sources */,
 				AB7AD46A2C5F817A002DB693 /* CameraPreviewView.swift in Sources */,
 				8B7543122C58894300B1C53D /* TabbarView.swift in Sources */,
@@ -527,6 +541,7 @@
 				7227C47A2C5918AC0060F430 /* ChallengeDetailView.swift in Sources */,
 				ADB8C45B2C4F7E2F00D5B9BC /* TeemonDeoApp.swift in Sources */,
 				AB44FE6B2C5D26E70060310F /* Challenge.swift in Sources */,
+				8BF2D1832C624D6B0068A71E /* EndedChallengeDetailView.swift in Sources */,
 				AB7AD4642C5F8133002DB693 /* CertifyingView.swift in Sources */,
 				8B7543182C588A0B00B1C53D /* Utilities.swift in Sources */,
 				AD63FA612C60BA9900BBA80A /* CertifyingFinishedView.swift in Sources */,
@@ -535,6 +550,7 @@
 				72FEB9602C5A1D0100F64B71 /* DateHelper.swift in Sources */,
 				8B75431E2C588AAB00B1C53D /* SignInAppleHelper.swift in Sources */,
 				8B7543162C5889C500B1C53D /* SettingView.swift in Sources */,
+				8BF2D1852C6251980068A71E /* ChallengeRecordComponent.swift in Sources */,
 				AD13C8172C5B362C00B87781 /* FireStoreChallengeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -763,7 +779,7 @@
 				minimumVersion = 7.1.0;
 			};
 		};
-		8BF2D1762C5E2AE70068A71E /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		8BF2D17F2C624C1C0068A71E /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
 			requirement = {
@@ -797,9 +813,9 @@
 			package = ADB8C46C2C4F7F4400D5B9BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
 		};
-		8BF2D1772C5E2AE70068A71E /* Lottie */ = {
+		8BF2D1802C624C1C0068A71E /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8BF2D1762C5E2AE70068A71E /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = 8BF2D17F2C624C1C0068A71E /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
 		ADB8C46D2C4F7F4400D5B9BC /* FirebaseAuth */ = {

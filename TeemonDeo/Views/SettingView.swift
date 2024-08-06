@@ -84,7 +84,6 @@ struct profileView: View {
 
 struct endedChallengeListView: View {
     @StateObject var mainViewModel = ChallengeMainViewModel()
-    @State var path = NavigationPath()
 
     var body: some View {
         VStack{
@@ -115,7 +114,7 @@ struct endedChallengeListView: View {
             
             ForEach(mainViewModel.challenges) { chall in
                 if DateHelper.calculateCurrentDay(startDate: chall.challengeStartDate) > chall.challengePeriod*7 {
-                    NavigationLink(destination: ChallengeDetailView(path: $path, challengeData: chall)) {
+                    NavigationLink(destination: EndedChallengeDetailView(challengeData: chall)) {
                         endedChallengeListCell(challenge: chall)
                             .padding()
                     }

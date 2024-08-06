@@ -12,7 +12,6 @@ struct CertifyingFinishedView: View {
     var certFinlData: CertifyingFinishedData
 
     @StateObject var mainViewModel = ChallengeMainViewModel()
-    var challengeData: Challenge
     
     var body: some View {
         VStack{
@@ -52,7 +51,7 @@ struct CertifyingFinishedView: View {
 
             Button {
                 path.removeLast(path.count)
-                mainViewModel.countCompletedChallenge(challenge: challengeData)
+                mainViewModel.countCompletedChallenge(challenge: certFinlData.challenge)
             } label: {
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)

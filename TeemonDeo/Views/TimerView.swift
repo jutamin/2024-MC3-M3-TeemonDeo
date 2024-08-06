@@ -9,11 +9,14 @@ import SwiftUI
 import AVFoundation
 
 struct TimerView: View {
-    var timerChalData: Challenge
+    @Binding var path: NavigationPath
+
+    var timerChalData: TimerData
 
     @State private var isActive = false
     
     @ObservedObject var timerManager = TimerManager()
+    
     //@EnvironmentObject var soundViewModel: SoundViewModel
     @StateObject var audioPlayerViewModel = AudioPlayerViewModel()
     @State var isFinished : Bool = false
@@ -108,7 +111,9 @@ struct TimerView: View {
                     startLottieView.stop()
                     isFinished = true
                     isActive = true
-                    
+                    //path.append("CertifyingView")
+                    path.append(CertifyingData(challenge: timerChalData.challenge))
+
                 } else {
                     self.timerManager.start()
                     startLottieView.play()
@@ -127,10 +132,7 @@ struct TimerView: View {
             }
             
             // TODO: 다른 버전의 NavigationLink로 변경
-            NavigationLink(destination: CertifyingView(certiChalData: timerChalData), isActive: $isActive){
-                Text("")
-            }
-            
+
 
             //로티
             startLottieView
@@ -138,6 +140,7 @@ struct TimerView: View {
                 .frame(width: 360)
         }
         .padding(.top, 30)
+        .navigationBarBackButtonHidden()
 
     }
 

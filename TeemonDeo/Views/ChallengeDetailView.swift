@@ -4,6 +4,8 @@ import SwiftUI
 
 
 struct ChallengeDetailView: View {
+    @Binding var path: NavigationPath
+
     var challengeData: Challenge
     
     func getPeriodColors(period: Int) -> (boxColor: Color, textColor: Color) {
@@ -72,9 +74,10 @@ struct ChallengeDetailView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.bottom, -4)
                 
-                
-                NavigationLink {
-                    TimerView(timerChalData: challengeData)
+
+                Button{
+                    //path.append("TimerView")
+                    path.append(TimerData(challenge: challengeData))
                 } label: {
                     VStack{
                         Text("오늘의 비움 실천하기")
@@ -86,6 +89,9 @@ struct ChallengeDetailView: View {
                     .frame(maxWidth: .infinity, maxHeight: 86)
                     .background(Rectangle().fill(.black))
                 }
+                .frame(maxWidth: .infinity, maxHeight: 86)
+                .background(Rectangle().fill(.black))
+                
 
             }
             .edgesIgnoringSafeArea(.bottom)
@@ -98,6 +104,8 @@ struct ChallengeDetailView: View {
             Image(systemName: "ellipsis")
         })
         )
+        
+        
     }
 }
 

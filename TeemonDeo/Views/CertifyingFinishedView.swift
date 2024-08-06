@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct CertifyingFinishedView: View {
+    @Binding var path: NavigationPath
+    var certFinlData: CertifyingFinishedData
 
-    
     var body: some View {
         VStack{
 
@@ -47,7 +48,7 @@ struct CertifyingFinishedView: View {
             Spacer()
 
             Button {
-                //
+                path.removeLast(path.count)
             } label: {
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
@@ -64,6 +65,6 @@ struct CertifyingFinishedView: View {
 
             
         }
-        
+        .navigationBarBackButtonHidden()
     }
 }

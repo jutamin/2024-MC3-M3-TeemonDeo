@@ -12,10 +12,12 @@ struct ChallengeMainView: View {
     @State var isShowingSheet = false
     @State var detents: PresentationDetent = .height(613)
     
+    @State var path = NavigationPath()
+
     
     var body: some View {
         
-        VStack{
+        NavigationStack(path: $path){
             VStack{
                 HStack{
                     Text("복세단살")
@@ -30,7 +32,6 @@ struct ChallengeMainView: View {
                 
                 HStack{
                     Text("\(viewModel.challengeUser?.userNickname ?? "")님!\n오늘의 챌린지를\n시작해보세요!")
-                    //Text("쭈쭈님!\n오늘의 챌린지를\n시작해보세요!")
                         .font(.title)
                     
                     Spacer()
@@ -45,7 +46,7 @@ struct ChallengeMainView: View {
                 
                 
                 ScrollView{
-                    
+
                     HStack{
                         Text("진행 중인 챌린지")
                             .font(.laundryBold18)
@@ -63,11 +64,35 @@ struct ChallengeMainView: View {
                     .padding(24)
                     .padding(.top)
                     
+
+                    
                     ForEach(viewModel.challenges, id: \.self) { data in
-                        NavigationLink(destination: ChallengeDetailView(challengeData: data)) {
+                        NavigationLink(value: data, label: {
                             challengeCardView(challenge: data)
+                        })
+                        NavigationLink(value: TimerData(challenge: data)) {
+                            EmptyView()
+                        }
+                        NavigationLink(value: CertifyingData(challenge: data)) {
+                            EmptyView()
+                        }
+                        NavigationLink(value: CertifyingFinishedData(challenge: data)) {
+                            EmptyView()
                         }
                     }
+                    .navigationDestination(for: Challenge.self) { challenge in
+                        ChallengeDetailView(path: $path, challengeData: challenge)
+                    }
+                    .navigationDestination(for: TimerData.self) { timerData in
+                        TimerView(path: $path, timerChalData: timerData)
+                    }
+                    .navigationDestination(for: CertifyingData.self) { certifyingData in
+                        CertifyingView(path: $path, certiChalData: certifyingData)
+                    }
+                    .navigationDestination(for: CertifyingFinishedData.self) { certifyingFinishedData in
+                        CertifyingFinishedView(path: $path, certFinlData: certifyingFinishedData)
+                    }
+
                 }
                 .background(Color.gray100)
                 .padding(.top, 20)

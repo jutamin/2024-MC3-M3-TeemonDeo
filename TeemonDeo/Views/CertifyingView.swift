@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct CertifyingView: View {
-    var certiChalData: Challenge
+    @Binding var path: NavigationPath
+
+    var certiChalData: CertifyingData
     
     @ObservedObject var cameraViewModel = CameraViewModel()
     @ObservedObject var certifyingiewModel = CertifyingViewModel()
@@ -31,10 +33,7 @@ struct CertifyingView: View {
                 Text("버리는 물건을 찍어 인증하세요")
                     .font(.SuitTitle2)
                     .foregroundColor(.white)
-                NavigationLink(destination: CertifyingFinishedView(challengeData: certiChalData), isActive: $allFinished) {
-                    Text("")
-                }
-                
+
                 // CameraPreview가 자꾸 왼쪽으로 붙는다 -> HStack, Spacer로 강제 해결
                 if let previewImage = cameraViewModel.recentImage {
                     HStack{
@@ -107,9 +106,11 @@ extension CertifyingView {
             Button(action: {
                 print("완료")
                 Task {
-                    try await certifyingiewModel.uploadImg(challengeId: certiChalData.id, recordMemo: imageMemo, willUploadImg: cameraViewModel.recentImage)
+                    try await certifyingiewModel.uploadImg(challengeId: certiChalData.challenge.id, recordMemo: imageMemo, willUploadImg: cameraViewModel.recentImage)
                 }
-                allFinished = true
+                //allFinished = true
+                //path.append("CertifyingFinishedView")
+                path.append(CertifyingFinishedData(challenge: certiChalData.challenge))
 
             })
             {

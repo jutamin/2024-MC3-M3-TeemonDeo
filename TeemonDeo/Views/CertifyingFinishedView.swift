@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct CertifyingFinishedView: View {
+    @Binding var path: NavigationPath
+    var certFinlData: CertifyingFinishedData
+
     @StateObject var mainViewModel = ChallengeMainViewModel()
     var challengeData: Challenge
     
@@ -48,6 +51,7 @@ struct CertifyingFinishedView: View {
             Spacer()
 
             Button {
+                path.removeLast(path.count)
                 mainViewModel.countCompletedChallenge(challenge: challengeData)
             } label: {
                 ZStack{
@@ -65,6 +69,6 @@ struct CertifyingFinishedView: View {
 
             
         }
-        
+        .navigationBarBackButtonHidden()
     }
 }

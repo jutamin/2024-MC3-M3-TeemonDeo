@@ -4,7 +4,12 @@ import SwiftUI
 
 
 struct ChallengeDetailView: View {
+    @ObservedObject var challengeDetailViewModel = ChallengeDetailViewModel()
+
+    @Binding var path: NavigationPath
+    
     var challengeData: Challenge
+
     
     func getPeriodColors(period: Int) -> (boxColor: Color, textColor: Color) {
         switch period {
@@ -34,13 +39,13 @@ struct ChallengeDetailView: View {
             HStack(spacing: 10) {
                 challengePeriodText(period: challengeData.challengePeriod, boxColor: getPeriodColors(period: challengeData.challengePeriod).0, textColor: getPeriodColors(period: challengeData.challengePeriod).1)
                     .cornerRadius(8)
-
+                
                 challengeSpaceText(space: challengeData.challengeSpace, boxColor: .gray200, textColor: .gray800)
                     .cornerRadius(8)
-
+                
             }
             .padding(.bottom, 20)
-
+            
             VStack(spacing: 0) {
                 ZStack {
                     Rectangle()
@@ -57,11 +62,20 @@ struct ChallengeDetailView: View {
                         
                         Spacer()
                         
-                        let progress = DateHelper.calculateProgress(startDate: challengeData.challengeStartDate, period: challengeData.challengePeriod)
-                        Text("진행도 \(progress)%")
-                            .font(.system(size: 16, weight: .medium))
+                        Text("진행도 \(Int(Double(challengeDetailViewModel.recordCount) / Double(challengeData.challengePeriod * 7) * 100)) %")
+                            .font(.SuitBody1)
                             .padding(.trailing, 26)
                             .foregroundColor(Color.gray600)
+//                        let progress = DateHelper.calculateProgress(startDate: challengeData.challengeStartDate, period: challengeData.challengePeriod)
+//                        Text("진행도 \(progress)%")
+//                            .font(.system(size: 16, weight: .medium))
+//                            .padding(.trailing, 26)
+//                            .foregroundColor(Color.gray600)
+                        //                        let progress = DateHelper.calculateProgress(startDate: challengeData.challengeStartDate, period: challengeData.challengePeriod)
+                        //                        Text("진행도 \(progress)%")
+                        //                            .font(.system(size: 16, weight: .medium))
+                        //                            .padding(.trailing, 26)
+                        //                            .foregroundColor(Color.gray600)
                     }
                 }
                 .padding(.bottom, -4)
@@ -72,9 +86,10 @@ struct ChallengeDetailView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.bottom, -4)
                 
-                
-                NavigationLink {
-                    TimerView(timerChalData: challengeData)
+
+                Button{
+                    //path.append("TimerView")
+                    path.append(TimerData(challenge: challengeData))
                 } label: {
                     VStack{
                         Text("오늘의 비움 실천하기")
@@ -86,18 +101,27 @@ struct ChallengeDetailView: View {
                     .frame(maxWidth: .infinity, maxHeight: 86)
                     .background(Rectangle().fill(.black))
                 }
-
+                .frame(maxWidth: .infinity, maxHeight: 86)
+                .background(Rectangle().fill(.black))
+                
+                
             }
             .edgesIgnoringSafeArea(.bottom)
         }
+
         .padding(.top, 50)
-        .navigationBarItems(trailing: 
+        .navigationBarItems(trailing:
                                 Button(action: {
             //
         }, label: {
             Image(systemName: "ellipsis")
         })
         )
+        .onAppear{
+            Task{
+                await challengeDetailViewModel.loadRecords(challengeId: challengeData.id)
+            }
+        }
     }
 }
 

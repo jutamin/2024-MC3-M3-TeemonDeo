@@ -34,7 +34,6 @@ struct CertifyingView: View {
                     .font(.SuitTitle2)
                     .foregroundColor(.white)
 
-                
                 // CameraPreview가 자꾸 왼쪽으로 붙는다 -> HStack, Spacer로 강제 해결
                 if let previewImage = cameraViewModel.recentImage {
                     HStack{

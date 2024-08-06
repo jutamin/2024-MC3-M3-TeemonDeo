@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Splash Image.PNG",
+      "filename" : "challengeIcon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Splash Image 1.PNG",
+      "filename" : "challengeIconx2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Splash Image 2.PNG",
+      "filename" : "challengeIconx3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -27,16 +27,15 @@ struct SettingView: View {
                             .resizable()
                             .frame(width: 25, height: 25)
                             .foregroundStyle(.black)
-                    }
-                    )
+                    })
                 }
                 .padding()
                         
                 profileView()
                     .padding(8)
-                
-                endedChallengeListView()
-                    .background(Color.gray100)
+                ScrollView{
+                    endedChallengeListView()
+                }.background(Color.gray100)
             }
         }
     }
@@ -48,22 +47,31 @@ struct profileView: View {
     var body: some View {
         
         VStack() {
-            Button(action: {},
-                   label: {
-                Image("defaultProfileImage")
+            NavigationLink(destination: SettingProfileView(),
+                           label: {Image("defaultProfileImage")
                     .resizable()
-                    .frame(maxWidth: 80, maxHeight: 80)
-            })
+                .frame(maxWidth: 80, maxHeight: 80)})
             .padding(.bottom, 14)
             
-                Text(settingViewModel.challengeUser?.userNickname ?? "유저닉네임")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .padding(.bottom, 8)
+            Text(settingViewModel.challengeUser?.userNickname ?? "유저닉네임")
+                .font(.title2)
+                .fontWeight(.bold)
+                .padding(.bottom, 8)
             
-            (Text(Image(systemName: "seal.fill")) + Text(" 개쩌는 티어: \(settingViewModel.challengeUser?.userTier ?? 111)"))
-                    .font(.footnote)
-                    .foregroundStyle(Color.gray800)
+            NavigationLink(destination: TierInfoView(),
+                           label: {
+                HStack{
+                    Text(Image(systemName: "seal.fill"))
+                        .font(.SuitBody2)
+                        .foregroundStyle(Color.gray800)
+                    Text("티어: \(settingViewModel.challengeUser?.userTier ?? 111)")
+                        .font(.SuitBody1)
+                        .foregroundStyle(Color.gray800)
+                    Text(Image(systemName: "questionmark.circle.fill"))
+                        .font(.SuitBody2)
+                        .foregroundStyle(Color.gray200)
+                }
+            })
             
         }
         .padding(.horizontal)
@@ -85,20 +93,18 @@ struct endedChallengeListView: View {
                     .fontWeight(.bold)
                 Spacer()
                 
-                Text(String(mainViewModel.challengesCount))
-                
                 RoundedRectangle(cornerRadius: 2)
                     .frame(width: 10, height: 10)
                     .foregroundStyle(Color.Blue)
                 
-                Text("3 완료")
+                Text("\(String(mainViewModel.completedChallengeCount)) 완료")
                     .font(.callout)
                     .foregroundStyle(Color.Blue)
                 
                 RoundedRectangle(cornerRadius: 2)
                     .frame(width: 10, height: 10)
                     .foregroundStyle(Color.gray400)
-                Text("4 미완료")
+                Text("\(String(mainViewModel.countChallenge() - mainViewModel.completedChallengeCount)) 미완료")
                     .font(.callout)
                     .foregroundStyle(Color.gray400)
                 
@@ -107,16 +113,17 @@ struct endedChallengeListView: View {
             .padding(.horizontal,20)
             
             ForEach(mainViewModel.challenges) { chall in
-                NavigationLink(value: chall) {
-                    endedChallengeListCell(challenge: chall)
-                        .padding(.horizontal)
-                        .background{
-                            RoundedRectangle(cornerRadius: 20.0)
-                                .foregroundStyle(.white)
-                        }
+                if DateHelper.calculateCurrentDay(startDate: chall.challengeStartDate) > chall.challengePeriod*7 {
+                    NavigationLink(destination: ChallengeDetailView(challengeData: chall)) {
+                        endedChallengeListCell(challenge: chall)
+                            .padding()
+                    }
                 }
             }
             Spacer()
+        }
+        .onAppear(){
+            mainViewModel.loadChallenge()
         }
     }
 }
@@ -124,44 +131,69 @@ struct endedChallengeListView: View {
 struct endedChallengeListCell: View {
     var challenge: Challenge
     
+    func getPeriodColors(period: Int) -> (boxColor: Color, textColor: Color) {
+        switch period {
+        case 1:
+            return (.LightBlue, .DarkBlue)
+        case 2:
+            return (.LightGreeen, .DarkGreen)
+        case 3:
+            return (.LightPink, .DarkPink)
+        default:
+            return (.LightBlue, .DarkBlue)
+        }
+    }
+    
     var body: some View {
-        HStack{
-            VStack(alignment: .leading, spacing: 8) {
-                Text("책상부터 비워보자")
-                Text(challenge.challengeName)
-                    .font(.headline)
-                    .fontWeight(.semibold)
-                Text(challenge.challengeStartDate)
-                Text("2024.07.24 ~ 2024.07.31")
-                    .font(.caption)
-                    .foregroundStyle(.gray)
-                HStack{
-                    Text("1주 챌린지")
-                        .font(.caption)
-                        .foregroundStyle(.blue)
-                        .padding(3)
-                        .background{
-                            RoundedRectangle(cornerRadius: 6)
-                                .foregroundStyle(.blue).opacity(0.2)
-                        }
-                    Text("책상")
-                        .font(.caption)
-                        .foregroundStyle(.gray)
-                        .padding(3)
-                        .background{
-                            RoundedRectangle(cornerRadius: 6)
-                                .foregroundStyle(.gray).opacity(0.2)
-                        }
+        ZStack{
+            RoundedRectangle(cornerRadius: 8)
+                .fill(.white)
+                .stroke(Color.gray200, lineWidth: 1)
+                .frame(maxWidth: .infinity, maxHeight: 120)
+                .shadow(color: Color.black.opacity(0.05), radius: 20, y: 4)
+            
+            HStack{
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(challenge.challengeName)
+                        .font(.SuitTitle3)
+                        .foregroundStyle(Color.black)
+                    
+                    Text("\(challenge.challengeStartDate) ~ \(DateHelper.calculateEndDate(startDate: challenge.challengeStartDate, period: challenge.challengePeriod))")
+                        .font(.SuitArlert1)
+                        .foregroundStyle(Color.gray400)
+                    
+                    HStack{
+                        challengePeriodText(period: challenge.challengePeriod, boxColor: getPeriodColors(period: challenge.challengePeriod).0, textColor: getPeriodColors(period: challenge.challengePeriod).1)
+                        
+                        challengeSpaceText(space: challenge.challengeSpace, boxColor: .gray200, textColor: .gray800)
+                    }
                 }
+                Spacer()
+                Image(challenge.isChallengeSucceed ? "challengeCompleted" : "challengeNotCompleted")
+                    .resizable()
+                    .frame(maxWidth: 52, maxHeight: 52)
             }
             .padding()
-            
-            Spacer()
-            
-            Image("challengeCompleted")
-                .resizable()
-                .frame(maxWidth: 70, maxHeight: 70)
         }
+        
+    }
+    
+    @ViewBuilder
+    private func challengePeriodText(period: Int, boxColor: Color, textColor: Color) -> some View {
+        Text("\(period)주 챌린지")
+            .font(.footnote)
+            .foregroundColor(textColor)
+            .padding(5)
+            .background(Rectangle().fill(boxColor).frame(height: 23))
+    }
+    
+    @ViewBuilder
+    private func challengeSpaceText(space: String, boxColor: Color, textColor: Color) -> some View {
+        Text("\(space)")
+            .font(.footnote)
+            .foregroundColor(textColor)
+            .padding(5)
+            .background(Rectangle().fill(boxColor).frame(height: 23))
     }
 }
 

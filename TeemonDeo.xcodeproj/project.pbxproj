@@ -77,6 +77,7 @@
 		AD13C8762C5CC63D00B87781 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C86D2C5CC63D00B87781 /* Pretendard-SemiBold.otf */; };
 		AD13C8772C5CC63D00B87781 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C86E2C5CC63D00B87781 /* Pretendard-Light.otf */; };
 		AD13C8782C5CC63D00B87781 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C86F2C5CC63D00B87781 /* Pretendard-Bold.otf */; };
+		AD3133542C6219200026ADB6 /* ChallengeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3133532C6219200026ADB6 /* ChallengeDetailViewModel.swift */; };
 		AD63FA612C60BA9900BBA80A /* CertifyingFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD63FA602C60BA9900BBA80A /* CertifyingFinishedView.swift */; };
 		ADB8C45B2C4F7E2F00D5B9BC /* TeemonDeoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB8C45A2C4F7E2F00D5B9BC /* TeemonDeoApp.swift */; };
 		ADB8C45D2C4F7E2F00D5B9BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB8C45C2C4F7E2F00D5B9BC /* ContentView.swift */; };
@@ -156,6 +157,7 @@
 		AD13C86D2C5CC63D00B87781 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		AD13C86E2C5CC63D00B87781 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
 		AD13C86F2C5CC63D00B87781 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		AD3133532C6219200026ADB6 /* ChallengeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailViewModel.swift; sourceTree = "<group>"; };
 		AD63FA602C60BA9900BBA80A /* CertifyingFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifyingFinishedView.swift; sourceTree = "<group>"; };
 		ADB8C4572C4F7E2F00D5B9BC /* TeemonDeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeemonDeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB8C45A2C4F7E2F00D5B9BC /* TeemonDeoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeemonDeoApp.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				AD13C8142C5B35FD00B87781 /* ChallengeMainViewModel.swift */,
 				AB7AD4652C5F8146002DB693 /* CertifyingViewModel.swift */,
 				AB7AD4672C5F8162002DB693 /* CameraViewModel.swift */,
+				AD3133532C6219200026ADB6 /* ChallengeDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				8B75431C2C588A8C00B1C53D /* SignInGoogleHelper.swift in Sources */,
 				8B7543142C58898D00B1C53D /* LoginView.swift in Sources */,
 				AD13C8192C5B364800B87781 /* Colors.swift in Sources */,
+				AD3133542C6219200026ADB6 /* ChallengeDetailViewModel.swift in Sources */,
 				AD13C8232C5B372000B87781 /* TextModifire.swift in Sources */,
 				8BAD01232C59CF5F002EC402 /* UserManager.swift in Sources */,
 				8B7543102C58892500B1C53D /* RootView.swift in Sources */,

@@ -7,7 +7,8 @@ struct ChallengeDetailView: View {
     @ObservedObject var challengeDetailViewModel = ChallengeDetailViewModel()
 
     @Binding var path: NavigationPath
-    
+    @State var isShowingOptionSheet = false
+
     var challengeData: Challenge
 
     
@@ -108,11 +109,15 @@ struct ChallengeDetailView: View {
             }
             .edgesIgnoringSafeArea(.bottom)
         }
-
         .padding(.top, 50)
+        .sheet(isPresented: $isShowingOptionSheet) {
+            ChallengeOptionSheet(isShowingOptionSheet: $isShowingOptionSheet)
+                .presentationDetents([.fraction(0.25)])
+
+        }
         .navigationBarItems(trailing:
                                 Button(action: {
-            //
+            isShowingOptionSheet = true
         }, label: {
             Image(systemName: "ellipsis")
         })

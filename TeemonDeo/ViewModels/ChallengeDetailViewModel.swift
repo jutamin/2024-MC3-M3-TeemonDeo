@@ -23,15 +23,15 @@ class ChallengeDetailViewModel: ObservableObject {
     let fireStoreRecordManager = FireStoreRecordManager()
     
     
-    func loadRecords(challengeId: String) async {
+    func loadRecords(challengeId: String) async -> [ChallengeRecord]{
         do{
-            self.records = try await fireStoreRecordManager.fetchRecords(challengeId: challengeId)
+            records = try await fireStoreRecordManager.fetchRecords(challengeId: challengeId)
             DispatchQueue.main.async {
                 self.recordCount = self.records.count
-                //print(self.records.count)
             }
         } catch {
             print("loadRecords ERROR")
         }
+        return records
     }
 }

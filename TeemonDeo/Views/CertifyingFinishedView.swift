@@ -52,6 +52,7 @@ struct CertifyingFinishedView: View {
 
             Button {
                 path.removeLast(path.count)
+                mainViewModel.countEndedChallenge(challenge: certFinlData.challenge)
                 mainViewModel.countCompletedChallenge(challenge: certFinlData.challenge)
             } label: {
                 ZStack{

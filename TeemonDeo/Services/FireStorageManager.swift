@@ -11,7 +11,7 @@ import Foundation
 import FirebaseStorage
 
 class FireStorageManager {
-    var imageUrl: String = ""
+    var recordImageUrl: String = ""
     var imageId: String = UUID().uuidString
 
     func uploadImage(image: UIImage?) {
@@ -35,11 +35,13 @@ class FireStorageManager {
                 }
                 
                 if let url = url {
-                    self.imageUrl = url.absoluteString
+                    self.recordImageUrl = url.absoluteString
                 }
             }
         }
     }
+    
+    
 
-
+    
 }

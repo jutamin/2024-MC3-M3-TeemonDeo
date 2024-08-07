@@ -76,7 +76,7 @@ class FireStoreRecordManager {
             let recordImage: String = docData["recordImage"] as? String ?? ""
             let recordText: String = docData["recordText"] as? String ?? ""
             
-            let challenge = ChallengeRecord(id: recordId, recordImage: recordImage, recordText: recordText)
+            let challenge = ChallengeRecord(id: recordId, recordImage: recordImage, recordText: recordText, recordChallengeText: "", recordDate: "")
             
             self.records.append(challenge)
         }

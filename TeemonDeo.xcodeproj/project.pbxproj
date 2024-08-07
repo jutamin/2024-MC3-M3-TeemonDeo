@@ -82,6 +82,7 @@
 		AD13C8762C5CC63D00B87781 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C86D2C5CC63D00B87781 /* Pretendard-SemiBold.otf */; };
 		AD13C8772C5CC63D00B87781 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C86E2C5CC63D00B87781 /* Pretendard-Light.otf */; };
 		AD13C8782C5CC63D00B87781 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD13C86F2C5CC63D00B87781 /* Pretendard-Bold.otf */; };
+		AD1DA5022C632A9C00602C61 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DA5012C632A9C00602C61 /* TimerViewModel.swift */; };
 		AD3133542C6219200026ADB6 /* ChallengeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3133532C6219200026ADB6 /* ChallengeDetailViewModel.swift */; };
 		AD31335E2C63024A0026ADB6 /* ChallengeOptionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD31335D2C63024A0026ADB6 /* ChallengeOptionSheet.swift */; };
 		AD63FA612C60BA9900BBA80A /* CertifyingFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD63FA602C60BA9900BBA80A /* CertifyingFinishedView.swift */; };
@@ -168,6 +169,7 @@
 		AD13C86D2C5CC63D00B87781 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		AD13C86E2C5CC63D00B87781 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
 		AD13C86F2C5CC63D00B87781 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		AD1DA5012C632A9C00602C61 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		AD3133532C6219200026ADB6 /* ChallengeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailViewModel.swift; sourceTree = "<group>"; };
 		AD31335D2C63024A0026ADB6 /* ChallengeOptionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeOptionSheet.swift; sourceTree = "<group>"; };
 		AD63FA602C60BA9900BBA80A /* CertifyingFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifyingFinishedView.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				AB7AD4652C5F8146002DB693 /* CertifyingViewModel.swift */,
 				AB7AD4672C5F8162002DB693 /* CameraViewModel.swift */,
 				AD3133532C6219200026ADB6 /* ChallengeDetailViewModel.swift */,
+				AD1DA5012C632A9C00602C61 /* TimerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				5B1935B92C59CFA6001AC5B2 /* TimerView.swift in Sources */,
 				5B1935FF2C5A2BDE001AC5B2 /* TimerManager.swift in Sources */,
 				8BF2D17A2C5E2B0E0068A71E /* OnboardingView.swift in Sources */,
+				AD1DA5022C632A9C00602C61 /* TimerViewModel.swift in Sources */,
 				AD13C81B2C5B366700B87781 /* CustomFont.swift in Sources */,
 				8B14B6FE2C57766800045B7A /* LottieManager.swift in Sources */,
 				AB7AD4742C5FE745002DB693 /* FireStoreRecordManager.swift in Sources */,

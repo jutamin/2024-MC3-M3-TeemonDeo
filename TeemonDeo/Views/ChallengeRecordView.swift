@@ -47,7 +47,6 @@ struct ChallengeRecordView: View {
             }
         }
 
-        // Image(systemName: "chevron.left")
     }
 }
 

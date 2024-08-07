@@ -9,10 +9,8 @@ import SwiftUI
 import AVFoundation
 
 struct TimerView: View {
+    @EnvironmentObject var timerViewModel : TimerViewModel
 
-    @ObservedObject var timerViewModel = TimerViewModel()
-
-    
     @Binding var path: NavigationPath
 
     var timerChalData: TimerData
@@ -59,7 +57,7 @@ struct TimerView: View {
                                     .frame(width: geometry.size.width*0.9)
                                     .overlay(
                                         Text("\(timerViewModel.randomSentence)")
-                                            .font(.PretendardSemiBold24)
+                                            .font(.PretendardSemiBold18)
                                             .frame(width: geometry.size.width * 0.8)
                                             .padding()
                                             .multilineTextAlignment(.center),
@@ -145,7 +143,7 @@ struct TimerView: View {
                 .frame(width: 360)
         }
         .onAppear{
-            timerViewModel.getRandomSentence(category: timerChalData.challenge.challengeSpace)
+            timerViewModel.formatDateToString(date: Date())
         }
         .padding(.top, 30)
         .navigationBarBackButtonHidden()

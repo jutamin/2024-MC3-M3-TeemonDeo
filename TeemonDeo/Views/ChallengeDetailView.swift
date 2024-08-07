@@ -4,6 +4,8 @@ import SwiftUI
 
 
 struct ChallengeDetailView: View {
+    @EnvironmentObject var timerViewModel : TimerViewModel
+
     @ObservedObject var challengeDetailViewModel = ChallengeDetailViewModel()
 
     @Binding var path: NavigationPath
@@ -92,6 +94,7 @@ struct ChallengeDetailView: View {
 
 
                 Button{
+                    timerViewModel.getRandomSentence(category: challengeData.challengeSpace)
                     //path.append("TimerView")
                     path.append(TimerData(challenge: challengeData))
                 } label: {

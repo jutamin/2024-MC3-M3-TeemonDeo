@@ -18,9 +18,9 @@ class CertifyingViewModel: ObservableObject {
     private let fireStoreRecordManager = FireStoreRecordManager()
     
 
-    func uploadImg(challengeId: String, recordMemo: String, willUploadImg: UIImage?) async throws {
+    func uploadImg(challengeId: String, recordMemo: String, recordChallenegeText: String, recordDate: String, willUploadImg: UIImage?) async throws {
         fireStorageManager.uploadImage(image: willUploadImg)
-        let challengeRecord = ChallengeRecord(id: recordId, recordImage: fireStorageManager.imageId, recordText: recordMemo, recordChallengeText: "", recordDate: "")
+        let challengeRecord = ChallengeRecord(id: recordId, recordImage: fireStorageManager.imageId, recordText: recordMemo, recordChallengeText: recordChallenegeText, recordDate: recordDate)
         try await fireStoreRecordManager.addRecord(challengeId: challengeId, challengeRecord: challengeRecord)
     }
 }

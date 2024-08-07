@@ -26,6 +26,8 @@ struct TeemonDeoApp: App {
         WindowGroup {
             //NavigationView {
                 RootView()
+                .environmentObject(TimerViewModel())
+
                 //TimerView()
            // }
         }

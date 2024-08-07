@@ -60,7 +60,11 @@ struct DateHelper {
     static func calculateProgress(startDate: String, period: Int) -> Int {
         let currentDay = calculateCurrentDay(startDate: startDate)
         let progress = Double(currentDay) / Double(period*7) * 100
-        return Int(progress)
+        if progress >= 100 {
+            return 100
+        } else{
+            return Int(progress)
+        }
     }
     
 }

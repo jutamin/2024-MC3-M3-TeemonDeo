@@ -9,7 +9,12 @@ import SwiftUI
 
 struct TierInfoView: View {
     var body: some View {
-        Text("Tier Info View")
+        ScrollView{
+            Image("TierInfoViewImage")
+                .resizable()
+                .frame(maxWidth: .infinity)
+                .ignoresSafeArea()
+        }
     }
 }
 

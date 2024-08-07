@@ -43,6 +43,22 @@ struct SettingView: View {
 
 struct profileView: View {
     @StateObject private var settingViewModel = SettingsViewModel()
+    func getUserTier(tier: Int) -> String {
+        switch tier {
+        case 1 :
+            return "기안84"
+        case 2 :
+            return "기테무"
+        case 3 :
+            return "서장훈"
+        case 4 :
+            return "브라이언"
+        case 5 :
+            return "곤도 마리에"
+        default:
+            return " "
+        }
+    }
 
     var body: some View {
         
@@ -64,7 +80,7 @@ struct profileView: View {
                     Text(Image(systemName: "seal.fill"))
                         .font(.SuitBody2)
                         .foregroundStyle(Color.gray800)
-                    Text("티어: \(settingViewModel.challengeUser?.userTier ?? 111)")
+                    Text(getUserTier(tier: settingViewModel.challengeUser?.userTier ?? 0))
                         .font(.SuitBody1)
                         .foregroundStyle(Color.gray800)
                     Text(Image(systemName: "questionmark.circle.fill"))
@@ -116,9 +132,10 @@ struct endedChallengeListView: View {
                 if DateHelper.calculateCurrentDay(startDate: chall.challengeStartDate) > chall.challengePeriod*7 {
                     NavigationLink(destination: EndedChallengeDetailView(challengeData: chall)) {
                         endedChallengeListCell(challenge: chall)
-                            .padding()
+                            .padding(.horizontal)
                     }
                 }
+
             }
             Spacer()
         }

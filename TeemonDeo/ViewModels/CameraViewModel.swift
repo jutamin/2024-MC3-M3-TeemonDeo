@@ -25,12 +25,15 @@ class CameraViewModel: ObservableObject {
 
     func configure() {
         model.requestAndCheckPermissions()
-        model.session.startRunning()
-        // 0729 추가
+//        DispatchQueue.global(qos: .userInitiated).async {
+//            self.model.session.startRunning()
+//        }
     }
     
     func switchFlash() {
         isFlashOn.toggle()
+        // ✅ 추가3
+        model.flashMode = isFlashOn == true ? .on : .off
     }
     
     func switchSilent() {
@@ -39,12 +42,15 @@ class CameraViewModel: ObservableObject {
 
     
     func capturePhoto() {
+        print("in viewmodel before model.capturePhoto()")
         model.capturePhoto()
         
         print("[CameraViewModel]: Photo captured!")
     }
     
     func changeCamera() {
+        // ✅ 추가4
+        model.changeCamera()
         print("[CameraViewModel]: Camera changed!")
     }
     

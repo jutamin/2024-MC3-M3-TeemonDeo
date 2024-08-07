@@ -33,6 +33,23 @@ struct ChallengeMainView: View {
         }
     }
     
+    func getUserTierImage(tier: Int) -> Image {
+        switch tier {
+        case 1 :
+            return Image("tierLevel1")
+        case 2 :
+            return Image("tierLevel2")
+        case 3 :
+            return Image("tierLevel3")
+        case 4 :
+            return Image("tierLevel4")
+        case 5 :
+            return Image("tierLevel5")
+        default:
+            return Image("tierLevel1")
+        }
+    }
+    
     var body: some View {
         
         NavigationStack(path: $path){
@@ -44,10 +61,10 @@ struct ChallengeMainView: View {
                     Spacer()
                     
                     //TODO: User의 Tire에 따른 이미지 변화
-                    Text(Image(systemName: "seal.fill"))
+                    Text(getUserTierImage(tier: viewModel.challengeUser?.userTier ?? 1))
                         .font(.SuitBody1)
                         .foregroundStyle(Color.gray400)
-                    Text(getUserTier(tier: viewModel.challengeUser?.userTier ?? 0))
+                    Text(getUserTier(tier: viewModel.challengeUser?.userTier ?? 1))
                         .font(.SuitBody1)
                         .foregroundStyle(Color.gray400)
                 }
@@ -90,12 +107,6 @@ struct ChallengeMainView: View {
                         NavigationLink(value: data, label: {
                             if DateHelper.calculateCurrentDay(startDate: data.challengeStartDate) <= data.challengePeriod*7 {
                                 challengeCardView(challenge: data)
-                                    .onAppear{
-                                        Task{
-                                            do {recordscount = await challengeDetailViewModel.loadRecords(challengeId: data.id).count
-                                                print(data.challengeName, data.id, recordscount, challengeDetailViewModel.records)}
-                                        }
-                                    }
                             }
                             
                         })

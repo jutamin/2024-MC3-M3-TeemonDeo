@@ -15,22 +15,19 @@ struct TabbarView: View {
     var body: some View {
         NavigationStack{
             TabView {
-                VStack {
-                    ContentView()
-//                    PieChartView(data: iPhoneOperationSystem.dummyData())
-                }
-                .tag(0)
-                .tabItem {
-                    Image("tabbar1Image")
-                    Text("챌린지")
-                }
-                
                 ChallengeMainView()
-                    .tag(1)
+                    .tag(0)
                     .tabItem {
-                        Image("tabbar2Image")
-                        Text("공개처형")
+                        Image(systemName: "trophy")
+                        Text("챌린지")
                     }
+                
+//                ContentView()
+//                    .tag(1)
+//                    .tabItem {
+//                        Image("tabbar2Image")
+//                        Text("공개처형")
+//                    }
                 
                 SettingView(showSignInView: $showSignInView)
                     .tag(2)

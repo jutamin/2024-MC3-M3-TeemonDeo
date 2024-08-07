@@ -59,6 +59,23 @@ struct profileView: View {
             return " "
         }
     }
+    
+    func getUserTierImage(tier: Int) -> Image {
+        switch tier {
+        case 1 :
+            return Image("tierLevel1")
+        case 2 :
+            return Image("tierLevel2")
+        case 3 :
+            return Image("tierLevel3")
+        case 4 :
+            return Image("tierLevel4")
+        case 5 :
+            return Image("tierLevel5")
+        default:
+            return Image("tierLevel1")
+        }
+    }
 
     var body: some View {
         
@@ -77,10 +94,10 @@ struct profileView: View {
             NavigationLink(destination: TierInfoView(),
                            label: {
                 HStack{
-                    Text(Image(systemName: "seal.fill"))
+                    Text(getUserTierImage(tier: settingViewModel.challengeUser?.userTier ?? 1))
                         .font(.SuitBody2)
                         .foregroundStyle(Color.gray800)
-                    Text(getUserTier(tier: settingViewModel.challengeUser?.userTier ?? 0))
+                    Text(getUserTier(tier: settingViewModel.challengeUser?.userTier ?? 1))
                         .font(.SuitBody1)
                         .foregroundStyle(Color.gray800)
                     Text(Image(systemName: "questionmark.circle.fill"))

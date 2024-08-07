@@ -71,5 +71,8 @@ struct CertifyingFinishedView: View {
             
         }
         .navigationBarBackButtonHidden()
+        .onAppear(){
+            stopLottieView.play()
+        }
     }
 }

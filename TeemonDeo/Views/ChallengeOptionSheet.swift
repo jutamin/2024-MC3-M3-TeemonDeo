@@ -11,7 +11,8 @@ import SwiftUI
 struct ChallengeOptionSheet: View {
     
     @Binding var isShowingOptionSheet: Bool
-
+    @Binding var gotoRecordView: Bool
+    
     var body: some View {
         VStack{
             HStack{
@@ -30,7 +31,10 @@ struct ChallengeOptionSheet: View {
             .padding(.bottom, 30)
             
             Button {
-                //
+                isShowingOptionSheet = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    gotoRecordView = true
+                }
             } label: {
                 HStack{
                     Image(systemName: "tray.fill")

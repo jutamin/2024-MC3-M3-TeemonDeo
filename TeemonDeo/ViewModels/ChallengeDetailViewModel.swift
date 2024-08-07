@@ -28,7 +28,6 @@ class ChallengeDetailViewModel: ObservableObject {
             self.records = try await fireStoreRecordManager.fetchRecords(challengeId: challengeId)
             DispatchQueue.main.async {
                 self.recordCount = self.records.count
-                //print(self.records.count)
             }
         } catch {
             print("loadRecords ERROR")

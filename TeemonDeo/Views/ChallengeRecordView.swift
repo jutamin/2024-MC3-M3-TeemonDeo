@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ChallengeRecordView: View {
     
+    var challengeData: Challenge
+
     let data = Array(1...10).map { "목록 \($0)"}
 
     let columns = [
@@ -18,19 +20,8 @@ struct ChallengeRecordView: View {
     
     var body: some View {
         VStack(spacing:0){
-            HStack{
-                Image(systemName: "chevron.left")
-                Spacer()
-                Text("챌린지 기록")
-                Spacer()
-                RoundedRectangle(cornerRadius: 20).stroke(Color.black, lineWidth: 2.0)
-                    .frame(width: 58, height: 28)
-                    .foregroundColor(.white)
-                    .overlay {
-                        Text("\(columns.count)"+"/21")
-                    }
-            }
-            .padding()
+            Text(challengeData.challengeName)
+
             ScrollView(.vertical){
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(data, id: \.self) { i in
@@ -40,9 +31,24 @@ struct ChallengeRecordView: View {
             }
             .padding(.horizontal)
         }
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationTitle("")
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("챌린지 기록")
+            }
+            ToolbarItem(placement: .topBarTrailing) {
+                RoundedRectangle(cornerRadius: 20).stroke(Color.black, lineWidth: 2.0)
+                .frame(width: 58, height: 28)
+                .foregroundColor(.white)
+                .overlay {
+                    Text("\(columns.count)"+"/21")
+                }
+            }
+        }
+
+        // Image(systemName: "chevron.left")
     }
 }
 
-#Preview {
-    ChallengeRecordView()
-}
+

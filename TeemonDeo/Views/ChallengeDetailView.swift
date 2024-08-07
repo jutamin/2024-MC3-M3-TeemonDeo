@@ -10,6 +10,8 @@ struct ChallengeDetailView: View {
     @State var isShowingOptionSheet = false
 
     var challengeData: Challenge
+    
+    @State private var gotoRecord = false
 
     
     func getPeriodColors(period: Int) -> (boxColor: Color, textColor: Color) {
@@ -24,6 +26,12 @@ struct ChallengeDetailView: View {
             return (.LightBlue, .DarkBlue)
         }
     }
+    
+    func selectRecordImage(recordCnt: Int, period: Int) -> String {
+         return "\(period)" + "w" + "\(recordCnt)"
+    }
+    
+    
     
     var body: some View {
         VStack {
@@ -67,26 +75,21 @@ struct ChallengeDetailView: View {
                             .font(.SuitBody1)
                             .padding(.trailing, 26)
                             .foregroundColor(Color.gray600)
-//                        let progress = DateHelper.calculateProgress(startDate: challengeData.challengeStartDate, period: challengeData.challengePeriod)
-//                        Text("진행도 \(progress)%")
-//                            .font(.system(size: 16, weight: .medium))
-//                            .padding(.trailing, 26)
-//                            .foregroundColor(Color.gray600)
-                        //                        let progress = DateHelper.calculateProgress(startDate: challengeData.challengeStartDate, period: challengeData.challengePeriod)
-                        //                        Text("진행도 \(progress)%")
-                        //                            .font(.system(size: 16, weight: .medium))
-                        //                            .padding(.trailing, 26)
-                        //                            .foregroundColor(Color.gray600)
+                           .foregroundColor(Color.gray600)
                     }
                 }
-                .padding(.bottom, -4)
                 
-                Image("stamp")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxWidth: .infinity)
-                    .padding(.bottom, -4)
+                NavigationLink(destination: ChallengeRecordView(challengeData: challengeData), isActive: $gotoRecord) {
+                    EmptyView()
+                }
                 
+                ScrollView{
+                    Image(selectRecordImage(recordCnt: challengeDetailViewModel.recordCount, period: challengeData.challengePeriod))
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxWidth: .infinity)
+                }
+
 
                 Button{
                     //path.append("TimerView")
@@ -111,7 +114,7 @@ struct ChallengeDetailView: View {
         }
         .padding(.top, 50)
         .sheet(isPresented: $isShowingOptionSheet) {
-            ChallengeOptionSheet(isShowingOptionSheet: $isShowingOptionSheet)
+            ChallengeOptionSheet(isShowingOptionSheet: $isShowingOptionSheet, gotoRecordView: $gotoRecord)
                 .presentationDetents([.fraction(0.25)])
 
         }
@@ -127,6 +130,9 @@ struct ChallengeDetailView: View {
                 await challengeDetailViewModel.loadRecords(challengeId: challengeData.id)
             }
         }
+        
+        
+        
     }
 }
 

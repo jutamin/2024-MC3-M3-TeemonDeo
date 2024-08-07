@@ -100,7 +100,7 @@ struct ChallengeMainView: View {
                 
                 
             }
-
+            .navigationBarHidden(true)
             .refreshable {
                 viewModel.loadChallenge()
             }
@@ -109,8 +109,6 @@ struct ChallengeMainView: View {
             ChallengeSheetView(viewModel: viewModel,isShowingSheet: $isShowingSheet)
                 .ignoresSafeArea(.keyboard)
                 .edgesIgnoringSafeArea(.bottom)
-//                .presentationDetents([.height(geometry.size.height * 613.0 / 855.0)], selection: $detents)
-//                .presentationDetents([.height(613)], selection: $detents)
 
         }
         .onAppear(){

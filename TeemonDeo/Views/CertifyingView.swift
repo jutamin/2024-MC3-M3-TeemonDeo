@@ -28,9 +28,14 @@ struct CertifyingView: View {
             VStack(alignment: .center) {
                 Spacer()
                 
-                Text("7번째 비움")
+                Text("\(certifyingiewModel.recordCount)번째 비움")
                     .modifier(TextModifier())
                     .padding(.bottom)
+                    .onAppear{
+                        Task{
+                            await certifyingiewModel.loadRecords(challengeId: certiChalData.challenge.id)
+                        }
+                    }
                 
                 Text("버리는 물건을 찍어 인증하세요")
                     .font(.SuitTitle2)

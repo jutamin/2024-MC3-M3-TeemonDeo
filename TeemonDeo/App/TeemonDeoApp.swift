@@ -24,10 +24,12 @@ struct TeemonDeoApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
+            //NavigationView {
                 RootView()
+                .environmentObject(TimerViewModel())
+
                 //TimerView()
-            }
+           // }
         }
     }
 }

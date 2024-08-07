@@ -128,7 +128,7 @@ struct ChallengeMainView: View {
                 
                 
             }
-            
+            .navigationBarHidden(true)
             .refreshable {
                 viewModel.loadChallenge()
             }

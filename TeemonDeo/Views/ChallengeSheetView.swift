@@ -140,7 +140,7 @@ struct ChallengeSheetView: View {
                 .padding(10)
                 
                 HStack{
-                    SelectCategoryView(selected: isSelected == 1, item: "dS")
+                    SelectCategoryView(selected: isSelected == 1, item: "신발장")
                         .onTapGesture {
                             isSelected = (isSelected == 1) ? nil : 1
                         }

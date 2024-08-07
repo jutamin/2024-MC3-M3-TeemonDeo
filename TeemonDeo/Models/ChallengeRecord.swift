@@ -12,4 +12,6 @@ struct ChallengeRecord: Identifiable, Codable, Hashable {
     var id: String
     var recordImage: String
     var recordText: String
+    var recordChallengeText: String
+    var recordDate: String
 }

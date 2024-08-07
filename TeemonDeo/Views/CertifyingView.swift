@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CertifyingView: View {
+    @EnvironmentObject var timerViewModel : TimerViewModel
+
     @Binding var path: NavigationPath
 
     var certiChalData: CertifyingData
@@ -26,9 +28,14 @@ struct CertifyingView: View {
             VStack(alignment: .center) {
                 Spacer()
                 
-                Text("7번째 비움")
+                Text("\(certifyingiewModel.recordCount)번째 비움")
                     .modifier(TextModifier())
                     .padding(.bottom)
+                    .onAppear{
+                        Task{
+                            await certifyingiewModel.loadRecords(challengeId: certiChalData.challenge.id)
+                        }
+                    }
                 
                 Text("버리는 물건을 찍어 인증하세요")
                     .font(.SuitTitle2)
@@ -106,7 +113,7 @@ extension CertifyingView {
             Button(action: {
                 print("완료")
                 Task {
-                    try await certifyingiewModel.uploadImg(challengeId: certiChalData.challenge.id, recordMemo: imageMemo, willUploadImg: cameraViewModel.recentImage)
+                    try await certifyingiewModel.uploadImg(challengeId: certiChalData.challenge.id, recordMemo: imageMemo,recordChallenegeText: timerViewModel.randomSentence ,recordDate: timerViewModel.recordDate, willUploadImg: cameraViewModel.recentImage)
                 }
                 //allFinished = true
                 //path.append("CertifyingFinishedView")

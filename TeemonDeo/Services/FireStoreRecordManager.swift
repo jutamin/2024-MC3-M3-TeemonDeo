@@ -35,7 +35,6 @@ class FireStoreRecordManager {
         return snapshot
     }
     
-    
     func addRecord(challengeId: String?, challengeRecord: ChallengeRecord) async throws {
         guard let userId = userId else {
             throw NSError(domain: "FireStoreRecordManager", code: 1, userInfo: [NSLocalizedDescriptionKey: "User ID not available"])
@@ -48,6 +47,8 @@ class FireStoreRecordManager {
             "id": challengeRecord.id,
             "recordImage": challengeRecord.recordImage,
             "recordText": challengeRecord.recordText,
+            "recordChallengeText": challengeRecord.recordChallengeText,
+            "recordDate": challengeRecord.recordDate,
         ]
         
         try await db.collection("user").document(userId)
@@ -75,14 +76,17 @@ class FireStoreRecordManager {
             let docData = document.data()
             let recordImage: String = docData["recordImage"] as? String ?? ""
             let recordText: String = docData["recordText"] as? String ?? ""
-            
-            let challenge = ChallengeRecord(id: recordId, recordImage: recordImage, recordText: recordText)
+            let recordChallengeText: String = docData["recordChallengeText"] as? String ?? ""
+            let recordDate: String = docData["recordDate"] as? String ?? ""
+
+            let challenge = ChallengeRecord(id: recordId, recordImage: recordImage, recordText: recordText, recordChallengeText: recordChallengeText, recordDate: recordDate)
             
             self.records.append(challenge)
         }
         
         return self.records
     }
+    
     
 
 }

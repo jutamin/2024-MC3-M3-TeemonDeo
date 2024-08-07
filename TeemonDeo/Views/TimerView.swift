@@ -9,6 +9,8 @@ import SwiftUI
 import AVFoundation
 
 struct TimerView: View {
+    @EnvironmentObject var timerViewModel : TimerViewModel
+
     @Binding var path: NavigationPath
 
     var timerChalData: TimerData
@@ -47,17 +49,18 @@ struct TimerView: View {
                 if self.timerManager.timerMode == .running {
                     HStack{
                         GeometryReader { geometry in
-                            HStack{
+                            HStack(alignment: .center){
                                 Spacer()
                                 Image("guideBox")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: geometry.size.width*0.9)
                                     .overlay(
-                                        Text("뭐시기부터 버려보세요 우아아아아앙ㅇ")
-                                            .font(.system(size: 24, weight: .semibold))
+                                        Text("\(timerViewModel.randomSentence)")
+                                            .font(.PretendardSemiBold18)
                                             .frame(width: geometry.size.width * 0.8)
-                                            .padding(),
+                                            .padding()
+                                            .multilineTextAlignment(.center),
                                         alignment: .center
                                     )
                                 Spacer()
@@ -68,7 +71,7 @@ struct TimerView: View {
                 } else {
                     VStack{
                         Spacer()
-                        Text("책상부터 비워보자")
+                        Text("\(timerChalData.challenge.challengeName)")
                             .font(.SuitTitle3)
                             .foregroundColor(.gray400)
                             .padding(.bottom, 12)
@@ -139,10 +142,19 @@ struct TimerView: View {
                 .ignoresSafeArea(.all)
                 .frame(width: 360)
         }
+        .onAppear{
+            timerViewModel.formatDateToString(date: Date())
+        }
         .padding(.top, 30)
         .navigationBarBackButtonHidden()
 
     }
 
+}
+
+struct Category: Identifiable {
+    let id = UUID()
+    let name: String
+    let sentences: [String]
 }
 

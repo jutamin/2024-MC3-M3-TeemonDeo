@@ -14,6 +14,7 @@ struct EndedChallengeDetailView: View {
     @ObservedObject var challengeDetailViewModel = ChallengeDetailViewModel()
     
     var challengeData: Challenge
+
     
     
     func getPeriodColors(period: Int) -> (boxColor: Color, textColor: Color) {
@@ -102,7 +103,6 @@ struct EndedChallengeDetailView: View {
             }
             .edgesIgnoringSafeArea(.bottom)
         }
-        
         .padding(.top, 50)
         .navigationBarItems(trailing:
                                 Button(action: {

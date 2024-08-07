@@ -13,6 +13,8 @@ struct CertifyingFinishedView: View {
 
     @StateObject var mainViewModel = ChallengeMainViewModel()
     
+    var stopLottieView = LottieView(filename: "TimerStopLottie", loopMode: .playOnce)
+    
     var body: some View {
         VStack{
 
@@ -43,14 +45,14 @@ struct CertifyingFinishedView: View {
             
             Spacer()
             
-            Image("CertifyingFinished")
-                .resizable()
+            stopLottieView
                 .frame(width: 215, height: 261)
             
             Spacer()
 
             Button {
                 path.removeLast(path.count)
+                mainViewModel.countEndedChallenge(challenge: certFinlData.challenge)
                 mainViewModel.countCompletedChallenge(challenge: certFinlData.challenge)
             } label: {
                 ZStack{

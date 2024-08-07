@@ -13,7 +13,7 @@ import FirebaseAuth
 class ChallengeMainViewModel: ObservableObject {
     @Published var challenges: [Challenge] = []
     @Published var challengeUser: ChallengeUser? = nil
-
+    @Published var endedChallengesCount: Int = 0
     @Published var completedChallengeCount: Int = 0
     @Published var userId = Auth.auth().currentUser?.uid
 
@@ -63,9 +63,19 @@ class ChallengeMainViewModel: ObservableObject {
         return self.challenges.count
     }
     
-    func countCompletedChallenge(challenge: Challenge)/* -> Int*/ {
-        if challenge.isChallengeSucceed {
-            completedChallengeCount += 1
+    func countEndedChallenge(challenge: Challenge) {
+        endedChallengesCount = 0
+            if DateHelper.calculateProgress(startDate: challenge.challengeStartDate, period: challenge.challengePeriod) > challenge.challengePeriod*7 {
+                endedChallengesCount += 1
+        }
+    }
+    
+    func countCompletedChallenge(challenge: Challenge) {
+        completedChallengeCount = 0
+        if DateHelper.calculateProgress(startDate: challenge.challengeStartDate, period: challenge.challengePeriod) > challenge.challengePeriod*7 {
+            if challenge.isChallengeSucceed {
+                completedChallengeCount += 1
+            }
         }
     }
 

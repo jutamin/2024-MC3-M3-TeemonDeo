@@ -9,11 +9,29 @@ import SwiftUI
 
 struct ChallengeMainView: View {
     @ObservedObject var viewModel = ChallengeMainViewModel()
+    @ObservedObject var challengeDetailViewModel = ChallengeDetailViewModel()
     @State var isShowingSheet = false
     @State var detents: PresentationDetent = .height(613)
     
     @State var path = NavigationPath()
-
+    @State var recordscount: Int = 0
+    
+    func getUserTier(tier: Int) -> String {
+        switch tier {
+        case 1 :
+            return "기안84"
+        case 2 :
+            return "기테무"
+        case 3 :
+            return "서장훈"
+        case 4 :
+            return "브라이언"
+        case 5 :
+            return "곤도 마리에"
+        default:
+            return " "
+        }
+    }
     
     var body: some View {
         
@@ -26,7 +44,12 @@ struct ChallengeMainView: View {
                     Spacer()
                     
                     //TODO: User의 Tire에 따른 이미지 변화
-                    Text("개쩌는 티어")
+                    Text(Image(systemName: "seal.fill"))
+                        .font(.SuitBody1)
+                        .foregroundStyle(Color.gray400)
+                    Text(getUserTier(tier: viewModel.challengeUser?.userTier ?? 0))
+                        .font(.SuitBody1)
+                        .foregroundStyle(Color.gray400)
                 }
                 .padding()
                 
@@ -44,7 +67,6 @@ struct ChallengeMainView: View {
                 
                 //TODO: ProgressBar Status
                 
-                
                 ScrollView{
 
                     HStack{
@@ -52,7 +74,6 @@ struct ChallengeMainView: View {
                             .font(.laundryBold18)
                             .foregroundColor(.gray800)
 
-                        
                         Spacer()
                         
                         Button(action: {
@@ -61,14 +82,22 @@ struct ChallengeMainView: View {
                             addChallengeButton()
                         })
                     }
-                    .padding(24)
-                    .padding(.top)
-                    
-
+                    .padding(.horizontal, 24)
+                    .padding(.top, 28)
+                    .padding(.bottom, 8)
                     
                     ForEach(viewModel.challenges, id: \.self) { data in
                         NavigationLink(value: data, label: {
-                            challengeCardView(challenge: data)
+                            if DateHelper.calculateCurrentDay(startDate: data.challengeStartDate) <= data.challengePeriod*7 {
+                                challengeCardView(challenge: data)
+                                    .onAppear{
+                                        Task{
+                                            do {recordscount = await challengeDetailViewModel.loadRecords(challengeId: data.id).count
+                                                print(data.challengeName, data.id, recordscount, challengeDetailViewModel.records)}
+                                        }
+                                    }
+                            }
+                            
                         })
                         NavigationLink(value: TimerData(challenge: data)) {
                             EmptyView()
@@ -92,7 +121,6 @@ struct ChallengeMainView: View {
                     .navigationDestination(for: CertifyingFinishedData.self) { certifyingFinishedData in
                         CertifyingFinishedView(path: $path, certFinlData: certifyingFinishedData)
                     }
-
                 }
                 .background(Color.gray100)
                 .padding(.top, 20)
@@ -106,17 +134,14 @@ struct ChallengeMainView: View {
             }
         }
         .sheet(isPresented: $isShowingSheet) {
-            ChallengeSheetView(viewModel: viewModel,isShowingSheet: $isShowingSheet)
+            ChallengeSheetView(viewModel: viewModel, isShowingSheet: $isShowingSheet)
                 .ignoresSafeArea(.keyboard)
                 .edgesIgnoringSafeArea(.bottom)
-
         }
         .onAppear(){
             viewModel.loadChallenge()
             viewModel.loadChallengerUser()
         }
-        
-        
     }
 }
 
@@ -147,7 +172,7 @@ extension ChallengeMainView {
     @ViewBuilder
     private func challengePeriodText(period: Int, boxColor: Color, textColor: Color) -> some View {
         Text("\(period)주 챌린지")
-            .font(.footnote)
+            .font(.SuitArlert1)
             .foregroundColor(textColor)
             .padding(5)
             .background(Rectangle().fill(boxColor).frame(height: 23))
@@ -156,7 +181,7 @@ extension ChallengeMainView {
     @ViewBuilder
     private func challengeSpaceText(space: String, boxColor: Color, textColor: Color) -> some View {
         Text("\(space)")
-            .font(.footnote)
+            .font(.SuitArlert1)
             .foregroundColor(textColor)
             .padding(5)
             .background(Rectangle().fill(boxColor).frame(height: 23))
@@ -192,12 +217,43 @@ extension ChallengeMainView {
                 Spacer()
                 
                 //TODO: Circle Custom Graph
-                Image(systemName: "circle")
-                    .padding(.trailing)
+                VStack{
+                    PieChartView(data: addChartModel2(challenge: challenge))
+                        .padding(.bottom, -10)
+                    
+                    Text("\(DateHelper.calculateProgress(startDate: challenge.challengeStartDate, period: challenge.challengePeriod))%")
+                        .font(.SuitArlert1)
+                        .foregroundStyle(Color.gray800)
+                }
+                .padding(.trailing)
             }
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 5)
+        
+    }
+    
+    @ViewBuilder
+    private func CircularProgressView(challenge: Challenge) -> some View{
+        ZStack {
+            Circle()
+                .stroke(
+                    Color.gray200,
+                    lineWidth: 30
+                )
+            Circle()
+                .trim(from: 0, to: (Double(challengeDetailViewModel.recordCount) / Double(challenge.challengePeriod * 7) * 100))
+                .stroke(
+                    Color.LightBlue,
+                    style: StrokeStyle(
+                        lineWidth: 30,
+                        lineCap: .round
+                    )
+                )
+                .rotationEffect(.degrees(-90))
+                // 1
+                .animation(.easeIn, value: (Double(challengeDetailViewModel.recordCount) / Double(challenge.challengePeriod * 7) * 100))
+        }.frame(maxWidth: 26, maxHeight: 26)
     }
     
     func getPeriodColors(period: Int) -> (boxColor: Color, textColor: Color) {
@@ -213,7 +269,15 @@ extension ChallengeMainView {
         }
     }
     
-    
+    func addChartModel2(challenge: Challenge) -> [challengeProgressChart] {
+        return [challengeProgressChart(id: challenge.id,
+                                                       challengeName: challenge.challengeName,
+                                                       progress: DateHelper.calculateProgress(startDate: challenge.challengeStartDate, period: challenge.challengePeriod)),
+                                challengeProgressChart(id: challenge.id,
+                                                       challengeName: "default",
+                                                       progress: 100 - DateHelper.calculateProgress(startDate: challenge.challengeStartDate, period: challenge.challengePeriod))
+        ]
+    }
 }
 
 #Preview {

@@ -9,31 +9,27 @@ import SwiftUI
 import Charts
 
 
-struct iPhoneOperationSystem {
-    let version: String
-    let count: Int
-    
-    static func dummyData() -> [iPhoneOperationSystem] {
-        return [
-            iPhoneOperationSystem(version: "16.0", count: 81),
-            iPhoneOperationSystem(version: "15.0", count: 13),
-            iPhoneOperationSystem(version: "14.0", count: 6)
-        ]
-    }
+struct challengeProgressChart: Identifiable {
+    let id: String
+    let challengeName: String
+    let progress: Int
 }
 
 struct PieChartView: View {
     
-    var data: [iPhoneOperationSystem]
+    var data: [challengeProgressChart]
     
+
     var body: some View {
-        Chart(data, id: \.version) { element in
-            SectorMark(angle: .value("Usage", element.count))
-                .foregroundStyle(by: .value("Version", element.version))
+        Chart(data) { element in
+            SectorMark(angle: .value("Progress", element.progress), angularInset: 1.5)
+                .foregroundStyle(element.challengeName == "default" ? Color.gray200 : Color.Blue)
         }
+        .chartLegend(.hidden)
+        .frame(maxWidth: 26, maxHeight: 26)
         .padding()
     }
 }
-#Preview {
-    PieChartView(data: iPhoneOperationSystem.dummyData())
-}
+//#Preview {
+//    PieChartView(data: iPhoneOperationSystem.dummyData())
+//}

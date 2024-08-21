@@ -52,15 +52,15 @@ class TimerViewModel: ObservableObject {
     func getRandomSentence(category: String) {
         switch category {
         case "신발장":
-            self.randomSentence = categories[1].sentences.randomElement() ?? ""
+            self.randomSentence = categories[0].sentences.randomElement() ?? ""
         case "서랍":
-            self.randomSentence = categories[2].sentences.randomElement() ?? ""
+            self.randomSentence = categories[1].sentences.randomElement() ?? ""
         case "책상":
-            self.randomSentence = categories[3].sentences.randomElement() ?? ""
+            self.randomSentence = categories[2].sentences.randomElement() ?? ""
         case "화장대":
-            self.randomSentence = categories[4].sentences.randomElement() ?? ""
+            self.randomSentence = categories[3].sentences.randomElement() ?? ""
         case "옷장":
-            self.randomSentence = categories[5].sentences.randomElement() ?? ""
+            self.randomSentence = categories[4].sentences.randomElement() ?? ""
         default:
             self.randomSentence = "no"
         }

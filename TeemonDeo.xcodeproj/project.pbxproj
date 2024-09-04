@@ -343,7 +343,6 @@
 			children = (
 				ADBBF01C2C882C0A00D1E73F /* Services */,
 				ADBBF0182C882AD700D1E73F /* Models */,
-				ADBBF0172C882AD100D1E73F /* ViewModels */,
 				ADBBF0162C882ACC00D1E73F /* Views */,
 			);
 			path = Authentication;
@@ -422,13 +421,6 @@
 				8B7543132C58898D00B1C53D /* LoginView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		ADBBF0172C882AD100D1E73F /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		ADBBF0182C882AD700D1E73F /* Models */ = {

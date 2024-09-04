@@ -22,13 +22,6 @@ struct TabbarView: View {
                         Text("챌린지")
                     }
                 
-//                ContentView()
-//                    .tag(1)
-//                    .tabItem {
-//                        Image("tabbar2Image")
-//                        Text("공개처형")
-//                    }
-                
                 SettingView(showSignInView: $showSignInView)
                     .tag(2)
                     .tabItem {
